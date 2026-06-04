@@ -1,53 +1,42 @@
-# 🛰️ MikroTik - Scripts, Tutoriais e Configurações
+# 🛰️ Wiki Técnica MikroTik
 
-Repositório dedicado à documentação, automação e compartilhamento de scripts para dispositivos MikroTik (RouterOS). O objetivo é centralizar soluções práticas para administração de redes, monitoramento e segurança.
+[![GitHub Pages](https://img.shields.io/badge/Docs-Live-green?style=flat-square)](https://soarespaullo.github.io/MikroTik)
+[![RouterOS](https://img.shields.io/badge/RouterOS-v7.x-blue?style=flat-square)](https://mikrotik.com)
+[![License](https://img.shields.io/badge/License-MIT-orange?style=flat-square)](LICENSE)
 
----
 
-## 📂 Estrutura do Repositório
+Este repositório centraliza a documentação, rotinas de automação e scripts para dispositivos MikroTik (**RouterOS v7**). Todo o conteúdo deste repositório é compilado automaticamente em uma Wiki interativa utilizando **Jekyll** e o tema **Just the Docs**.
 
-- **/scripts**: Scripts `.rsc` prontos para uso (Failover, Backup, Notificações Telegram).
-- **/tutoriais**: Guias passo a passo em Markdown (Configuração de VPN, Hotspot, QoS).
-- **/configs**: Exemplos de arquivos de configuração base (`export`).
-
----
-
-## 🛠️ Conteúdos em Destaque
-
-### 1. Monitoramento & Notificações (Telegram Bot)
-Scripts para monitorar o status das interfaces (UP/DOWN) e enviar alertas em tempo real via API do Telegram.
-- [**Ver script de notificação PPPoE**](./scripts/telegram-notification.rsc)
-
-### 2. Segurança: Device Mode
-Tutorial essencial para liberar permissões de comandos sensíveis (como `/tool fetch`) em versões recentes do RouterOS.
-- [**Guia de ativação do Device Mode**](https://github.com/soarespaullo/MikroTik/wiki/Device-Mode) 
-
-### 3. Failover com Netwatch
-Configuração de redundância de links utilizando monitoramento por ping em servidores raiz (Google/Cloudflare).
-- [**Guia de Failover com Netwatch**](https://github.com/soarespaullo/MikroTik/wiki/Failover-Netwatch)
+🌐 **Acesse a Wiki Oficial:** [https://soarespaullo.github.io/MikroTik](https://soarespaullo.github.io/MikroTik)
 
 ---
 
-## 🚀 Como usar estes scripts
+## 📂 Estrutura do Projeto
 
-1. **Acesso via Terminal:** Copie o código do script e cole diretamente no terminal do seu Winbox.
-2. **Importação de arquivo:** - Baixe o arquivo `.rsc`.
-   - Arraste para a pasta `Files` do MikroTik.
-   - Execute no terminal: `/import file-name=script.rsc`.
+O repositório está estruturado como um projeto Jekyll pronto para deploy no GitHub Pages:
 
----
-
-## ⚠️ Avisos Importantes
-
-* **Teste em Bancada:** Nunca aplique scripts de Firewall ou Rotas diretamente em roteadores de produção sem antes testar em um ambiente controlado.
-* **Versões:** Os scripts contidos aqui são testados preferencialmente na **RouterOS v7.x**. Verifique a compatibilidade se estiver usando a v6.x.
+* `docs/` — Contém todas as páginas de documentação técnica organizadas por categorias (Conectividade, Segurança, Manutenção).
+* `assets/` — Imagens, logotipos e arquivos estáticos da Wiki.
+* `_config.yml` — Arquivo principal de configuração do layout, identidade e comportamento do tema.
+* `.github/workflows/` — Automação de CI/CD (GitHub Actions) que compila e publica o site automaticamente a cada `git push`.
 
 ---
 
-## 🤝 Contribuições
+## 🛠️ Conteúdos em Destaque (Na Wiki)
 
-Sinta-se à vontade para abrir uma *Issue* ou enviar um *Pull Request* com melhorias de scripts ou novos tutoriais.
+Acesse os guias formatados com sumários táteis, blocos de notas e destaque de código diretamente na Wiki:
+
+* 🔒 **Segurança & Acesso:** Configurações de Firewall Básico, proteção de gerenciamento com Port Knocking, VPN WireGuard e controle de Neighbor Discovery.
+* 🛠️ **Manutenção do Sistema:** Scripts de Backup (`.rsc` e `.backup`), análise de logs, monitoramento com Netwatch/Watchdog e sincronização de hora (NTP).
+* 🤖 **Automação & Alertas:** Integração com a API do Telegram para notificações de queda/restabelecimento de links PPPoE em tempo real.
 
 ---
-**Mantido por:** [Paulo Soares](https://soarespaullo.github.io)  
-**Licença:** MIT
+
+## 💻 Como Rodar este Projeto Localmente
+
+Se você quiser clonar este repositório para testar modificações no layout ou adicionar documentações no seu ambiente local (Arch Linux ou similar), siga o procedimento:
+
+1. **Requisitos Prévios:** Certifique-se de ter o Ruby e o Bundler instalados no sistema.
+2. **Instalar Dependências:**
+   ```bash
+   bundle install
