@@ -80,20 +80,14 @@ Este script gera o backup (`.rsc`) e envia por *e-mail* com o status completo: *
 
     *   **Comment:** Backup MikroTik: Export .rsc via E-mail.
 
-    *   **Source:** cole o seguinte script:
+    *   **Source:** Obtenha o código fonte através dos botões abaixo e cole neste campo.
 
-### 📥 Download 
+### 📥 Obtenção do Script e Implantação
 
-Você pode baixar o arquivo original ou visualizar:
+Escolha a forma mais adequada para obter o código-fonte ou inspecionar o arquivo direto no repositório:
 
-<a href="https://raw.githubusercontent.com/soarespaullo/MikroTik/main/scripts/Bk-Mail.rsc" class="btn btn-blue" target="_blank">📥 Baixar Script (.rsc)</a>
-<a href="https://github.com/soarespaullo/MikroTik/blob/main/scripts/Bk-Mail.rsc" class="btn btn-outline" target="_blank">👁️ Visualizar Código no GitHub</a>
-
-[**📥 Baixar Script (.rsc)**](https://raw.githubusercontent.com/soarespaullo/MikroTik/main/scripts/Bk-Mail.rsc){: .btn .btn-blue}
-[**👁️ Visualizar Código no GitHub**]([https://forum.mikrotik.com/](https://github.com/soarespaullo/MikroTik/blob/main/scripts/Bk-Mail.rsc)){: .btn .btn-outline }
-
-[**📥 Baixar Script (.rsc)**](https://raw.githubusercontent.com/soarespaullo/MikroTik/main/scripts/Bk-Mail.rsc){: .btn .btn-blue target="_blank" }
-[**👁️ Visualizar Código no GitHub**](https://github.com/soarespaullo/MikroTik/blob/main/scripts/Bk-Mail.rsc){: .btn .btn-outline target="_blank" }
+[**📥 Baixar Arquivo (.rsc)**](https://raw.githubusercontent.com/soarespaullo/MikroTik/main/scripts/Bk-Mail.rsc){: .btn .btn-blue target="_blank" }
+[**👁️ Inspecionar Código no GitHub**](https://github.com/soarespaullo/MikroTik/blob/main/scripts/Bk-Mail.rsc){: .btn .btn-outline target="_blank" }
 
 ---
 
