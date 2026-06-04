@@ -1,0 +1,17 @@
+# Cache e arquivos temporários do Jekyll
+.jekyll-cache/
+.jekyll-metadata
+
+# Pasta de compilação final (gerada automaticamente pelo comando serve)
+_site/
+
+# Logs e arquivos do sistema
+.sass-cache/
+.bundle/
+vendor/
+tmp/
+*.log
+
+# Arquivos específicos do sistema operacional (Arch/Linux)
+.DS_Store
+.directory
