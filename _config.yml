@@ -7,6 +7,7 @@ theme: "just-the-docs"
 logo: "/assets/images/logo-mikrotik.png"
 favicon_ico: "/assets/images/favicon.ico"
 url: "https://soarespaullo.github.io" # Recomendado para o GitHub Pages
+baseurl: "/MikroTik"
 
 # ====================================================
 # Visual e Experiência do Usuário (UX)
