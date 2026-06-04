@@ -1,0 +1,4 @@
+<div class="text-small text-grey-dk-000">
+  &copy; {{ "now" | date: "%Y" }} Paulo Soares <br>
+  Wiki Técnica MikroTik
+</div>

@@ -1,0 +1,1486 @@
+{"0": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "🆙 Guia: Atualização do Sistema (RouterOS &amp; Firmware)",
+    "content": "Manter o MikroTik atualizado protege contra vulnerabilidades e melhora o desempenho. A atualização é dividida em duas etapas obrigatórias. ",
+    "url": "/docs/manutencao/atualizacao/#-guia-atualiza%C3%A7%C3%A3o-do-sistema-routeros--firmware",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#-guia-atualização-do-sistema-routeros--firmware"
+  },"1": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "🏗️ 1. Entendendo os Canais (Channels)",
+    "content": "Antes de clicar em atualizar, você deve escolher a “estrada” que o seu roteador vai seguir: . | Long Term: Foco total em estabilidade. Recomendado para empresas e roteadores de borda. | Stable: Versão oficial com novos recursos. Ótimo para uso doméstico avançado e provedores. | Testing: Versão de pré-lançamento para testes de bugs. | Development: Versão beta/experimental. Não use em produção. | . ",
+    "url": "/docs/manutencao/atualizacao/#%EF%B8%8F-1-entendendo-os-canais-channels",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#️-1-entendendo-os-canais-channels"
+  },"2": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "📥 2. Atualizando o Software (RouterOS)",
+    "content": "Este passo atualiza o sistema operacional do roteador. | Vá em System → Packages. | Clique no botão Check For Updates. | Em Channel, selecione o canal desejado (Recomendado: Long Term). | Clique em Download &amp; Install. | . O roteador irá baixar os arquivos e reiniciar automaticamente. A rede ficará fora do ar por cerca de 1 a 2 minutos. ",
+    "url": "/docs/manutencao/atualizacao/#-2-atualizando-o-software-routeros",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#-2-atualizando-o-software-routeros"
+  },"3": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "⚡ 3. Atualizando o Firmware (BIOS/RouterBOARD)",
+    "content": "Muitos administradores esquecem este passo. Ele atualiza o chip da placa-mãe do MikroTik. | Após o roteador reiniciar da atualização anterior, vá em System → RouterBOARD. | Compare o Current Firmware com o Upgrade Firmware. | Se o Upgrade for mais recente, clique no botão Upgrade. | O Winbox pedirá uma confirmação. Clique em Yes. | Importante: O firmware só é aplicado após um novo reboot manual. Vá em System → Reboot e confirme. | . Nunca desligue a energia do roteador durante o processo de atualização do firmware (RouterBOARD), pois isso pode corromper a BIOS do equipamento. ",
+    "url": "/docs/manutencao/atualizacao/#-3-atualizando-o-firmware-biosrouterboard",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#-3-atualizando-o-firmware-biosrouterboard"
+  },"4": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "🛠️ 4. Atualização via Arquivo (Offline)",
+    "content": "Se o roteador não tiver acesso à internet, você pode atualizar manualmente: . | Baixe o arquivo .npk correspondente à arquitetura do seu roteador (ex: arm64, mmips, mipsbe) no site oficial mikrotik.com/download. | Abra o Winbox e vá em Files. | Arraste o arquivo baixado do seu PC para dentro da janela Files do Winbox. | Vá em System → Reboot. O roteador identificará o arquivo e atualizará sozinho durante a reinicialização. | . ",
+    "url": "/docs/manutencao/atualizacao/#%EF%B8%8F-4-atualiza%C3%A7%C3%A3o-via-arquivo-offline",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#️-4-atualização-via-arquivo-offline"
+  },"5": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "✅ 5. Verificação Final",
+    "content": "Após os reboots, verifique: . | Em System → Resources: Se a versão do RouterOS está correta. | Em System → RouterBOARD: Se o Current Firmware agora iguala o Upgrade Firmware. | . ",
+    "url": "/docs/manutencao/atualizacao/#-5-verifica%C3%A7%C3%A3o-final",
+    
+    "relUrl": "/docs/manutencao/atualizacao/#-5-verificação-final"
+  },"6": {
+    "doc": "🆙 Atualização do Sistema",
+    "title": "🆙 Atualização do Sistema",
+    "content": " ",
+    "url": "/docs/manutencao/atualizacao/",
+    
+    "relUrl": "/docs/manutencao/atualizacao/"
+  },"7": {
+    "doc": "💾 Scripts de Backup",
+    "title": "💾 Guia: Backup MikroTik (RouterOS v7)",
+    "content": "Este guia cobre as três formas essenciais de garantir a segurança da sua configuração: Backup Binário, Exportação via Terminal e Automação com envio por E-mail. ",
+    "url": "/docs/manutencao/backup/#-guia-backup-mikrotik-routeros-v7",
+    
+    "relUrl": "/docs/manutencao/backup/#-guia-backup-mikrotik-routeros-v7"
+  },"8": {
+    "doc": "💾 Scripts de Backup",
+    "title": "📧 1. Configurando o Servidor de E-mail",
+    "content": "Antes de automatizar, o MikroTik precisa ter permissão para enviar e-mails. | Vá em Tools → Email. | Preencha os campos conforme seu provedor (Ex: Gmail): . | Server: smtp.gmail.com . | Port: 587 . | Start TLS: yes . | From: seu-email@gmail.com . | User: seu-email@gmail.com . | Password: senha_de_aplicativo (No Gmail, use “Senhas de App”). | . | . ",
+    "url": "/docs/manutencao/backup/#-1-configurando-o-servidor-de-e-mail",
+    
+    "relUrl": "/docs/manutencao/backup/#-1-configurando-o-servidor-de-e-mail"
+  },"9": {
+    "doc": "💾 Scripts de Backup",
+    "title": "🛡️ 2. Backup Binário (.backup) — Manual",
+    "content": "Uso: Recuperação total em caso de pane no mesmo roteador. | Via Winbox: Vá em Files → Backup. Defina um nome e uma senha. | Via Terminal: . | . /system backup save name=backup_manual password=SUA_SENHA . Arraste o arquivo da janela Files para seu computador após a criação. ",
+    "url": "/docs/manutencao/backup/#%EF%B8%8F-2-backup-bin%C3%A1rio-backup--manual",
+    
+    "relUrl": "/docs/manutencao/backup/#️-2-backup-binário-backup--manual"
+  },"10": {
+    "doc": "💾 Scripts de Backup",
+    "title": "📄 3. Exportação de Texto (.rsc) — Manual",
+    "content": "Uso: Ler as configurações ou migrar para outro modelo de MikroTik. Via Terminal: . /export terse file=config_manual . O que é o terse? . Este parâmetro remove quebras de linha e formata cada comando em uma única linha contínua. Isso torna o arquivo de backup mais organizado para buscas e evita erros de sintaxe ao copiar e colar os comandos em outro MikroTik. O arquivo aparecerá na lista Files pronto para DOWNLOAD. ",
+    "url": "/docs/manutencao/backup/#-3-exporta%C3%A7%C3%A3o-de-texto-rsc--manual",
+    
+    "relUrl": "/docs/manutencao/backup/#-3-exportação-de-texto-rsc--manual"
+  },"11": {
+    "doc": "💾 Scripts de Backup",
+    "title": "🤖 4. Automação: Backup por E-mail (Script v7)",
+    "content": "Este script gera o backup (.rsc) e envia por e-mail com o status completo: IP (WAN/PPPoE), Uptime formatado, Modelo da RB e Versão. | Vá em System → Scripts, clique em +. | Name: Bk-Mail . | Policy:read, write, policy, test, sensitive, password e ftp. | Comment: Backup MikroTik: Export .rsc via E-mail. | Source: cole o seguinte script: . | . | . # ------------------------------------------------------------------------------ # SCRIPT: Bk-Mail # DESCRIÇÃO: Backup automatizado com envio por e-mail (.rsc) # VERSÃO: 2.5 (Estável) # AUTOR: Equipe de Rede - @soarespaullo # RECURSOS: IP Dinâmico Universal, Uptime formatado e Identidade Automática # ------------------------------------------------------------------------------ # # --- CONFIGURAÇÕES DE TEXTO --- :local sysName [/system identity get name] :local msgAssunto (\"Backup Automatico - \" . $sysName) :local msgCorpo \"Relatorio de Backup do Concentrador:\\n\\n\" :local msgAssinatura \"\\n\\nAtt, \\nEquipe de Rede - @soarespaullo\" # --- VARIÁVEIS DO SISTEMA --- :local sysVer [/system resource get version] :local sysModel [/system resource get board-name] :local sysDate [/system clock get date] :local sysTime [/system clock get time] :local fileName ($sysName . \".rsc\") :local mailTo [/tool e-mail get user] # --- TRATAMENTO DO UPTIME (Formato: XXd XX:XX) --- :local rawUptime [/system resource get uptime] :local uptimeStr [:tostr $rawUptime] :local finalUptime \"\" :if ([:find $uptimeStr \"w\"] &gt; 0) do={ :local weeks [:pick $uptimeStr 0 [:find $uptimeStr \"w\"]] :local days [:pick $uptimeStr ([:find $uptimeStr \"w\"] + 1) [:find $uptimeStr \"d\"]] :local rest [:pick $uptimeStr ([:find $uptimeStr \"d\"] + 1) [:len $uptimeStr]] :set finalUptime (($weeks * 7 + $days) . \"d \" . [:pick $rest 0 5]) } else={ :set finalUptime [:pick $uptimeStr 0 11] } # --- LÓGICA DE BUSCA DE IP --- :local sysAddr \"Nao identificado\" :do { # Busca o ID da interface que possui a rota default ativa :local routeID [/ip route find where dst-address=0.0.0.0/0 and active=yes] :local gwInt [/ip route get $routeID gateway] # Se o gateway for um nome de interface (comum em PPPoE) :do { :local rawAddr [/ip address get [find interface=$gwInt] address] :set sysAddr [:pick $rawAddr 0 [:find $rawAddr \"/\"]] } on-error={ # Se falhar (link fixo/dedicado), busca o IP de qualquer interface que não seja Bridge/REDE :local rawAddr [/ip address get [find interface!~\"bridge\" and interface!~\"REDE\" and address!~\"^192.168.\"] address] :set sysAddr [:pick ($rawAddr-&gt;0) 0 [:find ($rawAddr-&gt;0) \"/\"]] } } on-error={ :set sysAddr \"Verificar WAN/Rota Default\" } # --- EXECUÇÃO --- /log warning \"Iniciando Script de Backup.\" /export terse file=$fileName /delay 5 # Montagem do corpo do e-mail :local corpoFinal ($msgCorpo . \"Nome: \" . $sysName . \"\\nModelo: \" . $sysModel . \"\\nEndereco IP: \" . $sysAddr . \"\\nVersao: \" . $sysVer . \"\\nUptime: \" . $finalUptime . \"\\nData: \" . $sysDate . \" - \" . $sysTime . $msgAssinatura) /log info \"Enviando backup por e-mail para: $mailTo\" /tool e-mail send file=$fileName to=$mailTo subject=$msgAssunto body=$corpoFinal /delay 5 /log info \"Script de Backup finalizado com sucesso.\" . ",
+    "url": "/docs/manutencao/backup/#-4-automa%C3%A7%C3%A3o-backup-por-e-mail-script-v7",
+    
+    "relUrl": "/docs/manutencao/backup/#-4-automação-backup-por-e-mail-script-v7"
+  },"12": {
+    "doc": "💾 Scripts de Backup",
+    "title": "📅 5. Agendando o Envio Automático",
+    "content": "Para que o script rode sozinho (ex: toda madrugada), precisamos de um agendamento com permissões administrativas completas. | Vá em System → Scheduler e clique em +. | Comment: Backup MikroTik: Export .rsc via E-mail. | Name: Sched-Bk-Mail. | Start Time: 03:00:00. | Interval: 1d 00:00:00 (Executa uma vez por dia). | On Event: Digite o nome exato do script: Bk-Mail. | Policy: read, write, policy, test, sensitive, ftp e password . | . | . As permissões marcadas aqui no Scheduler devem ser exatamente as mesmas que você marcou dentro do menu System → Scripts. Se o agendador tiver menos permissões que o script, o backup retornará o erro “not enough permissions”. ",
+    "url": "/docs/manutencao/backup/#-5-agendando-o-envio-autom%C3%A1tico",
+    
+    "relUrl": "/docs/manutencao/backup/#-5-agendando-o-envio-automático"
+  },"13": {
+    "doc": "💾 Scripts de Backup",
+    "title": "💾 Scripts de Backup",
+    "content": " ",
+    "url": "/docs/manutencao/backup/",
+    
+    "relUrl": "/docs/manutencao/backup/"
+  },"14": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🚫 Guia: Gerenciamento de Serviços (Segurança)",
+    "content": "Por padrão, o MikroTik vem com várias portas de comunicação abertas. Este tutorial ensina como desativar o que não é usado e proteger o acesso via Winbox e SSH. ",
+    "url": "/docs/seguranca/bloqueio-servicos/#-guia-gerenciamento-de-servi%C3%A7os-seguran%C3%A7a",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#-guia-gerenciamento-de-serviços-segurança"
+  },"15": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🛠️ 1. Onde encontrar os Serviços",
+    "content": "No Winbox, acesse o menu IP → Services. Você verá uma lista com os protocolos de comunicação do roteador. ",
+    "url": "/docs/seguranca/bloqueio-servicos/#%EF%B8%8F-1-onde-encontrar-os-servi%C3%A7os",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#️-1-onde-encontrar-os-serviços"
+  },"16": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🔒 2. Desativando Serviços Inseguros",
+    "content": "Serviços que enviam dados (incluindo senhas) em texto puro devem ser desativados imediatamente se você não tiver um motivo específico para usá-los. Passo a passo: . | Selecione o serviço (ex: telnet). | Clique no X (Disable) vermelho no topo da janela. | Repita o processo para os seguintes serviços: . | ftp: Transferência de arquivos (use o Winbox para isso). | telnet: Acesso via terminal inseguro. | www: Acesso via navegador (WebFig) — Recomendado desativar se usar apenas Winbox. | api / api-ssl: Usado apenas por softwares externos e integrações. | . | . ",
+    "url": "/docs/seguranca/bloqueio-servicos/#-2-desativando-servi%C3%A7os-inseguros",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#-2-desativando-serviços-inseguros"
+  },"17": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🔑 3. Protegendo o Winbox e SSH (Troca de Portas)",
+    "content": "Mudar as portas padrão dificulta a ação de robôs (bots) que ficam tentando senhas em portas conhecidas. Alterando a porta do Winbox: . | Dê um clique duplo em winbox. | No campo Port, mude de 8291 para uma porta de sua escolha (ex: 5050). | Clique em OK. | Nota: Na próxima vez que conectar, você deve usar IP:5050. | . | . Alterando a porta do SSH: . | Dê um clique duplo em ssh. | No campo Port, mude de 22 para uma porta alta (ex: 2222). | Clique em OK. | . ",
+    "url": "/docs/seguranca/bloqueio-servicos/#-3-protegendo-o-winbox-e-ssh-troca-de-portas",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#-3-protegendo-o-winbox-e-ssh-troca-de-portas"
+  },"18": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🗺️ 4. Restrição por IP (Available From)",
+    "content": "Esta é a camada de segurança mais forte. Você pode dizer ao MikroTik que um serviço só deve aceitar conexões vindas de um IP específico (como o seu IP fixo ou sua rede local). | No serviço desejado (ex: winbox), clique duas vezes. | No campo Available From, digite a sua rede local: 10.220.0.0/24. | Clique em OK. | Agora, mesmo que alguém descubra sua senha e sua porta, só conseguirá entrar se estiver fisicamente conectado à sua rede local. | . | . ",
+    "url": "/docs/seguranca/bloqueio-servicos/#%EF%B8%8F-4-restri%C3%A7%C3%A3o-por-ip-available-from",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#️-4-restrição-por-ip-available-from"
+  },"19": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "📋 Resumo de Configuração Sugerida",
+    "content": "| Serviço | Status | Porta Sugerida | Motivo | . | telnet | ❌ Desativado | - | Inseguro (texto puro) | . | ftp | ❌ Desativado | - | Inseguro (texto puro) | . | www | ❌ Desativado | - | Evita invasão via navegador | . | ssh | ✅ Ativado | 2222 | Backup de acesso via terminal | . | winbox | ✅ Ativado | 5050 | Gerenciamento principal | . | api | ❌ Desativado | - | Risco desnecessário | . Cuidado: Antes de desativar o serviço www ou mudar a porta do winbox, certifique-se de que você tem acesso via Winbox funcionando. Se você se trancar para fora, terá que usar o acesso via porta Console (se o seu modelo tiver) ou dar um Reset de Fábrica. ",
+    "url": "/docs/seguranca/bloqueio-servicos/#-resumo-de-configura%C3%A7%C3%A3o-sugerida",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/#-resumo-de-configuração-sugerida"
+  },"20": {
+    "doc": "🚫 Bloqueio de Serviços",
+    "title": "🚫 Bloqueio de Serviços",
+    "content": " ",
+    "url": "/docs/seguranca/bloqueio-servicos/",
+    
+    "relUrl": "/docs/seguranca/bloqueio-servicos/"
+  },"21": {
+    "doc": "🤖 Bot Telegram",
+    "title": "🤖 Guia: Configuração do Bot no Telegram",
+    "content": "Este tutorial ensina como criar um bot do Telegram do zero e obter o TOKEN e o CHAT ID para usar em scripts de backup e notificações no MikroTik. ",
+    "url": "/docs/automacao/bot-telegram/#-guia-configura%C3%A7%C3%A3o-do-bot-no-telegram",
+    
+    "relUrl": "/docs/automacao/bot-telegram/#-guia-configuração-do-bot-no-telegram"
+  },"22": {
+    "doc": "🤖 Bot Telegram",
+    "title": "1. Criando o seu Bot (Obtendo o Token)",
+    "content": "O BotFather é o bot oficial do Telegram que gerencia todos os outros bots. | Abra o seu Telegram e pesquise por @BotFather. | Inicie a conversa clicando em Começar (ou envie /start). | Envie o comando /newbot. | Escolha um nome para o seu bot (Ex: MikroTik). | Escolha um username único que termine em bot (Ex: MTKBot). | O BotFather enviará uma mensagem com o seu HTTP API Token. | . Guarde esse código, ele é a senha do seu bot! . ",
+    "url": "/docs/automacao/bot-telegram/#1-criando-o-seu-bot-obtendo-o-token",
+    
+    "relUrl": "/docs/automacao/bot-telegram/#1-criando-o-seu-bot-obtendo-o-token"
+  },"23": {
+    "doc": "🤖 Bot Telegram",
+    "title": "2. Obtendo o seu Chat ID",
+    "content": "O Chat ID é o número de identificação da sua conta para que o bot saiba para quem enviar as mensagens. | No Telegram, pesquise por @userinfobot. | Inicie o bot clicando em Começar. | Ele responderá instantaneamente com o seu Id (Ex: 556803685). | . Antes de rodar qualquer script, você precisa iniciar uma conversa com o seu bot (o criado no passo 1) e clicar em Começar. Caso contrário, ele não terá permissão para te enviar mensagens. ",
+    "url": "/docs/automacao/bot-telegram/#2-obtendo-o-seu-chat-id",
+    
+    "relUrl": "/docs/automacao/bot-telegram/#2-obtendo-o-seu-chat-id"
+  },"24": {
+    "doc": "🤖 Bot Telegram",
+    "title": "3. Testando o Bot via Navegador",
+    "content": "Teste se as credenciais estão corretas colando este link no navegador (substitua pelos seus dados): . https://api.telegram.org/bot&lt;SEU_TOKEN&gt;/sendMessage?chat_id=&lt;SEU_CHAT_ID&gt;&amp;text=Teste_MikroTik . ",
+    "url": "/docs/automacao/bot-telegram/#3-testando-o-bot-via-navegador",
+    
+    "relUrl": "/docs/automacao/bot-telegram/#3-testando-o-bot-via-navegador"
+  },"25": {
+    "doc": "🤖 Bot Telegram",
+    "title": "4. Aplicando no MikroTik",
+    "content": "Preencha as variáveis nos seus scripts do RouterOS: . :local botToken \"8733935690:AAGrDezO9N_RVJ98T8p_ZxMLÇKJHGYTFR_f\" :local chatId \"556803685\" . ",
+    "url": "/docs/automacao/bot-telegram/#4-aplicando-no-mikrotik",
+    
+    "relUrl": "/docs/automacao/bot-telegram/#4-aplicando-no-mikrotik"
+  },"26": {
+    "doc": "🤖 Bot Telegram",
+    "title": "🤖 Bot Telegram",
+    "content": " ",
+    "url": "/docs/automacao/bot-telegram/",
+    
+    "relUrl": "/docs/automacao/bot-telegram/"
+  },"27": {
+    "doc": "📈 Bandwidth Test",
+    "title": "📈 Guia: Bandwidth Test (BTest)",
+    "content": "O Bandwidth Test é a ferramenta definitiva para medir o rendimento (throughput) entre dois dispositivos MikroTik. Diferente de um teste de velocidade comum, o BTest permite testar protocolos específicos (TCP/UDP) e direções de tráfego (Send/Receive). ",
+    "url": "/docs/manutencao/btest/#-guia-bandwidth-test-btest",
+    
+    "relUrl": "/docs/manutencao/btest/#-guia-bandwidth-test-btest"
+  },"28": {
+    "doc": "📈 Bandwidth Test",
+    "title": "🚀 Como Funciona",
+    "content": "Para realizar um teste, você precisa de dois roteadores MikroTik: . | O Servidor: O roteador que receberá a conexão. | O Cliente: O roteador que iniciará o teste de carga. | . ",
+    "url": "/docs/manutencao/btest/#-como-funciona",
+    
+    "relUrl": "/docs/manutencao/btest/#-como-funciona"
+  },"29": {
+    "doc": "📈 Bandwidth Test",
+    "title": "🛠️ Configuração Passo a Passo",
+    "content": "1. Habilitar o Servidor . No roteador que servirá de destino, acesse: Tools &gt; BTest Server. | Marque a opção Enabled. | (Opcional) Defina uma senha em Authenticate para evitar que estranhos usem seu processamento para testes. | . 2. Executar o Teste (Cliente) . No roteador de origem, vá em: Tools &gt; Bandwidth Test. | Test To: Digite o IP do roteador servidor. | Protocol: * UDP: Mais leve, ideal para testar a capacidade máxima do meio físico. | TCP: Mais pesado, exige mais CPU, mas reflete o comportamento real da navegação web. | . | Direction: Escolha entre receive (download), send (upload) ou both (ambos). | . ",
+    "url": "/docs/manutencao/btest/#%EF%B8%8F-configura%C3%A7%C3%A3o-passo-a-passo",
+    
+    "relUrl": "/docs/manutencao/btest/#️-configuração-passo-a-passo"
+  },"30": {
+    "doc": "📈 Bandwidth Test",
+    "title": "⚠️ Avisos Importantes: Cuidado com a CPU!",
+    "content": "O Bandwidth Test consome muito processamento (CPU). Se você rodar um teste em um roteador pequeno (como uma hAP lite), a CPU chegará em 100% e a rede pode travar durante o teste. Dicas para testes precisos: . | Sempre monitore o System &gt; Resources &gt; CPU durante o teste. | Se a CPU atingir 100%, o resultado do teste de banda não é real; ele parou no limite do processador, não do link. | Dê preferência ao protocolo UDP para testar limites de rádio ou cabo. | . ",
+    "url": "/docs/manutencao/btest/#%EF%B8%8F-avisos-importantes-cuidado-com-a-cpu",
+    
+    "relUrl": "/docs/manutencao/btest/#️-avisos-importantes-cuidado-com-a-cpu"
+  },"31": {
+    "doc": "📈 Bandwidth Test",
+    "title": "💻 Comandos via Terminal",
+    "content": "Se você prefere o terminal, pode rodar um teste rápido assim: . /tool bandwidth-test address=192.168.88.1 protocol=udp direction=receive . ",
+    "url": "/docs/manutencao/btest/#-comandos-via-terminal",
+    
+    "relUrl": "/docs/manutencao/btest/#-comandos-via-terminal"
+  },"32": {
+    "doc": "📈 Bandwidth Test",
+    "title": "🔍 Quando usar o Bandwidth Test?",
+    "content": ". | Testar Cabos: Verificar se um cabo está passando 100Mbps ou 1Gbps. | Alinhamento de Antenas: Verificar o tráfego real em enlaces sem fio (PTP). | Validar VPNs: Testar quanto de banda passa por dentro de um túnel (L2TP, WireGuard, etc). | . ",
+    "url": "/docs/manutencao/btest/#-quando-usar-o-bandwidth-test",
+    
+    "relUrl": "/docs/manutencao/btest/#-quando-usar-o-bandwidth-test"
+  },"33": {
+    "doc": "📈 Bandwidth Test",
+    "title": "📈 Bandwidth Test",
+    "content": " ",
+    "url": "/docs/manutencao/btest/",
+    
+    "relUrl": "/docs/manutencao/btest/"
+  },"34": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🚀 Guia: Configuração Inicial do MikroTik",
+    "content": "Este guia aborda os passos fundamentais para tirar um MikroTik da caixa, limpar as configurações de fábrica e deixá-lo pronto para navegar com segurança e organização. ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-guia-configura%C3%A7%C3%A3o-inicial-do-mikrotik",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-guia-configuração-inicial-do-mikrotik"
+  },"35": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🧹 1. Limpeza de Fábrica (Reset)",
+    "content": "Ao ligar o MikroTik pela primeira vez, um pop-up aparecerá. Clique sempre em Remove Configuration. Se você esqueceu de clicar ou o roteador já veio configurado, faça o reset manual: . | Vá em System → Reset Configuration. | Marque a opção No Default Configuration. | Clique em Reset Configuration. Isso garante que o roteador esteja 100% “limpo”. | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-1-limpeza-de-f%C3%A1brica-reset",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-1-limpeza-de-fábrica-reset"
+  },"36": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🆔 2. Identidade e Organização",
+    "content": "Antes de configurar a rede, identifique o seu equipamento e as portas físicas. | Nome do Roteador: Vá em System → Identity e dê um nome ao seu roteador (ex: Borda-Principal). | Renomear Interfaces: Vá em Interfaces. Dê um clique duplo na porta e renomeie para facilitar a identificação: . | ether1 → ether1-link-proxxima | ether5 → ether5-rede-local | . | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-2-identidade-e-organiza%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-2-identidade-e-organização"
+  },"37": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🏠 3. Configuração da Rede Local (LAN)",
+    "content": "Definir o IP do Roteador . | Vá em IP → Addresses e clique em +. | Address: 10.220.0.1/24 | Interface: ether5-rede-local. | . Criar o Servidor DHCP . | Vá em IP → DHCP Server e clique no botão DHCP Setup. | Siga o assistente: . | Interface: ether5-rede-local. | Gateway: 10.220.0.1. | Addresses to Give Out: 10.220.0.2-10.220.0.254. | DNS Servers: 8.8.8.8 e 1.1.1.1. | Lease Time: 00:30:00. | . | . O Lease Time (30 minutos) é o tempo que o IP fica reservado para o dispositivo. Em redes com muita rotatividade, tempos curtos são melhores; em redes fixas, você pode aumentar para 08:00:00 (8 horas). Addresses to Give Out. Caso você precise reservar IPs para equipamentos fixos (como Servidores, Impressoras ou DVRs), ajuste o range para iniciar em um número mais alto, por exemplo: 10.220.0.100-10.220.0.254. Isso deixa os IPs iniciais (.2 ao .99) livres para você configurar manualmente nos aparelhos, garantindo que o MikroTik não entregue esses mesmos endereços para outros dispositivos via DHCP, evitando conflitos de IP na rede. ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-3-configura%C3%A7%C3%A3o-da-rede-local-lan",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-3-configuração-da-rede-local-lan"
+  },"38": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🌐 4. Configuração do Link de Internet (WAN)",
+    "content": "Dependendo do seu provedor, a conexão será feita via PPPoE (Usuário e Senha) ou DHCP (IP Automático). Escolha a opção que se aplica ao seu cenário: . Opção A: Conexão via PPPoE . Caso seu provedor exija autenticação (Usuário e Senha), como um modem em modo bridge ou tecnologia de fibra que utiliza o protocolo (PPPoE). | Vá em PPP → + → PPPoE Client. | Aba General: . | Name: pppoe-cliente-proxxima | Interface: ether1-link-proxxima. | . | Aba Dial Out: Insira o User e Password fornecidos pelo seu provedor de internet. | Marque Add Default Route. | Garanta que Add Default Route esteja marcado (ou deixe desmarcado se você estiver configurando o Failover manualmente). | . Verifique se o Status na parte inferior da janela mostra connected. Opção B: Conexão via DHCP Client . Caso seu provedor entregue a internet via DHCP (IP Automático), como um modem em modo roteador ou tecnologia fibra direta (DHCP). | Vá em IP → DHCP Client | Clique no botão +. | Na aba DHCP: . | Interface: Escolha a interface física onde o cabo do provedor está conectado (ex: ether1-link-proxxima-dhcp). | Add Default Route: Garanta que esteja marcado como yes (ou no se você estiver configurando o Failover manualmente). | . | Clique em Apply e OK. | . Verifique se o Status na parte inferior da janela mostra bound. ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-4-configura%C3%A7%C3%A3o-do-link-de-internet-wan",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-4-configuração-do-link-de-internet-wan"
+  },"39": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🛠️ 5. DNS, NAT e Navegação",
+    "content": "Para que os dispositivos da rede interna consigam navegar, precisamos de duas coisas: . | DNS do Sistema: Vá em IP → DNS → Servers → +. E adicione 8.8.8.8 e 1.1.1.1. | Regra de NAT (Masquerade): A regra de NAT “esconde” os IPs da sua rede local atrás do IP público do link. Crie a regra de acordo com a sua conexão (ou ambas, se for usar Failover): | . Para Link PPPoE: . Vá em IP → Firewall → NAT → Clique no +. | Chain: srcnat. | Out. Interface: pppoe-cliente-proxxima. | Action: masquerade. | . Para Link DHCP (IP Automático): . | Vá em IP → Firewall → NAT → Clique no +. | Chain: srcnat. | Out. Interface: ether1-link-proxxima-dhcp (Escolha a interface onde o cabo da internet está). | Action: masquerade. | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#%EF%B8%8F-5-dns-nat-e-navega%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#️-5-dns-nat-e-navegação"
+  },"40": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🌉 6. Configuração de Bridge (Unir Portas)",
+    "content": "A Bridge permite que o MikroTik funcione como um Switch, unindo várias portas físicas na mesma rede local. | Criar a Ponte: . | Vá em Bridge e clique em +. | Name: REDE-SWITCH. | Clique em OK. | . | Vincular as Portas: . | Na aba Ports, clique em +. | Interface: Selecione a porta (ex: ether5-rede-local). | Bridge: REDE-SWITCH. | Clique em OK e repita para as outras portas (exceto a que você está usando para configurar agora, se desejar evitar quedas) | . | Migrar o IP Address para a Bridge: Como o IP estava na ether5, precisamos movê-lo para a Bridge para que todas as portas respondam por ele. | Vá em IP → Addresses. | Dê um clique duplo no IP 10.220.0.1/24. | Mude o campo Interface de ether5-rede-local para REDE-SWITCH. | Clique em OK. | . | Migrar o DHCP Server para a Bridge: Para que os dispositivos recebam IP em qualquer porta da Bridge: . | Vá em IP → DHCP Server. | Na aba DHCP, dê um clique duplo no servidor criado (ex: dhcp1). | Mude o campo Interface para REDE-SWITCH. | Clique em OK. | . | . Se o IP e o DHCP ficarem presos à ether5, as outras portas da Bridge (como a ether2, ether3, ether4) não conseguirão navegar ou entregar endereços aos dispositivos. Ao mudar para a interface REDE-SWITCH, você ativa a rede em todo o “Switch” virtual. ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-6-configura%C3%A7%C3%A3o-de-bridge-unir-portas",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-6-configuração-de-bridge-unir-portas"
+  },"41": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🆙 7. Atualização do Sistema",
+    "content": "Mantenha seu MikroTik seguro e estável. Vá em System → Packages e clique em Check For Updates. Diferença entre Canais (Channels): . | Long Term: Estabilidade máxima (Produção). | Stable: Novos recursos testados. | Testing: Versão de pré-lançamento. | Development: Apenas para laboratório (Risco de travamento). | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-7-atualiza%C3%A7%C3%A3o-do-sistema",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-7-atualização-do-sistema"
+  },"42": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "👤 8. Criando Usuário de Acesso",
+    "content": "NUNCA use o usuário admin sem senha. | Vá em System → Users e clique em +. | Name: Crie seu nome de usuário. | Group: full (Acesso total). | Password: Digite uma senha forte. | Após criar o seu, desative ou remova o usuário admin padrão. | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-8-criando-usu%C3%A1rio-de-acesso",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-8-criando-usuário-de-acesso"
+  },"43": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🛡️ 9. Desativar Serviços Desnecessários",
+    "content": "O MikroTik vem com várias “portas” abertas por padrão que você não vai usar e que podem ser alvos de ataques. | Vá em IP → Services. | Clique no botão Disable (ícone cinza de Pause) para desabilitá-los. | api, api-ssl, ftp, telnet, www (acesso via navegador). | . | Mantenha apenas: . | winbox (para configurar) e ssh (caso precise de acesso remoto via terminal). | . | . Você pode mudar a porta do winbox (padrão 8291) para uma porta aleatória (ex: 54321) para dificultar a vida de invasores. ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#%EF%B8%8F-9-desativar-servi%C3%A7os-desnecess%C3%A1rios",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#️-9-desativar-serviços-desnecessários"
+  },"44": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "⏰ 10. Ajuste de Horário (NTP)",
+    "content": "Para que os logs, agendamentos e scripts funcionem corretamente, o roteador precisa manter a hora sincronizada. Utilizamos os servidores oficiais do projeto NTP.br. | Vá em System → NTP Client. | Marque a caixa Enabled. | No campo NTP Servers, clique no + adicione os seguintes servidores: . | a.st1.ntp.br | b.st1.ntp.br | . | Vá em System → Clock e confirme se o Time Zone Name está como America/Sao_Paulo. | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#-10-ajuste-de-hor%C3%A1rio-ntp",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#-10-ajuste-de-horário-ntp"
+  },"45": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🗄️ 11. Backup de Segurança",
+    "content": "Existem dois tipos de arquivos que você deve gerar ao finalizar a configuração: . | Backup Binário (.backup): Salva tudo, inclusive senhas. Use para restaurar no mesmo aparelho. | Vá em Files → Backup. | . | Script de Exportação (.rsc): Salva as configurações em texto. Ótimo para conferir o que foi feito. | Abra o New Terminal e digite: export file=BKP_MIKROTIK. | . | . ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/#%EF%B8%8F-11-backup-de-seguran%C3%A7a",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/#️-11-backup-de-segurança"
+  },"46": {
+    "doc": "🏁 Configuração Inicial",
+    "title": "🏁 Configuração Inicial",
+    "content": " ",
+    "url": "/docs/primeiro-passos/configuracao-inicial/",
+    
+    "relUrl": "/docs/primeiro-passos/configuracao-inicial/"
+  },"47": {
+    "doc": "🔑 Device Mode",
+    "title": "🔑 Guia: Ativação do Device Mode",
+    "content": "Este tutorial descreve como libertar permissões para comandos sensíveis, como /tool fetch e /system scheduler, que são frequentemente bloqueados por padrão nas versões mais recentes do RouterOS para aumentar a segurança do dispositivo. ",
+    "url": "/docs/seguranca/device-mode/#-guia-ativa%C3%A7%C3%A3o-do-device-mode",
+    
+    "relUrl": "/docs/seguranca/device-mode/#-guia-ativação-do-device-mode"
+  },"48": {
+    "doc": "🔑 Device Mode",
+    "title": "📌 O que é o Device Mode?",
+    "content": "A MikroTik introduziu o Device Mode para impedir que scripts maliciosos façam downloads de ficheiros externos ou executem agendamentos automáticos sem a autorização física do administrador. Se o teu script de notificações (Telegram) ou de backup parou de funcionar com o erro: failure: not allowed by device-mode Este guia é a solução definitiva. ",
+    "url": "/docs/seguranca/device-mode/#-o-que-%C3%A9-o-device-mode",
+    
+    "relUrl": "/docs/seguranca/device-mode/#-o-que-é-o-device-mode"
+  },"49": {
+    "doc": "🔑 Device Mode",
+    "title": "🛠️ Passo a Passo para Libertar o Acesso",
+    "content": "Aviso Prévio: Este procedimento exige acesso físico ao equipamento. Por questões de segurança, a MikroTik não permite completar a ativação de forma 100% remota. 1. Verificar as permissões atuais . Abre o Terminal no Winbox e executa: . /system/device-mode/print . Observa se os itens fetch e scheduler estão marcados como no. | Solicitar a atualização de permissões Para libertar as funções necessárias para os teus scripts e automações, executa o seguinte comando: | . /system/device-mode/update fetch=yes scheduler=yes email=yes . | Confirmação Física (Obrigatório) Após executares o comando acima, o RouterOS entrará num estado de espera por 5 minutos. | No Roteador: Prime rapidamente o botão RESET ou o botão MODE (apenas um clique rápido, não segures o botão). | Resultado: O roteador irá reiniciar automaticamente para validar a nova política de segurança. | . ",
+    "url": "/docs/seguranca/device-mode/#%EF%B8%8F-passo-a-passo-para-libertar-o-acesso",
+    
+    "relUrl": "/docs/seguranca/device-mode/#️-passo-a-passo-para-libertar-o-acesso"
+  },"50": {
+    "doc": "🔑 Device Mode",
+    "title": "💡 Troubleshooting (Resolução de Problemas)",
+    "content": "“Estou remoto e não posso premir o botão” . Infelizmente, por design de segurança, não existe bypass. Se o router estiver num local remoto, as funções de fetch e scheduler permanecerão bloqueadas até que alguém carregue no botão físico. “O comando de update não funciona” . Verifica se a tua versão do RouterOS é a v7.13 ou superior. Em versões muito antigas (anteriores à v6.49.8), este modo não existe e o erro de permissão costuma estar relacionado com as policies do grupo de utilizador. “Premir o botão vai apagar as minhas configurações?” . NÃO. Durante a janela de 5 minutos do comando update, o clique no botão serve apenas como uma “assinatura física”. O router apenas reinicia; as tuas configurações de IP, Firewall e NAT permanecerão intactas. ",
+    "url": "/docs/seguranca/device-mode/#-troubleshooting-resolu%C3%A7%C3%A3o-de-problemas",
+    
+    "relUrl": "/docs/seguranca/device-mode/#-troubleshooting-resolução-de-problemas"
+  },"51": {
+    "doc": "🔑 Device Mode",
+    "title": "📑 Exemplo de Script Funcional (Após Libertação)",
+    "content": "Uma vez ativo o fetch, podes usar scripts como este para testar a comunicação com a API do Telegram: . /tool fetch url=\"https://api.telegram.org/TOKEN/sendMessage?chat_id=CHAT_ID&amp;text=Teste+Wiki!\" keep-result=no check-certificate=no . ",
+    "url": "/docs/seguranca/device-mode/#-exemplo-de-script-funcional-ap%C3%B3s-liberta%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/seguranca/device-mode/#-exemplo-de-script-funcional-após-libertação"
+  },"52": {
+    "doc": "🔑 Device Mode",
+    "title": "🔑 Device Mode",
+    "content": " ",
+    "url": "/docs/seguranca/device-mode/",
+    
+    "relUrl": "/docs/seguranca/device-mode/"
+  },"53": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "🦆 Guia: DNS Dinâmico com DuckDNS",
+    "content": "O DuckDNS é um serviço gratuito que permite associar um nome fixo ao seu IP dinâmico. Este script é robusto pois salva o status em um arquivo dentro da memória do MikroTik. ",
+    "url": "/docs/seguranca/duckdns/#-guia-dns-din%C3%A2mico-com-duckdns",
+    
+    "relUrl": "/docs/seguranca/duckdns/#-guia-dns-dinâmico-com-duckdns"
+  },"54": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "🛠️ 1. Preparação no Portal DuckDNS",
+    "content": ". | Acesse o site oficial: duckdns.org. | Realize o Login: No topo da página, escolha o provedor de sua preferência para acessar o painel (você pode utilizar sua conta Google, GitHub, Twitter/X, Reddit ou Persona). | No campo sub domain, escolha um nome para identificar sua rede (ex: minha-empresa) e clique em add domain. | Localize e copie o seu Token (um código alfanumérico único que aparece no topo da página). ATENÇÃO: Não compartilhe este código, pois ele é a “chave” que permite ao MikroTik atualizar seu IP. | . O DuckDNS não utiliza usuário e senha comuns; ele usa o sistema de OAuth. Isso significa que você sempre entrará clicando no ícone da rede social que escolheu no primeiro acesso. ",
+    "url": "/docs/seguranca/duckdns/#%EF%B8%8F-1-prepara%C3%A7%C3%A3o-no-portal-duckdns",
+    
+    "relUrl": "/docs/seguranca/duckdns/#️-1-preparação-no-portal-duckdns"
+  },"55": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "📜 2. Script de Atualização",
+    "content": "Este script monitora o IP e atualiza o servidor apenas se houver mudança, registrando o sucesso ou erro no log. Passo a passo: . | Vá em System → Scripts e crie um novo chamado atualizar-duckdns. | Em Policies, marque: read, write, test, policy. | No campo Source, cole o código abaixo (ajuste as variáveis no início): . | . # --- Configurações do Usuário --- :local duckdomain \"rb-mikrotik\" :local ducktoken \"c68lkmnj-29ae-4082-bfed-e7klkqusdfa\" :local inetinterface \"pppoe-cliente-proxxima\" # --- Captura do IP Atual --- :global actualIP [/ip address get [find where interface=$inetinterface] address]; :set actualIP [:pick $actualIP 0 [:find $actualIP \"/\"]]; # --- Criação do arquivo de backup (se não existir) --- :if ([:len [/file find where name=ipstore.txt]] &lt; 1 ) do={ /file print file=ipstore.txt where name=ipstore.txt; /delay delay-time=2; /file set ipstore.txt contents=\"0.0.0.0\"; }; # --- Comparação e Atualização --- :local previousIP [/file get [find where name=ipstore.txt] contents]; :if ($previousIP != $actualIP) do={ :log info (\"DuckDNS: Tentando atualizar... Novo IP: \" . $actualIP . \" - Anterior: \" . $previousIP); /tool fetch mode=https keep-result=yes dst-path=duckdns-result.txt address=[:resolve www.duckdns.org] port=443 host=www.duckdns.org src-path=(\"/update?domains=$duckdomain&amp;token=$ducktoken&amp;ip=\".$actualIP); /delay delay-time=5; :local lastChange [/file get [find where name=duckdns-result.txt] contents]; :if ($lastChange = \"OK\") do={ /file set ipstore.txt contents=$actualIP; :log warning (\"DuckDNS: Atualizado com sucesso! IP: \" . $actualIP); } else={ :log error (\"DuckDNS: Falha na atualizacao com o IP \" . $actualIP); }; }; . ",
+    "url": "/docs/seguranca/duckdns/#-2-script-de-atualiza%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/seguranca/duckdns/#-2-script-de-atualização"
+  },"56": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "⏰ 3. Agendamento (Scheduler)",
+    "content": "Para automação total, crie o agendamento: . | Acesse System → Scheduler e clique no +. | Name: Check-DuckDNS. | Interval: 00:05:00 (5 minutos). | On Event: atualizar-duckdns. | . Na aba Policy, certifique-se de marcar read, write, test e policy. Sem isso, o agendador não terá permissão para ler o arquivo ipstore.txt ou usar o comando fetch. ",
+    "url": "/docs/seguranca/duckdns/#-3-agendamento-scheduler",
+    
+    "relUrl": "/docs/seguranca/duckdns/#-3-agendamento-scheduler"
+  },"57": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "🔍 Como testar?",
+    "content": "Para garantir que o script está rodando e se comunicando com o DuckDNS, siga esta ordem: . | Execute o Script: Vá em System → Scripts, selecione o atualizar-duckdns e clique no botão Run Script. | Verifique os Logs: Acesse o menu Log na lateral esquerda. | Se o IP for novo, você verá: DuckDNS: Tentando atualizar... seguido de DuckDNS: Atualizado com sucesso!. | . | Confira os Arquivos: Vá no menu Files. Você deverá ver dois novos arquivos na lista: . | ipstore.txt: Contém o IP que o script salvou para comparação futura. | duckdns-result.txt: Contém a resposta do site DuckDNS (deve estar escrito OK dentro dele). | . | Teste Externo: Desconecte seu celular do Wi-Fi e tente acessar seu domínio (ex: seu-subdominio.duckdns.org) pelo navegador ou Winbox. | . ",
+    "url": "/docs/seguranca/duckdns/#-como-testar",
+    
+    "relUrl": "/docs/seguranca/duckdns/#-como-testar"
+  },"58": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "💡 Por que este script é diferenciado?",
+    "content": ". | Persistência: Ao contrário de variáveis globais que somem ao reiniciar, este script usa o arquivo ipstore.txt. Se a energia cair, ao voltar, ele ainda saberá qual era o IP antigo. | Feedback Real: Ele lê o conteúdo retornado pelo site (OK ou KO) e avisa exatamente se a atualização funcionou no seu Log. | . ",
+    "url": "/docs/seguranca/duckdns/#-por-que-este-script-%C3%A9-diferenciado",
+    
+    "relUrl": "/docs/seguranca/duckdns/#-por-que-este-script-é-diferenciado"
+  },"59": {
+    "doc": "🦆 DNS Dinâmico (DuckDNS)",
+    "title": "🦆 DNS Dinâmico (DuckDNS)",
+    "content": " ",
+    "url": "/docs/seguranca/duckdns/",
+    
+    "relUrl": "/docs/seguranca/duckdns/"
+  },"60": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🔄 Guia: Failover com Netwatch (Redundância de Links)",
+    "content": "Este guia descreve como configurar a redundância de links, priorizando o link Proxxima (PPPoE) e assumindo o link Unitell (DHCP) automaticamente em caso de falha. ",
+    "url": "/docs/redes/failover/#-guia-failover-com-netwatch-redund%C3%A2ncia-de-links",
+    
+    "relUrl": "/docs/redes/failover/#-guia-failover-com-netwatch-redundância-de-links"
+  },"61": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🛠️ 1. Estrutura de Rotas (Distância Administrativa)",
+    "content": "O Failover baseia-se na Distância. O link com a menor distância é o preferencial. | Link Principal (Proxxima): Definido com Distance: 1. | Link de Backup (Unitell): Definido com Distance: 2. | . ",
+    "url": "/docs/redes/failover/#%EF%B8%8F-1-estrutura-de-rotas-dist%C3%A2ncia-administrativa",
+    
+    "relUrl": "/docs/redes/failover/#️-1-estrutura-de-rotas-distância-administrativa"
+  },"62": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🛤️ 2. Desativando a Rota Padrão Dinâmica",
+    "content": "Para que o Failover funcione, o MikroTik não deve gerenciar as rotas sozinho. Precisamos transformar as rotas dinâmicas em estáticas. Passo 1: Tornar a Rota Manual (Copy) . | Acesse IP → Routes. | Localize a rota default do Link 1 (aquela com Dst. Address: 0.0.0.0/0 e o símbolo D de dinâmica). | Clique duas vezes nela e selecione Copy. | Clique em Apply e depois em OK. Isso criará uma cópia estática. | Repita o procedimento para o Link 2 (Unitell). | . Passo 2: Desativar a Rota Automática na Interface . | Vá em PPP → Interfaces (Link Proxxima) ou IP → DHCP Client (Link Unitell). | Dê dois cliques na interface ou cliente DHCP. | Altere o campo Add Default Route para no. | Clique em Apply e OK. | . Não esqueça os comentários! Após criar as cópias manuais, clique com o botão direito nelas e use a opção Comment. Nomeie-as exatamente como: LINK PROXXIMA e LINK UNITELL BKP. ",
+    "url": "/docs/redes/failover/#%EF%B8%8F-2-desativando-a-rota-padr%C3%A3o-din%C3%A2mica",
+    
+    "relUrl": "/docs/redes/failover/#️-2-desativando-a-rota-padrão-dinâmica"
+  },"63": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🛰️ 3. Criando a Rota para Monitoramento (Check Host)",
+    "content": "Esta rota força o MikroTik a testar o IP de destino exclusivamente através do link principal, evitando que o ping saia pelo link de backup e gere um “falso positivo”. | Acesse IP → Routes e clique em +. | Dst. Address: 202.12.27.33 (IP de um Root Server). | Gateway: pppoe-cliente-proxxima. | Clique em Comment e digite: ROTA PARA MONITORAMENTO PROXXIMA. | Clique em Apply e OK. | . ",
+    "url": "/docs/redes/failover/#%EF%B8%8F-3-criando-a-rota-para-monitoramento-check-host",
+    
+    "relUrl": "/docs/redes/failover/#️-3-criando-a-rota-para-monitoramento-check-host"
+  },"64": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "👁️ 4. Monitoramento Ativo com Netwatch",
+    "content": "O Netwatch monitora o IP externo e desativa a rota principal se o ping falhar. Para um monitoramento preciso, recomendamos utilizar os IPs dos Root Servers (servidores raiz da internet), que garantem alta disponibilidade para o teste de conectividade. Você pode consultar a lista completa de IPs dos Root Servers (de A a M) no site oficial da IANA. | Acesse Tools → Netwatch e clique em +. | Na aba Host: . | Host: 202.12.27.33 | Type: icmp | Interval: 00:00:15 | . | Na aba Down (Ação ao cair): /ip route disable [find comment=\"LINK PROXXIMA\"] . | Na aba Up (Ação ao voltar): /ip route enable [find comment=\"LINK PROXXIMA\"] . | . ",
+    "url": "/docs/redes/failover/#%EF%B8%8F-4-monitoramento-ativo-com-netwatch",
+    
+    "relUrl": "/docs/redes/failover/#️-4-monitoramento-ativo-com-netwatch"
+  },"65": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🛡️ 5. Configuração de NAT (Masquerade)",
+    "content": "Certifique-se de que existam as duas regras de saída em IP → Firewall → NAT: . Regra 1: Chain: srcnat Out. Interface: pppoe-cliente-proxxima Action: masquerade. Regra 2: Chain: srcnat Out. Interface: ether2-link-unitell-dhcp Action: masquerade. ",
+    "url": "/docs/redes/failover/#%EF%B8%8F-5-configura%C3%A7%C3%A3o-de-nat-masquerade",
+    
+    "relUrl": "/docs/redes/failover/#️-5-configuração-de-nat-masquerade"
+  },"66": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🔍 Como testar?",
+    "content": ". | No Winbox, abra a janela IP → Routes. | Simule uma falha desconectando o cabo da ether1-link-proxxima. | O resultado esperado: . | O Netwatch detectará a falha. | A rota LINK PROXXIMA ficará cinza (desativada). | A rota LINK UNITELL BKP assumirá o status AS (Active Static) imediatamente. | . | . Por que usar Comentários? . O Netwatch utiliza o comentário LINK PROXXIMA para identificar qual rota ele deve ligar ou desligar. O nome no comentário deve ser idêntico ao comando inserido no Netwatch. ",
+    "url": "/docs/redes/failover/#-como-testar",
+    
+    "relUrl": "/docs/redes/failover/#-como-testar"
+  },"67": {
+    "doc": "🔄 Failover (Netwatch)",
+    "title": "🔄 Failover (Netwatch)",
+    "content": " ",
+    "url": "/docs/redes/failover/",
+    
+    "relUrl": "/docs/redes/failover/"
+  },"68": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🛡️ Guia: Firewall Básico (Proteção do Roteador)",
+    "content": "O Firewall de input é responsável por proteger o próprio roteador de acessos externos não autorizados. Seguiremos a estratégia de “Bloqueio por Padrão”, onde liberamos apenas o essencial e dropamos o resto. ",
+    "url": "/docs/seguranca/firewall-basico/#%EF%B8%8F-guia-firewall-b%C3%A1sico-prote%C3%A7%C3%A3o-do-roteador",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#️-guia-firewall-básico-proteção-do-roteador"
+  },"69": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🏗️ 1. Aceitar Conexões Estabelecidas ou Relacionadas",
+    "content": "Esta regra permite que o roteador responda a comunicações que ele mesmo iniciou. Sem ela, nada funciona corretamente. | Vá em IP → Firewall → Filter Rules e clique em +. | Aba General: . | Chain: input . | Connection State: Marque established e related. | . | Aba Action: . | Action: accept | . | Clique em OK. | . ",
+    "url": "/docs/seguranca/firewall-basico/#%EF%B8%8F-1-aceitar-conex%C3%B5es-estabelecidas-ou-relacionadas",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#️-1-aceitar-conexões-estabelecidas-ou-relacionadas"
+  },"70": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🔑 2. Aceitar Lista de Suporte (Rede Confiável)",
+    "content": "Esta mesma lista (rede-suporte) é utilizada no nosso sistema de Port Knocking. Isso significa que, seja via rede local ou via batida secreta, o firewall usará esta única regra para permitir o seu acesso, mantendo as configurações organizadas. Libera acesso total ao roteador para os IPs que estão na sua lista de permissão. | Primeiro, crie a lista: Vá na aba Address Lists e clique em +. | List: rede-suporte . | Address: 10.220.0.0/24 (Aceita a rede local inteira). | . | Crie a regra no Filter: . | Aba General: Chain: input. | Aba General: Src. Address List: rede-suporte. | Aba Action: Action: accept. | . | . Em Address, você pode colocar o IP específico de um computador ou o bloco da rede toda como fizemos acima. ",
+    "url": "/docs/seguranca/firewall-basico/#-2-aceitar-lista-de-suporte-rede-confi%C3%A1vel",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#-2-aceitar-lista-de-suporte-rede-confiável"
+  },"71": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🏓 3. Aceitar ICMP (Ping) com Limite",
+    "content": "Permite que o roteador responda a Pings, mas limita a quantidade para evitar ataques de negação de serviço (DoS). | Aba General: . | Chain: input . | Protocol: icmp . | . | Aba Extra: . | Limit: . | Rate: 10/sec . | Burst: 5 . | . | . | Aba Action: . | Action: accept | . | . ",
+    "url": "/docs/seguranca/firewall-basico/#-3-aceitar-icmp-ping-com-limite",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#-3-aceitar-icmp-ping-com-limite"
+  },"72": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🚫 4. Drop Geral (O Cadeado)",
+    "content": "Esta regra deve ser sempre a última. Ela bloqueia qualquer tentativa de conexão que não se encaixou nas regras acima (como acessos vindos da Internet/WAN). | Aba General: . | Chain: input | . | Aba Action: . | Action: drop | . | . ",
+    "url": "/docs/seguranca/firewall-basico/#-4-drop-geral-o-cadeado",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#-4-drop-geral-o-cadeado"
+  },"73": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "⚠️ Atenção à Ordem das Regras",
+    "content": "No MikroTik, a ordem dos fatores altera o produto! O firewall lê as regras de cima para baixo. | accept established/related (Topo) . | accept rede-suporte . | accept icmp . | drop input (Fundo) . | . Se você colocar a regra de Drop acima da regra de Rede Suporte, você perderá o acesso ao Winbox imediatamente e precisará de acesso físico ao roteador. ",
+    "url": "/docs/seguranca/firewall-basico/#%EF%B8%8F-aten%C3%A7%C3%A3o-%C3%A0-ordem-das-regras",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/#️-atenção-à-ordem-das-regras"
+  },"74": {
+    "doc": "🛡️ Firewall Básico",
+    "title": "🛡️ Firewall Básico",
+    "content": " ",
+    "url": "/docs/seguranca/firewall-basico/",
+    
+    "relUrl": "/docs/seguranca/firewall-basico/"
+  },"75": {
+    "doc": "📈 Graphing (Monitoramento Web)",
+    "title": "📈 Guia: Graphing (Monitoramento Web)",
+    "content": "O Graphing permite que você visualize o histórico de consumo de tráfego, CPU e Memória através de uma interface web simples, sem precisar de sistemas externos como o Zabbix. Como configurar: . | Habilitar Gráficos de Interface: . | Vá em Tools → Graphing. | Na aba Interface Rules, clique no +. | Em Interface, selecione a que deseja monitorar (ex: ether1 ou all). | Em Allow Address, você pode restringir quem vê os gráficos para um IP específico (ex: 10.220.0.100/32) ou para uma faixa de rede (ex: 10.220.0.0/24). | Store on Disks: Marque apenas se desejar salvar os dados no armazenamento físico (não recomendado para memórias Flash simples para evitar desgaste). | . | Habilitar Gráficos de Recursos (CPU/RAM/Disco): . | Na mesma janela, vá na aba Resource Rules. | Clique no + e apenas dê OK (isso começará a monitorar CPU e Memória). | . | Como visualizar: . | Abra o seu navegador e digite o IP da sua RB seguido de /graphs (Ex: http://10.220.0.1/graphs). | . | . Se você alterou a porta padrão do serviço WWW (em IP → Services), você deve incluí-la no endereço de acesso. | Porta padrão (80): http://10.220.0.1/graphs . | Porta personalizada (ex: 8080): http://10.220.0.1:8080/graphs . | . Certifique-se de que o serviço WWW está habilitado, caso contrário os gráficos não carregarão. Os gráficos são salvos na RAM por padrão. Se a RB reiniciar, o histórico é limpo. Se quiser salvar no disco, marque a opção Store on Disks. ",
+    "url": "/docs/manutencao/graphing/#-guia-graphing-monitoramento-web",
+    
+    "relUrl": "/docs/manutencao/graphing/#-guia-graphing-monitoramento-web"
+  },"76": {
+    "doc": "📈 Graphing (Monitoramento Web)",
+    "title": "📈 Graphing (Monitoramento Web)",
+    "content": " ",
+    "url": "/docs/manutencao/graphing/",
+    
+    "relUrl": "/docs/manutencao/graphing/"
+  },"77": {
+    "doc": "🔄 Hairpin NAT (Acesso Interno)",
+    "title": "📖 Guia: Hairpin NAT (Acesso Interno via DDNS/IP Público)",
+    "content": "O Problema . Quando você tenta acessar o seu IP Externo (ou DDNS) estando dentro da rede local, o pacote chega ao roteador, mas “se perde” na hora de voltar para o seu computador, fazendo a conexão falhar. O Hairpin NAT corrige esse redirecionamento interno. ",
+    "url": "/docs/seguranca/hairpin-nat/#-guia-hairpin-nat-acesso-interno-via-ddnsip-p%C3%BAblico",
+    
+    "relUrl": "/docs/seguranca/hairpin-nat/#-guia-hairpin-nat-acesso-interno-via-ddnsip-público"
+  },"78": {
+    "doc": "🔄 Hairpin NAT (Acesso Interno)",
+    "title": "🛠️ Configuração Passo a Passo",
+    "content": ". | Acesse IP → Firewall e vá na aba NAT. | Clique no botão + e preencha na aba General: . | Chain: srcnat . | Src. Address: 10.220.0.0/24 (Sua faixa de rede local). | Dst. Address: 10.220.0.100 (IP do servidor de destino). | Protocol: 6 (tcp) . | Dst. Port: (Veja as opções abaixo) . | . | . 🎯 Opção A: Para uma porta específica . Se quiser aplicar a regra apenas a um serviço (ex: HTTPS): . | Dst. Port: 443 . | Comment: Hairpin NAT - Acesso Interno HTTPS . | . 🎯 Opção B: Para múltiplas portas (Recomendado) . Se você tem várias portas (80, 443, 2222) para o mesmo servidor: . | Dst. Port: (Deixe em branco) . | Comment: Hairpin NAT - Geral Servidor 100 . | . Ao deixar em branco, a regra funcionará automaticamente para qualquer porta redirecionada para esse IP. | Na aba Action: . | Action: masquerade | . | Clique em OK. | . A Opção B é a mais eficiente para o dia a dia. Se amanhã você abrir uma nova porta para este servidor no DST-NAT, não precisará criar uma nova regra de Hairpin; ela já sairá funcionando automaticamente. ",
+    "url": "/docs/seguranca/hairpin-nat/#%EF%B8%8F-configura%C3%A7%C3%A3o-passo-a-passo",
+    
+    "relUrl": "/docs/seguranca/hairpin-nat/#️-configuração-passo-a-passo"
+  },"79": {
+    "doc": "🔄 Hairpin NAT (Acesso Interno)",
+    "title": "🔄 Hairpin NAT (Acesso Interno)",
+    "content": " ",
+    "url": "/docs/seguranca/hairpin-nat/",
+    
+    "relUrl": "/docs/seguranca/hairpin-nat/"
+  },"80": {
+    "doc": "📡 Hotspot",
+    "title": "📡 Guia: Configuração de Hotspot",
+    "content": "O Hotspot permite controlar o acesso à internet através de uma página de login. Ele gerencia autenticação, controle de banda e tempo de conexão em um só lugar. ",
+    "url": "/docs/redes/hotspot/#-guia-configura%C3%A7%C3%A3o-de-hotspot",
+    
+    "relUrl": "/docs/redes/hotspot/#-guia-configuração-de-hotspot"
+  },"81": {
+    "doc": "📡 Hotspot",
+    "title": "🏗️ 1. Preparação",
+    "content": "Antes de começar, você precisa de uma interface (física ou Bridge) dedicada para o Hotspot. Não utilize a mesma bridge da sua rede administrativa. Certifique-se de que a interface escolhida (ex: bridge-hotspot) já tenha um endereço IP definido em IP → Addresses. ",
+    "url": "/docs/redes/hotspot/#%EF%B8%8F-1-prepara%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/redes/hotspot/#️-1-preparação"
+  },"82": {
+    "doc": "📡 Hotspot",
+    "title": "🪜 2. Configuração via Hotspot Setup",
+    "content": "O MikroTik possui um assistente que cria todas as regras de firewall e NAT automaticamente. | Vá em IP → Hotspot. | Na aba Servers, clique no botão Hotspot Setup. | Hotspot Interface: Selecione a interface (ex: bridge-hotspot). Clique em Next. | Local Address of Network: Deixe o IP que já aparece. Marque Masquerade Network. Clique em Next. | Address Pool of Hotspot Network: Range de IPs que os clientes vão receber. Clique em Next. | Select Certificate: Selecione none (a menos que tenha um certificado SSL). Clique em Next. | IP Address of SMTP Server: Deixe 0.0.0.0. Clique em Next. | DNS Servers: Use 8.8.8.8 e 1.1.1.1. Clique em Next. | DNS Name: Endereço que o usuário verá no navegador (ex: login.wifi). Clique em Next. | Create Local Hotspot User: Crie o primeiro usuário (ex: admin/admin). Clique em Next. | . ",
+    "url": "/docs/redes/hotspot/#-2-configura%C3%A7%C3%A3o-via-hotspot-setup",
+    
+    "relUrl": "/docs/redes/hotspot/#-2-configuração-via-hotspot-setup"
+  },"83": {
+    "doc": "📡 Hotspot",
+    "title": "👤 3. Perfis de Usuários (User Profiles)",
+    "content": "É aqui que você define a velocidade da internet para os clientes. | Vá na aba User Profiles e clique no +. | Name: perfil-10mb. | Shared Users: Quantos dispositivos podem usar o mesmo login simultaneamente (ex: 1). | Rate Limit (rx/tx): Defina a velocidade (ex: 10M/10M). | . O segredo do Rate Limit: O primeiro valor é o Upload e o segundo é o Download. Use sempre o sufixo M para Megas. ",
+    "url": "/docs/redes/hotspot/#-3-perfis-de-usu%C3%A1rios-user-profiles",
+    
+    "relUrl": "/docs/redes/hotspot/#-3-perfis-de-usuários-user-profiles"
+  },"84": {
+    "doc": "📡 Hotspot",
+    "title": "📝 4. Criando Clientes (Users)",
+    "content": "Para liberar o acesso de alguém manualmente: . | Vá na aba Users e clique no +. | Server: Selecione all ou o seu servidor de hotspot. | Name: Nome de usuário (login). | Password: Senha do cliente. | Profile: Selecione o perfil de velocidade (ex: perfil-10mb). | . ",
+    "url": "/docs/redes/hotspot/#-4-criando-clientes-users",
+    
+    "relUrl": "/docs/redes/hotspot/#-4-criando-clientes-users"
+  },"85": {
+    "doc": "📡 Hotspot",
+    "title": "🛠️ 5. Ajustes Importantes de Segurança",
+    "content": "Desativar Cookies . Por padrão, o MikroTik “lembra” do usuário via cookies. Em redes públicas, isso pode causar problemas. | Vá em Server Profiles. | Dê um clique duplo no perfil criado (ex: hsprof1). | Na aba Login, desmarque a opção HTTP Cookie. Assim, o usuário sempre precisará logar. | . Walled Garden . Para liberar sites (como o site institucional) antes do usuário logar: . | Vá na aba Walled Garden. | Clique em +, coloque o domínio em Dst. Host (ex: *mikrotik.com*) e Action: allow. | . ",
+    "url": "/docs/redes/hotspot/#%EF%B8%8F-5-ajustes-importantes-de-seguran%C3%A7a",
+    
+    "relUrl": "/docs/redes/hotspot/#️-5-ajustes-importantes-de-segurança"
+  },"86": {
+    "doc": "📡 Hotspot",
+    "title": "📡 Hotspot",
+    "content": " ",
+    "url": "/docs/redes/hotspot/",
+    
+    "relUrl": "/docs/redes/hotspot/"
+  },"87": {
+    "doc": "🔒 Segurança & Acesso",
+    "title": "🔒 Segurança &amp; Acesso",
+    "content": "Configurações de proteção, VPNs e métodos de acesso seguro ao MikroTik. ",
+    "url": "/docs/seguranca/#-seguran%C3%A7a--acesso",
+    
+    "relUrl": "/docs/seguranca/#-segurança--acesso"
+  },"88": {
+    "doc": "🔒 Segurança & Acesso",
+    "title": "🔒 Segurança & Acesso",
+    "content": " ",
+    "url": "/docs/seguranca/",
+    
+    "relUrl": "/docs/seguranca/"
+  },"89": {
+    "doc": "📡 Redes & Links",
+    "title": "📡 Redes &amp; Links",
+    "content": "Configure links de internet, túneis, controle de tráfego e segmentação de rede. ",
+    "url": "/docs/redes/#-redes--links",
+    
+    "relUrl": "/docs/redes/#-redes--links"
+  },"90": {
+    "doc": "📡 Redes & Links",
+    "title": "📡 Redes & Links",
+    "content": " ",
+    "url": "/docs/redes/",
+    
+    "relUrl": "/docs/redes/"
+  },"91": {
+    "doc": "⚡ Automação",
+    "title": "⚡ Automação",
+    "content": "Escolha um dos tópicos abaixo para configurar rotinas automáticas no seu MikroTik. ",
+    "url": "/docs/automacao/",
+    
+    "relUrl": "/docs/automacao/"
+  },"92": {
+    "doc": "Recursos da Wiki",
+    "title": "🛠️ Recursos Disponíveis na Wiki",
+    "content": "Esta página demonstra as funcionalidades técnicas ativas na documentação para RouterOS v7. ",
+    "url": "/docs/recursos/#%EF%B8%8F-recursos-dispon%C3%ADveis-na-wiki",
+    
+    "relUrl": "/docs/recursos/#️-recursos-disponíveis-na-wiki"
+  },"93": {
+    "doc": "Recursos da Wiki",
+    "title": "1. Alertas Visuais (Callouts)",
+    "content": "Use estes blocos para destacar informações críticas nos seus scripts e tutoriais. Nota: Use para informações complementares ou dicas de boas práticas. Atenção: Use para configurações que podem causar queda de conexão ou perda de acesso. Importante: Use para requisitos obrigatórios antes de rodar um comando no Terminal. ",
+    "url": "/docs/recursos/#1-alertas-visuais-callouts",
+    
+    "relUrl": "/docs/recursos/#1-alertas-visuais-callouts"
+  },"94": {
+    "doc": "Recursos da Wiki",
+    "title": "2. Diagramas de Rede (Mermaid)",
+    "content": "Você pode desenhar topologias e fluxos de pacotes diretamente via código. graph LR A[Internet] --- B(MikroTik Router) B --- C{VLAN 10} B --- D{VLAN 20} C --- E[Dispositivos Cabeados] D --- F[Wi-Fi Convidados] . ",
+    "url": "/docs/recursos/#2-diagramas-de-rede-mermaid",
+    
+    "relUrl": "/docs/recursos/#2-diagramas-de-rede-mermaid"
+  },"95": {
+    "doc": "Recursos da Wiki",
+    "title": "3. Listas (Lists)",
+    "content": "Úteis para organizar tarefas de configuração e glossários técnicos. Task List (Checklist de Configuração) . | Configurar Identidade do Roteador (/system identity) | Configurar Usuário e Senha Forte | Configurar Firewall Filter (Input/Forward) | Ativar Backup Automático | . Definition List (Glossário) . Winbox Interface gráfica oficial para gerenciar o RouterOS. Fasttrack Recurso que acelera o encaminhamento de pacotes ignorando o processamento pesado do Firewall. ",
+    "url": "/docs/recursos/#3-listas-lists",
+    
+    "relUrl": "/docs/recursos/#3-listas-lists"
+  },"96": {
+    "doc": "Recursos da Wiki",
+    "title": "4. Tabelas Responsivas (Tables)",
+    "content": "Ideal para planos de endereçamento IP e mapeamento de portas. | Interface | VLAN ID | Rede IP | Status | . | ether2 | 10 | 192.168.10.1/24 | ok | . | ether3 | 20 | 192.168.20.1/24 | ok | . | ether4 | 30 | 10.0.0.1/24 | Manutenção | . ",
+    "url": "/docs/recursos/#4-tabelas-responsivas-tables",
+    
+    "relUrl": "/docs/recursos/#4-tabelas-responsivas-tables"
+  },"97": {
+    "doc": "Recursos da Wiki",
+    "title": "5. Rótulos (Labels)",
+    "content": "Use para indicar versões, status de scripts ou compatibilidade. Default label . Blue labe . Stable . New release . Coming soon . Deprecated . ",
+    "url": "/docs/recursos/#5-r%C3%B3tulos-labels",
+    
+    "relUrl": "/docs/recursos/#5-rótulos-labels"
+  },"98": {
+    "doc": "Recursos da Wiki",
+    "title": "6. Botões (Buttons)",
+    "content": "Transforme links em botões de ação para downloads ou referências externas. Cores de Botão . Link Padrão Link Roxo Link Azul Link Verde Link Outline . Tamanhos e Espaçamento . Botão Grande Botão Pequeno . Botão com Espaço Botão Próximo . graph LR A[Scheduler] --&gt; B[Script Bk-Mail] B --&gt; C[Gera Arquivo .rsc] C --&gt; D[Envia E-mail] D --&gt; E[Limpa Log] . ",
+    "url": "/docs/recursos/#6-bot%C3%B5es-buttons",
+    
+    "relUrl": "/docs/recursos/#6-botões-buttons"
+  },"99": {
+    "doc": "Recursos da Wiki",
+    "title": "Recursos da Wiki",
+    "content": " ",
+    "url": "/docs/recursos/",
+    
+    "relUrl": "/docs/recursos/"
+  },"100": {
+    "doc": "🚀 Primeiros Passos",
+    "title": "🚀 Primeiros Passos",
+    "content": "Escolha um dos tópicos abaixo para começar a configurar seu MikroTik. ",
+    "url": "/docs/primeiro-passos/",
+    
+    "relUrl": "/docs/primeiro-passos/"
+  },"101": {
+    "doc": "🏠 Home",
+    "title": "🚀 Wiki Técnica MikroTik",
+    "content": "Documentação centralizada para administração, segurança e automação de redes baseadas em RouterOS v7. Este repositório compila procedimentos técnicos validados e scripts de automação para a nossa infraestrutura. ",
+    "url": "/#-wiki-t%C3%A9cnica-mikrotik",
+    
+    "relUrl": "/#-wiki-técnica-mikrotik"
+  },"102": {
+    "doc": "🏠 Home",
+    "title": "🛠️ Escopo Técnico",
+    "content": ". | 🔒 Segurança &amp; Acesso | 🛠️ Manutenção do Sistema | 🔗 Links Úteis | 📝 Referências do Projeto | . ",
+    "url": "/#%EF%B8%8F-escopo-t%C3%A9cnico",
+    
+    "relUrl": "/#️-escopo-técnico"
+  },"103": {
+    "doc": "🏠 Home",
+    "title": "🔒 Segurança &amp; Acesso",
+    "content": "Políticas de proteção de borda, controle de acesso granular e túneis seguros. | Firewall &amp; Proteção: Estratégia de bloqueio por padrão, regras de Input/Forward e proteção contra Brute Force. | Redirecionamentos: Implementação de Port Forwarding (DST-NAT) e Hairpin NAT para acesso interno. | Acesso Seguro: Configuração de Port Knocking, VPN WireGuard de alta performance e ocultação de vizinhos (MNDP). | Gerenciamento: DDNS via IP Cloud, DuckDNS, No-IP e políticas rígidas de usuários e privilégios. | . ",
+    "url": "/#-seguran%C3%A7a--acesso",
+    
+    "relUrl": "/#-segurança--acesso"
+  },"104": {
+    "doc": "🏠 Home",
+    "title": "🛠️ Manutenção do Sistema",
+    "content": "Rotinas de integridade, diagnósticos e automação para garantir alta disponibilidade. | Cópias de Segurança: Scripts automatizados para geração de .backup (binário) e .rsc (texto plano). | Diagnóstico &amp; Monitoramento: Testes de estresse com Bandwidth Test, gráficos de consumo web (Graphing) e análise detalhada de logs. | Gerenciamento Físico: Sincronização de hora via SNTP (NTP.br), mapeamento de rede L2 via RoMON e expansão de armazenamento via SMB. | Resiliência: Atualizações de RouterOS/Firmware e reinicialização automática contra travamentos via Watchdog. | . ",
+    "url": "/#%EF%B8%8F-manuten%C3%A7%C3%A3o-do-sistema",
+    
+    "relUrl": "/#️-manutenção-do-sistema"
+  },"105": {
+    "doc": "🏠 Home",
+    "title": "🔗 Links Úteis",
+    "content": "Para facilitar o dia a dia na operação da rede, utilize os canais oficiais da MikroTik: . | 🌐 MikroTik Download — Winbox, Netinstall e pacotes do RouterOS. | 📚 Documentação Oficial — Manuais técnicos e referências de comandos da Wiki. | 💬 Fórum MikroTik — Discussões da comunidade mundial e soluções de problemas. | . ",
+    "url": "/#-links-%C3%BAteis",
+    
+    "relUrl": "/#-links-úteis"
+  },"106": {
+    "doc": "🏠 Home",
+    "title": "📝 Referências do Projeto",
+    "content": "Target OS: RouterOS v7.x (Stable) Arquitetura: Ambientes de Produção, Provedores e Redes Corporativas. Objetivo: Prover guias rápidos e scripts de fácil implementação “copia e cola”. Esta Wiki é mantida pela Equipe de Rede sob coordenação de Paulo Soares. O código-fonte e as atualizações podem ser acompanhados diretamente no GitHub. ",
+    "url": "/#-refer%C3%AAncias-do-projeto",
+    
+    "relUrl": "/#-referências-do-projeto"
+  },"107": {
+    "doc": "🏠 Home",
+    "title": "🏠 Home",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"108": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "☁️ Guia: IP Cloud (DDNS)",
+    "content": "O serviço de Cloud da MikroTik fornece um nome de domínio gratuito (ex: 524f0542324a.sn.mynetname.net) que aponta sempre para o IP atual da sua internet, permitindo o acesso remoto de qualquer lugar do mundo. ",
+    "url": "/docs/seguranca/ip-cloud/#%EF%B8%8F-guia-ip-cloud-ddns",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/#️-guia-ip-cloud-ddns"
+  },"109": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "🪜 1. Ativando o DDNS",
+    "content": ". | Vá em IP → Cloud. | No campo DDNS Enabled, selecione a opção Yes. | (Opcional) Marque Update Time para que o roteador também use os servidores da MikroTik para ajustar o relógio. | Clique em Apply. | . ",
+    "url": "/docs/seguranca/ip-cloud/#-1-ativando-o-ddns",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/#-1-ativando-o-ddns"
+  },"110": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "🔗 2. Obtendo seu Endereço de Acesso",
+    "content": "Após clicar em Apply, observe os campos que foram preenchidos: . | Public Address: Mostra qual é o seu IP de internet atual. | DNS Name: Este é o seu endereço fixo. É este “nome” cheio de letras e números que você usará no Winbox ou no celular para acessar o roteador remotamente. | . Copie esse DNS Name e salve em um bloco de notas. Mesmo que a operadora mude seu IP, esse nome nunca muda, pois ele é baseado no Serial Number do seu equipamento. ",
+    "url": "/docs/seguranca/ip-cloud/#-2-obtendo-seu-endere%C3%A7o-de-acesso",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/#-2-obtendo-seu-endereço-de-acesso"
+  },"111": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "🛡️ 3. Considerações de Segurança",
+    "content": "Ao ativar o Cloud, seu roteador ganha um “nome” na internet. Para sua segurança, certifique-se de: . | Trocar a senha padrão: Nunca use o usuário admin sem senha (conforme fizemos no Guia de Configuração Inicial). | Portas de Serviço: Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em IP → Services. | . ",
+    "url": "/docs/seguranca/ip-cloud/#%EF%B8%8F-3-considera%C3%A7%C3%B5es-de-seguran%C3%A7a",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/#️-3-considerações-de-segurança"
+  },"112": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "❓ Por que usar o IP Cloud?",
+    "content": ". | Acesso Remoto: Você pode entrar no Winbox do escritório estando em casa ou pelo celular (usando o app MikroTik). | VPNs: Se você configurar uma VPN (como WireGuard), usará o DNS Name do Cloud para conectar os dispositivos, garantindo que a VPN não caia quando o IP da operadora mudar. | Gratuito: É um serviço oficial da MikroTik, sem mensalidade e sem necessidade de criar contas em sites externos (como No-IP). | . Verificação de Conectividade: Observe as mensagens no rodapé da janela: . Se mostrar updated, significa que o nome já está funcionando. Se mostrar Router is behind NAT, significa que seu MikroTik está recebendo um IP privado da operadora (CGNAT), e o acesso remoto direto pode não funcionar sem uma VPN. ",
+    "url": "/docs/seguranca/ip-cloud/#-por-que-usar-o-ip-cloud",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/#-por-que-usar-o-ip-cloud"
+  },"113": {
+    "doc": "☁️ IP Cloud (DDNS)",
+    "title": "☁️ IP Cloud (DDNS)",
+    "content": " ",
+    "url": "/docs/seguranca/ip-cloud/",
+    
+    "relUrl": "/docs/seguranca/ip-cloud/"
+  },"114": {
+    "doc": "⚖️ Load Balance",
+    "title": "⚖️ Guia: Load Balance PCC (Soma de Links)",
+    "content": "Este tutorial foca em um cenário com 2 Links de internet. O objetivo é distribuir as conexões de forma que a carga seja dividida igualmente entre os dois gateways. ",
+    "url": "/docs/redes/load-balance/#%EF%B8%8F-guia-load-balance-pcc-soma-de-links",
+    
+    "relUrl": "/docs/redes/load-balance/#️-guia-load-balance-pcc-soma-de-links"
+  },"115": {
+    "doc": "⚖️ Load Balance",
+    "title": "🛠️ 1. Marcação de Conexões (Mangle)",
+    "content": "O segredo do PCC está no Mangle. Precisamos identificar o que entra por cada link para que a resposta saia pelo mesmo link. Passo 1: Aceitar tráfego local . Antes de balancear, precisamos dizer ao roteador para não balancear o que é rede interna. | Vá em IP → Firewall → Mangle. | Clique em +. | Chain: prerouting Dst. Address: 10.220.0.0/24 (Sua rede local). | Action: accept. | . Passo 2: Marcar conexões de entrada (Input) . Isso garante que, se você acessar o roteador por fora via Link 1, ele responda pelo Link 1. | Clique em +. | Chain: input In. Interface: ether1-link1. | Action: mark connection New Connection Mark: Link1_Conn. | Repita para o Link 2: . | Chain: input In. Interface: ether2-link2. | Action: mark connection New Connection Mark: Link2_Conn. | . | . Passo 3: Classificador PCC (O coração do balanceamento) . Aqui dividimos o tráfego em duas partes (conforme o número de links). | Clique em +. | Chain: prerouting In. Interface: bridge-local (sua LAN). | Advanced → Per Connection Classifier: both addresses and ports 2 0. | Action: mark connection New Connection Mark: Link1_Conn. | Clique em + para a segunda parte: . | Chain: prerouting In. Interface: bridge-local. | Advanced → Per Connection Classifier: both addresses and ports 2 1. | Action: mark connection New Connection Mark: Link2_Conn. | . | . Passo 4: Marcar as Rotas (Routing Mark) . Para cada conexão marcada (Link1_Conn e Link2_Conn), crie uma regra de Action: mark routing. | New Routing Mark: Para_Link1 (e Para_Link2 no segundo). | Passthrough: Marcado. | . ",
+    "url": "/docs/redes/load-balance/#%EF%B8%8F-1-marca%C3%A7%C3%A3o-de-conex%C3%B5es-mangle",
+    
+    "relUrl": "/docs/redes/load-balance/#️-1-marcação-de-conexões-mangle"
+  },"116": {
+    "doc": "⚖️ Load Balance",
+    "title": "🧭 2. Configurando as Rotas (Routes)",
+    "content": "Agora que os pacotes estão “etiquetados”, vamos dizer para onde eles devem ir. | Vá em IP → Routes e clique em +. | Gateway: IP ou Interface do Link 1. | Routing Mark: Para_Link1. | Clique em + para o Link 2: . | Gateway: IP ou Interface do Link 2. | Routing Mark: Para_Link2. | . | . Importante: Você também deve manter as rotas padrão (sem Routing Mark) com distâncias diferentes para servir de failover caso o PCC falhe. ",
+    "url": "/docs/redes/load-balance/#-2-configurando-as-rotas-routes",
+    
+    "relUrl": "/docs/redes/load-balance/#-2-configurando-as-rotas-routes"
+  },"117": {
+    "doc": "⚖️ Load Balance",
+    "title": "📈 3. Visualizando o Funcionamento",
+    "content": "Para verificar se está funcionando: . | Vá em IP → Firewall → Mangle. | Observe a coluna Bytes e Packets. Se ambas as regras de PCC (2/0 e 2/1) estiverem contando tráfego simultaneamente, o balanceamento está ativo. | . ",
+    "url": "/docs/redes/load-balance/#-3-visualizando-o-funcionamento",
+    
+    "relUrl": "/docs/redes/load-balance/#-3-visualizando-o-funcionamento"
+  },"118": {
+    "doc": "⚖️ Load Balance",
+    "title": "⚠️ Observações Cruciais",
+    "content": "Bancos e Sites Seguros: Alguns sites caem se você mudar de IP no meio da sessão. O PCC com both addresses and ports é o mais equilibrado, mas se tiver problemas com bancos, mude o classificador para src-address. Velocidades Diferentes: Se o Link 1 tem 100MB e o Link 2 tem 50MB, você deve criar 3 marcações (3/0, 3/1 para o Link 1 e 3/2 para o Link 2). Isso cria uma proporção de 2:1. NAT: Não esqueça de ter as regras de masquerade para ambas as interfaces WAN em IP → Firewall → NAT. O Load Balance PCC não “soma” um único download (como um vídeo no YouTube), mas permite que um usuário baixe um vídeo pelo Link 1 enquanto outro usuário joga pelo Link 2, otimizando o uso total da banda. ",
+    "url": "/docs/redes/load-balance/#%EF%B8%8F-observa%C3%A7%C3%B5es-cruciais",
+    
+    "relUrl": "/docs/redes/load-balance/#️-observações-cruciais"
+  },"119": {
+    "doc": "⚖️ Load Balance",
+    "title": "⚖️ Load Balance",
+    "content": " ",
+    "url": "/docs/redes/load-balance/",
+    
+    "relUrl": "/docs/redes/load-balance/"
+  },"120": {
+    "doc": "📝 Análise de Logs",
+    "title": "📝 Guia: Análise e Gerenciamento de Logs",
+    "content": "Os logs são os “olhos” do administrador de rede. No MikroTik, quase todos os eventos importantes são registrados aqui, mas sem organização, as informações críticas podem se perder em meio ao ruído. ",
+    "url": "/docs/manutencao/logs/#-guia-an%C3%A1lise-e-gerenciamento-de-logs",
+    
+    "relUrl": "/docs/manutencao/logs/#-guia-análise-e-gerenciamento-de-logs"
+  },"121": {
+    "doc": "📝 Análise de Logs",
+    "title": "🔍 Onde Visualizar os Logs",
+    "content": "No Winbox, acesse a janela Log no menu lateral esquerdo. Por padrão, o RouterOS armazena os logs na memória RAM (eles são apagados se o roteador for reiniciado). ",
+    "url": "/docs/manutencao/logs/#-onde-visualizar-os-logs",
+    
+    "relUrl": "/docs/manutencao/logs/#-onde-visualizar-os-logs"
+  },"122": {
+    "doc": "📝 Análise de Logs",
+    "title": "🛠️ Configurando Tópicos de Log (System Logging)",
+    "content": "Você pode personalizar o que o MikroTik deve registrar e onde deve salvar. Acesse: System → Logging. 1. Criar um Filtro Customizado . Se você deseja monitorar apenas eventos de PPPoE e Scripts: . | Vá na aba Rules. | Clique em +. | Em Topics, selecione pppoe e info. | Em Action, escolha memory (ou disk se quiser que os logs sobrevivam ao reboot). | . 2. Tópicos Essenciais para Monitoramento: . | critical: Erros de hardware ou falhas graves de sistema. | error: Falhas em serviços (ex: script falhou). | warning: Alertas de atenção. | account: Registra quem logou no roteador. | script: Mensagens geradas pelos seus scripts customizados. | . ",
+    "url": "/docs/manutencao/logs/#%EF%B8%8F-configurando-t%C3%B3picos-de-log-system-logging",
+    
+    "relUrl": "/docs/manutencao/logs/#️-configurando-tópicos-de-log-system-logging"
+  },"123": {
+    "doc": "📝 Análise de Logs",
+    "title": "🚨 Interpretando Erros Comuns",
+    "content": "| Mensagem de Log | O que significa? | . | pppoe,info: terminating... - user request | O link foi derrubado manualmente ou pelo provedor. | . | script,error: failure: Network unreachable | Seu script tentou rodar antes da internet estar pronta. | . | system,error,critical: login failure for user admin | Alerta! Alguém está tentando invadir seu roteador via Brute Force. | . | interface,info: ether1 link down | Cabo desconectado ou falha física na porta. | . ",
+    "url": "/docs/manutencao/logs/#-interpretando-erros-comuns",
+    
+    "relUrl": "/docs/manutencao/logs/#-interpretando-erros-comuns"
+  },"124": {
+    "doc": "📝 Análise de Logs",
+    "title": "🤖 Enviando Logs para o Telegram via Script",
+    "content": "Você pode criar um script que monitora o log e te avisa no Telegram quando algo específico acontece. Exemplo de lógica para o Terminal: . :foreach i in=[/log find message~\"login failure\"] do={ :local logMsg [/log get $i message] /tool fetch url=\"[https://api.telegram.org/bot](https://api.telegram.org/bot)&lt;TOKEN&gt;/sendMessage?chat_id=&lt;ID&gt;&amp;text=Tentativa de Invasao: $logMsg\" keep-result=no check-certificate=no } . ",
+    "url": "/docs/manutencao/logs/#-enviando-logs-para-o-telegram-via-script",
+    
+    "relUrl": "/docs/manutencao/logs/#-enviando-logs-para-o-telegram-via-script"
+  },"125": {
+    "doc": "📝 Análise de Logs",
+    "title": "💾 Salvando Logs no Disco",
+    "content": "Para evitar perder o histórico após uma queda de energia: . | Vá em System → Logging → Actions. | Clique duas vezes em disk. | Defina File Name (ex: log-file). | Em Rules, altere a Action do tópico desejado de memory para disk. | . Ao criar scripts, use o comando :log info \"TEXTO\" ou :log error \"TEXTO\". Isso facilita muito a filtragem na Wiki ou no Terminal para saber se sua automação está funcionando corretamente. ",
+    "url": "/docs/manutencao/logs/#-salvando-logs-no-disco",
+    
+    "relUrl": "/docs/manutencao/logs/#-salvando-logs-no-disco"
+  },"126": {
+    "doc": "📝 Análise de Logs",
+    "title": "📝 Análise de Logs",
+    "content": " ",
+    "url": "/docs/manutencao/logs/",
+    
+    "relUrl": "/docs/manutencao/logs/"
+  },"127": {
+    "doc": "🛠️ Manutenção",
+    "title": "🛠️ Manutenção do Sistema",
+    "content": "Esta seção reúne os procedimentos operacionais padrão (POPs), scripts de automação e ferramentas de diagnóstico para garantir a integridade, o backup e a alta disponibilidade dos roteadores MikroTik. Escolha um dos tópicos no menu lateral para acessar os guias técnicos. ",
+    "url": "/docs/manutencao/manutencao/#%EF%B8%8F-manuten%C3%A7%C3%A3o-do-sistema",
+    
+    "relUrl": "/docs/manutencao/manutencao/#️-manutenção-do-sistema"
+  },"128": {
+    "doc": "🛠️ Manutenção",
+    "title": "🛠️ Manutenção",
+    "content": " ",
+    "url": "/docs/manutencao/manutencao/",
+    
+    "relUrl": "/docs/manutencao/manutencao/"
+  },"129": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "🕵️ Guia: Neighbor Discovery (Segurança)",
+    "content": "O protocolo MNDP (MikroTik Neighbor Discovery Protocol) permite que seu roteador seja encontrado na aba Neighbors do Winbox. Por segurança, ele nunca deve estar ativo na porta da internet (WAN), apenas em interfaces seguras. ",
+    "url": "/docs/seguranca/neighbor-discovery/#%EF%B8%8F-guia-neighbor-discovery-seguran%C3%A7a",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/#️-guia-neighbor-discovery-segurança"
+  },"130": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "🛠️ Passo 1: Criar a Lista de Interfaces Seguras",
+    "content": "O primeiro passo é criar um \"grupo\" e dizer ao MikroTik quem faz parte dele. | Vá em Interfaces → aba Interface List. | Clique em Lists e depois no +. | Name: LISTA-SEGURA . | Clique em OK. | . | Agora, clique na aba Interface List (ao lado de Lists) e clique no +. | List: LISTA-SEGURA . | Interface: Selecione a sua bridge-local (ou a interface onde você conecta seu PC). | Clique em OK. | . | . ",
+    "url": "/docs/seguranca/neighbor-discovery/#%EF%B8%8F-passo-1-criar-a-lista-de-interfaces-seguras",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/#️-passo-1-criar-a-lista-de-interfaces-seguras"
+  },"131": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "🔒 Passo 2: Restringir a Descoberta (Neighbor)",
+    "content": "Agora vamos dizer ao roteador para só “falar” com quem estiver nessa lista. | Vá no menu IP → Neighbor. | Clique na aba Discovery Settings. | No campo Interface, selecione a lista que você acabou de criar: LISTA-SEGURA. | Clique em Apply e OK. | . A partir de agora, se você conectar o cabo na porta WAN ou em qualquer porta que não esteja na LISTA-SEGURA, o MikroTik não aparecerá mais no Winbox. ",
+    "url": "/docs/seguranca/neighbor-discovery/#-passo-2-restringir-a-descoberta-neighbor",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/#-passo-2-restringir-a-descoberta-neighbor"
+  },"132": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "🛡️ Passo 3: Proteção Extra (MAC-Server)",
+    "content": "Para fechar a segurança, você deve restringir quem pode tentar login via Endereço MAC (aquela conexão que usamos quando o roteador está sem IP). | Vá em Tools → MAC Server. | Na aba MAC Telnet Server, clique em Allowed Interface List e mude para none (ou LISTA-SEGURA se você realmente usa MAC-Telnet). | Na aba MAC Winbox Server, clique em Allowed Interface List e selecione LISTA-SEGURA. | Clique em OK. | . ",
+    "url": "/docs/seguranca/neighbor-discovery/#%EF%B8%8F-passo-3-prote%C3%A7%C3%A3o-extra-mac-server",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/#️-passo-3-proteção-extra-mac-server"
+  },"133": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "✅ Como testar?",
+    "content": ". | Abra um novo Winbox em um PC na rede local. | Vá na aba Neighbors. Seu MikroTik deve aparecer normalmente. | O teste real: Se você tiver como conectar um cabo em uma porta fora da Bridge (ou na WAN), verá que o MikroTik sumiu da lista, ficando totalmente invisível para vizinhos e scanners. | . Por que usamos Interface List? . Se no futuro você criar uma rede Wi-Fi separada ou uma nova VLAN e quiser que o MikroTik também apareça nela, você não mexe mais no menu Neighbor. Você apenas adiciona essa nova interface dentro da LISTA-SEGURA e pronto: as regras de Neighbor, MAC-Server e até de Firewall (se você as configurar assim) já estarão valendo automaticamente. ",
+    "url": "/docs/seguranca/neighbor-discovery/#-como-testar",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/#-como-testar"
+  },"134": {
+    "doc": "🕵️ Neighbor Discovery (Segurança)",
+    "title": "🕵️ Neighbor Discovery (Segurança)",
+    "content": " ",
+    "url": "/docs/seguranca/neighbor-discovery/",
+    
+    "relUrl": "/docs/seguranca/neighbor-discovery/"
+  },"135": {
+    "doc": "📡 Netwatch",
+    "title": "📡 Guia: Monitoramento com Netwatch",
+    "content": "O Netwatch permite que o roteador “tome decisões” sozinho baseado na conectividade. É ideal para trocar rotas automaticamente ou avisar via Telegram quando um link cai. ",
+    "url": "/docs/automacao/netwatch/#-guia-monitoramento-com-netwatch",
+    
+    "relUrl": "/docs/automacao/netwatch/#-guia-monitoramento-com-netwatch"
+  },"136": {
+    "doc": "📡 Netwatch",
+    "title": "🛠️ 1. Como Criar um Monitoramento (Winbox)",
+    "content": ". | No menu lateral, vá em Tools → Netwatch. | Clique no botão +. | Na aba Host, preencha: . | Host: O endereço IP que você deseja monitorar (ex: 8.8.8.8 do Google ou gateway da sua operadora). | Interval: De quanto em quanto tempo ele deve testar o IP (ex: 00:00:10 para testar a cada 10 segundos). | Timeout: Quanto tempo ele deve esperar a resposta do ping antes de considerar que caiu (ex: 1000ms). | . | . ",
+    "url": "/docs/automacao/netwatch/#%EF%B8%8F-1-como-criar-um-monitoramento-winbox",
+    
+    "relUrl": "/docs/automacao/netwatch/#️-1-como-criar-um-monitoramento-winbox"
+  },"137": {
+    "doc": "📡 Netwatch",
+    "title": "⚡ 2. Configurando as Ações (Scripts)",
+    "content": "O Netwatch possui duas abas principais de ação: Up (quando o host responde) e Down (quando o host para de responder). Aba Down (O que fazer quando cair): . Aqui você coloca o comando ou o nome do script que deve rodar no momento da falha. Exemplo (Aviso no Log): .     /log error \"LINK PRINCIPAL FORA DO AR!\" . Aba Up (O que fazer quando voltar): . Aqui você coloca o que deve acontecer quando a conexão for restabelecida. Exemplo (Aviso no Log): .     /log warning \"LINK PRINCIPAL RESTABELECIDO!\" . ",
+    "url": "/docs/automacao/netwatch/#-2-configurando-as-a%C3%A7%C3%B5es-scripts",
+    
+    "relUrl": "/docs/automacao/netwatch/#-2-configurando-as-ações-scripts"
+  },"138": {
+    "doc": "📡 Netwatch",
+    "title": "🤖 3. Exemplo Prático: Notificação no Telegram",
+    "content": "Se você já seguiu o tutorial de Bot do Telegram, pode integrar o Netwatch para receber alertas no celular: . Na aba Down: . /tool fetch url=\"https://api.telegram.org/botTOKEN/sendMessage?chat_id=ID&amp;text=ALERTA: Link Proxxima Caiu!\" keep-result=no . Na aba Up: . /tool fetch url=\"https://api.telegram.org/botTOKEN/sendMessage?chat_id=ID&amp;text=UFA: Link Proxxima Normalizado!\" keep-result=no . ",
+    "url": "/docs/automacao/netwatch/#-3-exemplo-pr%C3%A1tico-notifica%C3%A7%C3%A3o-no-telegram",
+    
+    "relUrl": "/docs/automacao/netwatch/#-3-exemplo-prático-notificação-no-telegram"
+  },"139": {
+    "doc": "📡 Netwatch",
+    "title": "🔍 4. Status do Netwatch",
+    "content": "Na janela principal do Netwatch, você verá a coluna Status: . | 🟢 Up: O host está respondendo normalmente. | 🔴 Down: O host não responde (o script de “Down” foi executado). | ⚪ Unknown: O teste ainda não foi iniciado ou o host é inválido. | . ",
+    "url": "/docs/automacao/netwatch/#-4-status-do-netwatch",
+    
+    "relUrl": "/docs/automacao/netwatch/#-4-status-do-netwatch"
+  },"140": {
+    "doc": "📡 Netwatch",
+    "title": "⚠️ Dica de Ouro: Evite o “Falso Negativo”",
+    "content": "Não monitore um IP que pode bloquear pings ou que seja instável por natureza. O ideal é monitorar o DNS do Google (8.8.8.8) ou o Cloudflare (1.1.1.1) para testar a internet real, ou o IP do roteador da operadora para testar apenas o link físico. Uso Avançado: O Netwatch é muito usado em cenários de Failover, onde ele desativa uma rota principal (/ip route disable [find comment=\"rota1\"]) quando o link cai, forçando o roteador a usar o link reserva. ",
+    "url": "/docs/automacao/netwatch/#%EF%B8%8F-dica-de-ouro-evite-o-falso-negativo",
+    
+    "relUrl": "/docs/automacao/netwatch/#️-dica-de-ouro-evite-o-falso-negativo"
+  },"141": {
+    "doc": "📡 Netwatch",
+    "title": "📡 Netwatch",
+    "content": " ",
+    "url": "/docs/automacao/netwatch/",
+    
+    "relUrl": "/docs/automacao/netwatch/"
+  },"142": {
+    "doc": "🌐 DNS Dinâmico (No-IP)",
+    "title": "🌐 Guia: DNS Dinâmico com No-IP (Acesso Remoto)",
+    "content": "Este guia descreve como configurar o serviço de DNS Dinâmico do No-IP no MikroTik, permitindo o acesso remoto à rede (Winbox, VPN, Servidores) mesmo quando o endereço IP fornecido pela operadora é dinâmico. ",
+    "url": "/docs/seguranca/no-ip/#-guia-dns-din%C3%A2mico-com-no-ip-acesso-remoto",
+    
+    "relUrl": "/docs/seguranca/no-ip/#-guia-dns-dinâmico-com-no-ip-acesso-remoto"
+  },"143": {
+    "doc": "🌐 DNS Dinâmico (No-IP)",
+    "title": "🛠️ 1. Preparação no Portal No-IP",
+    "content": "Antes de configurar o roteador, você deve criar a identidade do seu host. | Acesse o site No-IP e crie sua conta. | Vá em DDNS e Acesso Remoto/ou Gerenciar DNS → DNS Records. | Clique em Criar Hostname. | Defina o nome (ex: mikrotik-net) e escolha um domínio (ex: ddns.net). | Guarde seu E-mail, Senha e o Hostname criado. | . O uso de DNS é ideal para quem possui IP Público Dinâmico. Caso seu IP esteja sob CGNAT, o acesso externo não funcionará a menos que a operadora realize o “rollback” ou forneça um IP público. ",
+    "url": "/docs/seguranca/no-ip/#%EF%B8%8F-1-prepara%C3%A7%C3%A3o-no-portal-no-ip",
+    
+    "relUrl": "/docs/seguranca/no-ip/#️-1-preparação-no-portal-no-ip"
+  },"144": {
+    "doc": "🌐 DNS Dinâmico (No-IP)",
+    "title": "📜 2. Script de Atualização Automática",
+    "content": "Como o MikroTik não possui um menu nativo para o No-IP, utilizamos um script para informar ao servidor qual é o seu IP atual toda vez que ele mudar. Passo a passo: . | Acesse System → Scripts e clique no +. | Name: atualizar-noip. | Policies (Permissões): Por padrão, o MikroTik já deixa as caixas marcadas. Apenas certifique-se de que as permissões read, write, test e policy continuem selecionadas. | read: Permite que o script leia o seu IP nas interfaces. | write: Permite que o script salve o novo IP na variável. | test: Permite que o script use a ferramenta Fetch para falar com a internet. | policy: Necessário para scripts que alteram configurações do sistema. | . | . No campo Source, cole o código abaixo: . # Atualizacao automatica do No-IP # Alterar as informacoes desta secao conforme os dados do seu login e host no-ip :local noipuser \"USUARIO\" :local noippass \"SENHA\" :local noiphost \"HOSTNAME.DDNS.NET\" # Nome da interface que devera ter o endereco IP vinculado ao host do no-ip :local inetinterface \"pppoe-cliente-proxxima\" :global previousIP :if ([/interface get $inetinterface value-name=running]) do={ # Obtendo informacao sobre o IP atual :local currentIP [/ip address get [find interface=\"$inetinterface\" disabled=no] address] :for i from=( [:len $currentIP] - 1) to=0 do={ :if ( [:pick $currentIP $i] = \"/\") do={ :set currentIP [:pick $currentIP 0 $i] } } :if ($currentIP != $previousIP) do={ :log info \"No-IP: IP atual $currentIP diferente do IP anterior, atualizando.\" :set previousIP $currentIP # Enviando o novo IP via http :log info \"No-IP: Atualizando o host $noiphost\" /tool fetch mode=http user=$noipuser password=$noippass url=\"http://dynupdate.no-ip.com/nic/update\\3Fhostname=$noiphost&amp;myip=$currentIP\" keep-result=no :log info \"No-IP: Host $noiphost atualizado no No-IP = $currentIP\" } } else={ :log info \"No-IP: $inetinterface desconectada. Impossivel atualizar No-IP.\" } . No campo inetinterface, certifique-se de digitar o nome exato da sua interface de internet (ex: pppoe-cliente-proxxima). ",
+    "url": "/docs/seguranca/no-ip/#-2-script-de-atualiza%C3%A7%C3%A3o-autom%C3%A1tica",
+    
+    "relUrl": "/docs/seguranca/no-ip/#-2-script-de-atualização-automática"
+  },"145": {
+    "doc": "🌐 DNS Dinâmico (No-IP)",
+    "title": "⏰ 3. Agendamento da Verificação (Scheduler)",
+    "content": "Para que o MikroTik verifique e atualize o IP automaticamente, precisamos criar um agendamento. | Acesse System → Scheduler e clique no +. | Name: Check-NoIP. | Interval: 00:05:00 (Verifica a cada 5 minutos). | On Event: Digite o nome exato do script criado anteriormente: atualizar-noip. | Clique em Apply e OK. | As permissões (Policies) devem ser idênticas às que você marcou no Script para que o agendamento tenha autoridade para executá-lo. | read: (para ler o IP da interface) . | write: (para atualizar a variável global) . | test: (para permitir que o comando fetch saia para a internet) . | policy: (para permitir a execução do script agendado) . | . | . Atenção ao CGNAT! Se o IP da sua interface PPPoE começar com 100.64.x.x, o acesso remoto via DDNS comum não funcionará, pois você não possui um IP público real. Nesse caso, será necessário utilizar um serviço de Tunneling (como ZeroTier ou Tailscale) ou solicitar um IP público à operadora. ",
+    "url": "/docs/seguranca/no-ip/#-3-agendamento-da-verifica%C3%A7%C3%A3o-scheduler",
+    
+    "relUrl": "/docs/seguranca/no-ip/#-3-agendamento-da-verificação-scheduler"
+  },"146": {
+    "doc": "🌐 DNS Dinâmico (No-IP)",
+    "title": "🌐 DNS Dinâmico (No-IP)",
+    "content": " ",
+    "url": "/docs/seguranca/no-ip/",
+    
+    "relUrl": "/docs/seguranca/no-ip/"
+  },"147": {
+    "doc": "⏰ Ajuste de Hora (NTP)",
+    "title": "⏰ Guia: Ajuste de Hora (NTP Client)",
+    "content": "O MikroTik não possui uma bateria interna para manter a hora após ser desligado. Por isso, ele precisa consultar servidores na internet toda vez que inicia para sincronizar o relógio. ",
+    "url": "/docs/manutencao/ntp/#-guia-ajuste-de-hora-ntp-client",
+    
+    "relUrl": "/docs/manutencao/ntp/#-guia-ajuste-de-hora-ntp-client"
+  },"148": {
+    "doc": "⏰ Ajuste de Hora (NTP)",
+    "title": "🪜 1. Configurando o Fuso Horário",
+    "content": "Antes de buscar a hora na internet, precisamos dizer ao roteador em qual parte do mundo ele está. | Vá em System → Clock. | Na aba Time, verifique se o campo Time Zone Name está correto. | Para a maior parte do Brasil, use: America/Sao_Paulo. | . | Marque a opção Time Zone Autodetect . | Clique em Apply e OK. | . ",
+    "url": "/docs/manutencao/ntp/#-1-configurando-o-fuso-hor%C3%A1rio",
+    
+    "relUrl": "/docs/manutencao/ntp/#-1-configurando-o-fuso-horário"
+  },"149": {
+    "doc": "⏰ Ajuste de Hora (NTP)",
+    "title": "🛰️ 2. Ativando o NTP Client (Recomendado)",
+    "content": "Agora vamos configurar o roteador para buscar a hora exata nos servidores oficiais do Brasil (NTP.br). | Vá em System → NTP Client. | Marque a caixa Enabled. | No campo NTP Servers, clique no + adicione os seguintes servidores: . | a.st1.ntp.br . | b.st1.ntp.br . | . | Clique em OK. | . Como saber se funcionou? . Assim que você clicar em OK, o campo Status na parte inferior da janela deverá mudar para synchronized. Isso indica que o roteador já recebeu e ajustou a hora corretamente. ❓ Por que isso é importante? . | Logs: Permite saber exatamente quando um erro ocorreu ou quando um cliente se conectou. | Agendamentos: Garante que scripts e tarefas programadas no Scheduler rodem no horário exato. | Segurança: VPNs e certificados de segurança exigem que a data e hora do roteador estejam atualizadas para validar a conexão. | . ",
+    "url": "/docs/manutencao/ntp/#%EF%B8%8F-2-ativando-o-ntp-client-recomendado",
+    
+    "relUrl": "/docs/manutencao/ntp/#️-2-ativando-o-ntp-client-recomendado"
+  },"150": {
+    "doc": "⏰ Ajuste de Hora (NTP)",
+    "title": "⏰ Ajuste de Hora (NTP)",
+    "content": " ",
+    "url": "/docs/manutencao/ntp/",
+    
+    "relUrl": "/docs/manutencao/ntp/"
+  },"151": {
+    "doc": "🚪 Port Forwarding (Redirecionamento)",
+    "title": "📖 Guia: Port Forwarding (Redirecionamento de Portas)",
+    "content": "O redirecionamento de portas permite que um serviço hospedado na sua rede interna (como um servidor web, câmera ou sistema) seja acessado externamente através do IP da sua WAN. ",
+    "url": "/docs/seguranca/port-forwarding/#-guia-port-forwarding-redirecionamento-de-portas",
+    
+    "relUrl": "/docs/seguranca/port-forwarding/#-guia-port-forwarding-redirecionamento-de-portas"
+  },"152": {
+    "doc": "🚪 Port Forwarding (Redirecionamento)",
+    "title": "🛠️ Configuração Passo a Passo",
+    "content": "Neste exemplo, vamos redirecionar o tráfego HTTPS (porta 443) para o servidor interno com o IP 10.220.0.100. | No Winbox, acesse o menu IP → Firewall. | Vá até a aba NAT e clique no botão +. | Na aba General, preencha os campos abaixo: . | Chain: dstnat . | Protocol: 6 (tcp) . | Dst. Port: 443 . | . | . Ajuste para Acesso Interno (Aba Extra): . Se você pretende acessar este servidor usando o DDNS/IP Público mesmo estando dentro da rede local, vá na aba Extra e defina Dst. Address Type: local. Isso é essencial para que o Hairpin NAT funcione corretamente sem precisar travar a regra em uma interface (WAN). | Mude para a aba Action e configure o destino: . | Action: dst-nat . | To Addresses: 10.220.0.100 . | . | Comentário (Comment): . | Adicione uma identificação para sua organização: Acesso Externo - Servidor Web. | . | Clique em Apply e OK. | . ",
+    "url": "/docs/seguranca/port-forwarding/#%EF%B8%8F-configura%C3%A7%C3%A3o-passo-a-passo",
+    
+    "relUrl": "/docs/seguranca/port-forwarding/#️-configuração-passo-a-passo"
+  },"153": {
+    "doc": "🚪 Port Forwarding (Redirecionamento)",
+    "title": "🛡️ Boas Práticas de Segurança",
+    "content": "Ao abrir a porta 443 (HTTPS), seu dispositivo ficará exposto à internet. Considere estas proteções: . | Restrição por IP de Origem: Se apenas uma empresa ou pessoa específica precisa acessar, vá na aba General e em Src. Address coloque o IP fixo de quem vai acessar. | . Sobre o Src. Address: O IP a ser inserido neste campo deve ser o IP Público (Internet) da pessoa/empresa que realizará o acesso. IPs privados/locais (ex: 192.168.x.x) não funcionam aqui, pois não trafegam pela internet. Caso o visitante não possua um IP fixo, deixe o campo em branco. | Porta Externa Diferente: Você pode usar uma porta externa “disfarçada” (ex: 8443) que redireciona para a 443 interna. Para isso, mude o Dst. Port para 8443 e mantenha o To Ports como 443. | . Acesso via Porta Personalizada: Ao usar uma porta externa “disfarçada” (ex: 8443), você deve obrigatoriamente especificá-la ao digitar o endereço no navegador ou aplicativo. | Exemplo: https://seudominio.ddns.net:8443 | . O MikroTik receberá a conexão na 8443 e fará a entrega silenciosa para a porta 443 interna do seu servidor. Se você não digitar :8443, o navegador tentará a porta padrão (443) e a conexão falhará. ",
+    "url": "/docs/seguranca/port-forwarding/#%EF%B8%8F-boas-pr%C3%A1ticas-de-seguran%C3%A7a",
+    
+    "relUrl": "/docs/seguranca/port-forwarding/#️-boas-práticas-de-segurança"
+  },"154": {
+    "doc": "🚪 Port Forwarding (Redirecionamento)",
+    "title": "🔍 Como testar?",
+    "content": ". | Certifique-se de que o serviço no IP 10.220.0.100 está ativo e aceitando conexões na porta 443. | . Teste de Porta Aberta: . Acesse o site YouGetSignal (Port Forwarding Tester) e: . | Verifique se o Remote Address é o seu IP público atual. | No campo Port Number, digite 443. | Clique em Check. | . Se o resultado for uma bandeira verde (Port 443 is open), seu redirecionamento está funcionando perfeitamente! . | Tente acessar pelo seu IP Público (encontrado em IP Cloud) usando um dispositivo fora da sua rede (como o 4G/5G do celular). | . Se você tentar acessar pelo IP externo estando conectado na rede local (Wi-Fi/Cabo da mesma rede), o acesso pode falhar devido à falta de uma regra de Hairpin NAT. Teste sempre por uma conexão externa. ",
+    "url": "/docs/seguranca/port-forwarding/#-como-testar",
+    
+    "relUrl": "/docs/seguranca/port-forwarding/#-como-testar"
+  },"155": {
+    "doc": "🚪 Port Forwarding (Redirecionamento)",
+    "title": "🚪 Port Forwarding (Redirecionamento)",
+    "content": " ",
+    "url": "/docs/seguranca/port-forwarding/",
+    
+    "relUrl": "/docs/seguranca/port-forwarding/"
+  },"156": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🚪 Guia: Port Knocking (Acesso Seguro)",
+    "content": "O Port Knocking funciona como uma “batida secreta”. Enquanto você não bater na sequência correta, as portas de gerenciamento do roteador permanecem invisíveis para a internet. ",
+    "url": "/docs/seguranca/port-knocking/#-guia-port-knocking-acesso-seguro",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#-guia-port-knocking-acesso-seguro"
+  },"157": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🛠️ 1. Entendendo a Lógica (A “Batida”)",
+    "content": "Imagine que o seu roteador é um cofre com um sistema de segurança inteligente: . | A 1ª Batida (Porta 7788): Você tenta acessar essa porta. O roteador não responde (dá erro no navegador), mas ele anota o seu IP na lista pre-rede-suporte por apenas 30 segundos. É como se ele dissesse: “Alguém bateu o primeiro toque, vou esperar o segundo por 30 segundos”. | A 2ª Batida (Porta 4455): Você acessa essa porta. O roteador verifica: “Esse IP que bateu aqui já tinha batido na porta 7788 nos últimos 30 segundos?”. Se SIM, ele move seu IP para a lista definitiva rede-suporte. | A Liberação: Uma vez que seu IP está na lista rede-suporte, a regra de Accept do Firewall se abre para você. Agora você pode abrir o Winbox, SSH ou Webfig. | . ",
+    "url": "/docs/seguranca/port-knocking/#%EF%B8%8F-1-entendendo-a-l%C3%B3gica-a-batida",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#️-1-entendendo-a-lógica-a-batida"
+  },"158": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🪜 2. Configuração via Winbox",
+    "content": "Passo 1: A Primeira Batida (Porta 7788) . | Vá em IP → Firewall → Filter Rules e clique em +. | Aba General: Chain: input, Protocol: 6 (tcp), Dst. Port: 7788. | Aba Action: . | Action: add src to address list . | Address List: pre-rede-suporte . | Timeout: 00:00:30 (30 segundos). | . | . Passo 2: A Segunda Batida (Porta 4455) . | Clique em + para uma nova regra. | Aba General: Chain: input, Src. Address List: pre-rede-suporte, Protocol: 6 (tcp), Dst. Port: 4455. | . Src. Address List: pre-rede-suporte — Aqui está o segredo: o roteador só aceita o segundo toque se você tiver dado o primeiro. | Aba Action: . | Action: add src to address list . | Address List: rede-suporte . | Timeout: 01:00:00 (Libera seu acesso por 1 hora). | . | . ",
+    "url": "/docs/seguranca/port-knocking/#-2-configura%C3%A7%C3%A3o-via-winbox",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#-2-configuração-via-winbox"
+  },"159": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🔓 3. Liberando o Acesso Real",
+    "content": "Se você já seguiu o guia de Firewall Básico, você já possui uma regra que aceita a rede-suporte. Não é necessário criar uma nova; o Port Knocking apenas adicionará o seu IP temporariamente a essa lista que o Firewall já autoriza. Se você ainda não tem essa regra, crie-a: . | Aba General: Chain: input, Src. Address List: rede-suporte. | Aba Action: Action: accept. | . No Winbox, arraste esta regra para (acima do seu Drop Geral). ",
+    "url": "/docs/seguranca/port-knocking/#-3-liberando-o-acesso-real",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#-3-liberando-o-acesso-real"
+  },"160": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🚀 4. Como realizar a batida na prática",
+    "content": "Quando você estiver fora da sua rede e precisar acessar o Winbox: . | Pelo Navegador: Digite e acesse (mesmo que dê erro): . | http://dominio.duckdns.org:7788 . | Aguarde 2 segundos e acesse: http://dominio.duckdns.org:4455 . | . | . O navegador dará erro de conexão, isso é normal e significa que a batida funcionou. | Pelo Winbox: Agora abra o Winbox e conecte usando seu DDNS/IP e a sua porta personalizada (ex: 5050). | . ",
+    "url": "/docs/seguranca/port-knocking/#-4-como-realizar-a-batida-na-pr%C3%A1tica",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#-4-como-realizar-a-batida-na-prática"
+  },"161": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "💡 Dica de Ouro",
+    "content": "Você pode automatizar essas batidas criando um arquivo .bat no Windows ou um atalho no celular que abre essas duas URLs em sequência. Assim, com um clique, você “abre o cofre” do seu MikroTik. O Port Knocking é excelente porque não consome recursos de CPU processando tentativas de login inválidas; o firewall simplesmente descarta os pacotes de quem não conhece a batida secreta. ",
+    "url": "/docs/seguranca/port-knocking/#-dica-de-ouro",
+    
+    "relUrl": "/docs/seguranca/port-knocking/#-dica-de-ouro"
+  },"162": {
+    "doc": "🚪 Port Knocking (Acesso Seguro)",
+    "title": "🚪 Port Knocking (Acesso Seguro)",
+    "content": " ",
+    "url": "/docs/seguranca/port-knocking/",
+    
+    "relUrl": "/docs/seguranca/port-knocking/"
+  },"163": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "🌐 Guia: PPPoE Client e PPPoE Server",
+    "content": "O protocolo PPPoE (Point-to-Point Protocol over Ethernet) é o padrão mais utilizado por provedores para autenticação de usuários, permitindo controle de banda e entrega de IP de forma organizada. ",
+    "url": "/docs/redes/pppoe/#-guia-pppoe-client-e-pppoe-server",
+    
+    "relUrl": "/docs/redes/pppoe/#-guia-pppoe-client-e-pppoe-server"
+  },"164": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "📥 1. PPPoE Client (Receber Internet)",
+    "content": "Use este método se você tem um link de internet que exige usuário e senha. Passo a Passo (Winbox): . | Vá em Interfaces e clique no botão +. | Selecione PPPoE Client. | Na aba General: . | Name: pppoe-internet | Interface: Selecione a porta onde o cabo da operadora está conectado (ex: ether1). | . | Na aba Dial Out: . | User: Digite o usuário fornecido pelo provedor. | Password: Digite a senha. | Allow: Deixe marcados chap, mschap1 e mschap2. | Use Peer DNS: Marque se quiser usar o DNS da operadora. | Add Default Route: Marque para o roteador criar a rota de internet automaticamente. | . | Clique em OK. | . Verificação: Se aparecer um “R” (Running) ao lado do nome, a conexão foi estabelecida com sucesso. ",
+    "url": "/docs/redes/pppoe/#-1-pppoe-client-receber-internet",
+    
+    "relUrl": "/docs/redes/pppoe/#-1-pppoe-client-receber-internet"
+  },"165": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "📤 2. PPPoE Server (Distribuir Internet)",
+    "content": "Use este método se você quer criar usuários e senhas para quem se conecta ao seu MikroTik. Passo 1: Criar o Pool de IPs . | Vá em IP → Pool. Clique em +. | Name: pool-pppoe | Addresses: 10.10.10.2-10.10.10.254 (IPs que os clientes vão receber). | . Passo 2: Criar o Perfil (Profile) . | Vá em PPP → Profiles. Clique em +. | Name: perfil-cliente | Local Address: 10.10.10.1 (IP do seu roteador na rede PPPoE). | Remote Address: Selecione o pool-pppoe. | Na aba Limits, você pode definir o controle de banda (ex: 10M/10M). | . Passo 3: Criar o Servidor . | Na aba PPP → PPPoE Service, clique em +. | Service Name: servidor-meu-provedor | Interface: Selecione em qual porta os clientes estão (ex: bridge-local). | Default Profile: Selecione o perfil-cliente. | Marque One Session Per Host (evita que o mesmo usuário logue duas vezes). | . Passo 4: Criar os Usuários (Secrets) . | Na aba PPP → Secrets, clique em +. | Name: joao_silva | Password: senha123 | Service: pppoe | Profile: perfil-cliente | . ",
+    "url": "/docs/redes/pppoe/#-2-pppoe-server-distribuir-internet",
+    
+    "relUrl": "/docs/redes/pppoe/#-2-pppoe-server-distribuir-internet"
+  },"166": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "🔄 3. Resumo da Conexão",
+    "content": "| Função | O que faz? | Onde configurar? | . | Client | Conecta na operadora | Interfaces → PPPoE Client | . | Server | Cria a autenticação local | PPP → PPPoE Service | . | Secret | Cadastro de usuário/senha | PPP → Secrets | . | Profile | Regras de velocidade e IP | PPP → Profiles | . ",
+    "url": "/docs/redes/pppoe/#-3-resumo-da-conex%C3%A3o",
+    
+    "relUrl": "/docs/redes/pppoe/#-3-resumo-da-conexão"
+  },"167": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "⚠️ Dicas Importantes",
+    "content": "MTU: O padrão PPPoE é 1492. Se os sites demorarem a carregar ou algumas imagens não abrirem, verifique se o MTU está correto no Client. Firewall NAT: Se você criou um PPPoE Server, não esqueça de adicionar uma regra de Masquerade em IP → Firewall → NAT para que seus clientes consigam navegar. Interface: Nunca coloque um PPPoE Server em uma interface que já tenha um DHCP Server rodando sem os devidos cuidados, para evitar conflitos de rede. ",
+    "url": "/docs/redes/pppoe/#%EF%B8%8F-dicas-importantes",
+    
+    "relUrl": "/docs/redes/pppoe/#️-dicas-importantes"
+  },"168": {
+    "doc": "🌐 PPPoE Cliente/Server",
+    "title": "🌐 PPPoE Cliente/Server",
+    "content": " ",
+    "url": "/docs/redes/pppoe/",
+    
+    "relUrl": "/docs/redes/pppoe/"
+  },"169": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "🚦 Guia: Controle de Banda (Queues)",
+    "content": "Existem duas formas principais de controlar a velocidade: as Simple Queues (para limites fixos por IP) e o PCQ (para dividir a internet de forma automática e inteligente entre todos). ",
+    "url": "/docs/redes/queues/#-guia-controle-de-banda-queues",
+    
+    "relUrl": "/docs/redes/queues/#-guia-controle-de-banda-queues"
+  },"170": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "📍 1. Simple Queues (Limite por Dispositivo)",
+    "content": "Use este método quando quiser definir um teto máximo de velocidade para um dispositivo específico (ex: uma TV ou um PC de download). | No Winbox, vá em Queues e na aba Simple Queues, clique em +. | Na aba General: . | Name: Nome do dispositivo (ex: PC-Visitante). | Target: O endereço IP do dispositivo (ex: 10.220.0.150). | . | Em Max Limit: . | Upload: Defina o limite de subida (ex: 5M). | Download: Defina o limite de descida (ex: 10M). | . | Clique em OK. | . ",
+    "url": "/docs/redes/queues/#-1-simple-queues-limite-por-dispositivo",
+    
+    "relUrl": "/docs/redes/queues/#-1-simple-queues-limite-por-dispositivo"
+  },"171": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "⚖️ 2. PCQ: Divisão Igualitária Automática",
+    "content": "O PCQ (Per Connection Queuing) é a melhor forma de gerenciar redes com muitos usuários. Ele divide o link total igualmente entre todos que estão tentando navegar ao mesmo tempo. Passo 1: Criar os tipos de fila PCQ . | Vá na aba Queue Types e clique em +. | Type Name: PCQ_Download Kind: pcq. | Em Settings, marque apenas a caixa Dst. Address. | . | Clique em + novamente. | Type Name: PCQ_Upload Kind: pcq. | Em Settings, marque apenas a caixa Src. Address. | . | . Passo 2: Aplicar na Rede Local . | Volte na aba Simple Queues e clique em +. | Name: Controle-Geral-Rede. | Target: Digite a sua rede inteira: 10.220.0.0/24. | Na aba Advanced: . | Queue Type Upload: Selecione PCQ_Upload. | Queue Type Download: Selecione PCQ_Download. | . | Clique em OK. | . ",
+    "url": "/docs/redes/queues/#%EF%B8%8F-2-pcq-divis%C3%A3o-igualit%C3%A1ria-autom%C3%A1tica",
+    
+    "relUrl": "/docs/redes/queues/#️-2-pcq-divisão-igualitária-automática"
+  },"172": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "🚀 3. Priorização de Tráfego (Limit At)",
+    "content": "Se você tem um serviço que não pode travar (como câmeras de segurança ou um servidor), você pode usar o campo Limit At dentro de uma Simple Queue. | Max Limit: É o máximo que ele atinge se o link estiver sobrando. | Limit At (Garantia): É a velocidade que o MikroTik vai “reservar” para aquele IP, mesmo que todos os outros estejam baixando arquivos pesados. | . ",
+    "url": "/docs/redes/queues/#-3-prioriza%C3%A7%C3%A3o-de-tr%C3%A1fego-limit-at",
+    
+    "relUrl": "/docs/redes/queues/#-3-priorização-de-tráfego-limit-at"
+  },"173": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "📊 4. Monitorando o Consumo",
+    "content": "Na janela de Simple Queues, observe as cores das ícones: . | 🟢 Verde: Uso de banda baixo (0-50%). | 🟡 Amarelo: Uso de banda moderado (50-75%). | 🔴 Vermelho: O usuário atingiu o limite máximo definido (75-100%). | . Atenção à Ordem: O MikroTik processa as Simple Queues de cima para baixo. Se você tem uma regra para a rede toda (10.220.0.0/24), as regras de IPs individuais devem ficar acima dela para funcionarem corretamente. ",
+    "url": "/docs/redes/queues/#-4-monitorando-o-consumo",
+    
+    "relUrl": "/docs/redes/queues/#-4-monitorando-o-consumo"
+  },"174": {
+    "doc": "🚦 Controle de Banda (Queues)",
+    "title": "🚦 Controle de Banda (Queues)",
+    "content": " ",
+    "url": "/docs/redes/queues/",
+    
+    "relUrl": "/docs/redes/queues/"
+  },"175": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "🕵️ Guia: Gerenciamento via RoMON",
+    "content": "O RoMON cria uma rede de gerenciamento independente do protocolo IP. Com ele ativado, você consegue “enxergar” e acessar via Winbox qualquer MikroTik da sua rede que também tenha o RoMON ativo, mesmo que ele não tenha IP configurado ou esteja em outra sub-rede. ",
+    "url": "/docs/manutencao/romon/#%EF%B8%8F-guia-gerenciamento-via-romon",
+    
+    "relUrl": "/docs/manutencao/romon/#️-guia-gerenciamento-via-romon"
+  },"176": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "🪜 1. Ativando o RoMON",
+    "content": "Você deve ativar o RoMON em todos os roteadores da sua rede que deseja gerenciar. | No Winbox, vá em Tools → RoMON. | Marque a caixa Enabled. | (Opcional) Secrets: Clique em + e defina uma senha global para a rede RoMON. Isso evita que vizinhos ou pessoas não autorizadas vejam seus equipamentos. | Clique em OK. | . ",
+    "url": "/docs/manutencao/romon/#-1-ativando-o-romon",
+    
+    "relUrl": "/docs/manutencao/romon/#-1-ativando-o-romon"
+  },"177": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "🔗 2. Acessando via RoMON",
+    "content": "Para acessar um roteador remoto através de um roteador vizinho: . | Abra o Winbox (não precisa estar logado em nenhum roteador). | Clique no botão Connect To RoMON. | Na aba Neighbors, selecione o roteador que está fisicamente ligado ao seu PC e clique em Connect. | Agora, o Winbox mudará para o modo RoMON. Clique na aba RoMON Neighbors. | Você verá uma lista de todos os MikroTiks da rede. Selecione o que deseja e clique em Connect. | . O RoMON é o seu “salvador” quando você erra uma configuração de IP ou Firewall e perde o acesso ao roteador. Se o RoMON estiver ativo, você entra por um roteador vizinho e conserta o erro sem precisar de cabo serial ou reset físico. ",
+    "url": "/docs/manutencao/romon/#-2-acessando-via-romon",
+    
+    "relUrl": "/docs/manutencao/romon/#-2-acessando-via-romon"
+  },"178": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "🛡️ 3. Configurações de Segurança",
+    "content": "Como o RoMON permite “saltar” de um roteador para outro, a segurança é essencial: . | Ports: Na janela do RoMON, você pode definir em quais interfaces o protocolo vai rodar (Aba Ports). Nunca deixe o RoMON ativo na interface ligada ao modem da operadora (WAN). | ID: O MikroTik gera um ID baseado no MAC. Não é necessário mudar, mas é bom saber que ele identifica o rádio de forma única na rede. | . ",
+    "url": "/docs/manutencao/romon/#%EF%B8%8F-3-configura%C3%A7%C3%B5es-de-seguran%C3%A7a",
+    
+    "relUrl": "/docs/manutencao/romon/#️-3-configurações-de-segurança"
+  },"179": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "❓ Por que usar o RoMON?",
+    "content": ". | Descoberta: Encontra equipamentos sem IP na rede. | Salto: Acessa um rádio no topo de uma torre passando por vários outros roteadores no caminho. | Agilidade: Não precisa criar rotas ou túneis apenas para acessar a gerência de um dispositivo. | . ",
+    "url": "/docs/manutencao/romon/#-por-que-usar-o-romon",
+    
+    "relUrl": "/docs/manutencao/romon/#-por-que-usar-o-romon"
+  },"180": {
+    "doc": "🕵️ RoMON (Acesso Indireto)",
+    "title": "🕵️ RoMON (Acesso Indireto)",
+    "content": " ",
+    "url": "/docs/manutencao/romon/",
+    
+    "relUrl": "/docs/manutencao/romon/"
+  },"181": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "🕒 Guia: Agendamentos Automáticos (Scheduler)",
+    "content": "O Scheduler (Agendador) é a ferramenta do MikroTik que permite executar scripts ou comandos em horários específicos ou em intervalos regulares (diários, semanais, etc.). ",
+    "url": "/docs/automacao/scheduler/#-guia-agendamentos-autom%C3%A1ticos-scheduler",
+    
+    "relUrl": "/docs/automacao/scheduler/#-guia-agendamentos-automáticos-scheduler"
+  },"182": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "⚙️ 1. Como criar um Agendamento (Winbox)",
+    "content": "Para automatizar qualquer tarefa, como o backup por e-mail ou a atualização de DDNS, siga estes passos: . | No menu lateral do Winbox, vá em System → Scheduler. | Clique no botão + (Add) para criar um novo agendamento. | Preencha os campos principais: . | Name: Um nome para identificar a tarefa (ex: Tarefa_Backup_Diario). | Start Date: A data em que o agendamento deve começar a valer. | Start Time: O horário exato da primeira execução (ex: 03:00:00 para rodar na madrugada). | Interval: De quanto em quanto tempo a tarefa deve se repetir. | Para rodar todo dia: 1d 00:00:00. | Para rodar a cada hora: 01:00:00. | . | On Event: Aqui você digita o nome do Script que você criou ou os comandos diretamente. | . | . ",
+    "url": "/docs/automacao/scheduler/#%EF%B8%8F-1-como-criar-um-agendamento-winbox",
+    
+    "relUrl": "/docs/automacao/scheduler/#️-1-como-criar-um-agendamento-winbox"
+  },"183": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "🛠️ 2. Configurações Importantes",
+    "content": "Políticas (Policies) . Para que o agendamento funcione, ele precisa de permissões de acesso. Na aba Policies, geralmente as seguintes opções devem estar marcadas para scripts de backup: read, write, policy, test, password, sensitive. Start Time: “startup” . Se você quiser que um script seja executado toda vez que o roteador ligar ou reiniciar: No campo Start Time, em vez de um horário, digite a palavra: startup. ",
+    "url": "/docs/automacao/scheduler/#%EF%B8%8F-2-configura%C3%A7%C3%B5es-importantes",
+    
+    "relUrl": "/docs/automacao/scheduler/#️-2-configurações-importantes"
+  },"184": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "📋 3. Exemplos de Intervalos Comuns",
+    "content": "| Frequência | Valor no Campo Interval | . | Diário | 1d 00:00:00 | . | Semanal | 7d 00:00:00 | . | A cada 12 horas | 12:00:00 | . | A cada 5 minutos | 00:05:00 | . | Execução única | 00:00:00 (Deixe zerado) | . ",
+    "url": "/docs/automacao/scheduler/#-3-exemplos-de-intervalos-comuns",
+    
+    "relUrl": "/docs/automacao/scheduler/#-3-exemplos-de-intervalos-comuns"
+  },"185": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "🔍 4. Monitorando a Execução",
+    "content": "Após configurar, você pode acompanhar o status na própria janela do Scheduler: . | Run Count: Mostra quantas vezes o script já foi executado. | Next Run: Informa exatamente quando será a próxima execução. | Log: Se o seu script tiver comandos de log (ex: /log info \"Backup realizado\"), você poderá ver o histórico na janela Log do Winbox. | . Sempre teste o seu Script manualmente no menu System → Scripts clicando em Run Script antes de agendá-lo. Se ele não funcionar manualmente, o agendamento também falhará. ",
+    "url": "/docs/automacao/scheduler/#-4-monitorando-a-execu%C3%A7%C3%A3o",
+    
+    "relUrl": "/docs/automacao/scheduler/#-4-monitorando-a-execução"
+  },"186": {
+    "doc": "🕒 Agendamentos (Scheduler)",
+    "title": "🕒 Agendamentos (Scheduler)",
+    "content": " ",
+    "url": "/docs/automacao/scheduler/",
+    
+    "relUrl": "/docs/automacao/scheduler/"
+  },"187": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "📂 Guia: Armazenamento SMB e Discos",
+    "content": "O MikroTik permite anexar armazenamento externo para expandir a memória flash limitada do dispositivo. Com o SMB (Server Message Block), você acessa esses arquivos diretamente pelo explorador de arquivos do Windows ou macOS. ",
+    "url": "/docs/manutencao/smb/#-guia-armazenamento-smb-e-discos",
+    
+    "relUrl": "/docs/manutencao/smb/#-guia-armazenamento-smb-e-discos"
+  },"188": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "💾 1. Preparando o Armazenamento (Format)",
+    "content": "Antes de usar um MicroSD ou Pendrive, ele precisa ser formatado no sistema de arquivos do RouterOS para que o sistema consiga gravar os arquivos corretamente. | No Winbox, vá em System → Disks. | Localize o seu dispositivo na lista: . | MicroSD: Geralmente aparece como disk1 ou disk2. | Pendrive USB: Geralmente aparece como usb1. | . | Selecione o disco desejado e clique no botão Format Drive. | Configure as opções conforme abaixo: . | Slot: Indica o local físico (MicroSD ou USB). | File System: Use ext4 (mais estável e moderno). | Label: Nome do disco (ex: STORAGE). | MBR Partition Table: Mantenha marcado para criar a tabela de partição. | . | Clique no botão Starte aguarde concluir a formatação. | . A formatação apagará todos os dados contidos no cartão ou pendrive. Certifique-se de selecionar o disco correto antes de clicar em Format. ",
+    "url": "/docs/manutencao/smb/#-1-preparando-o-armazenamento-format",
+    
+    "relUrl": "/docs/manutencao/smb/#-1-preparando-o-armazenamento-format"
+  },"189": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "🔑 2. Criando Usuários de Acesso",
+    "content": "Para segurança, defina quem pode ler e gravar nos arquivos. | Vá em IP → SMB. | Clique na aba Users e depois no +. | Name: Escolha um nome (ex: suporte). | Password: Defina uma senha segura. | Read Only: Deixe desmarcado se quiser enviar arquivos para lá. | Clique em OK. | . ",
+    "url": "/docs/manutencao/smb/#-2-criando-usu%C3%A1rios-de-acesso",
+    
+    "relUrl": "/docs/manutencao/smb/#-2-criando-usuários-de-acesso"
+  },"190": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "📂 3. Configurando o Compartilhamento (Shares)",
+    "content": "Aqui você define qual pasta do disco será visível na rede. | Ainda em IP → SMB, vá na aba Shares. | Clique no +. | Name: Nome da pasta na rede (ex: BKP-GERAL). | Directory: Clique na seta e selecione o disco (ex: disk2). | Ajuste as permissões de acesso: . | Read Only: Se marcado, os usuários poderão apenas ver e baixar arquivos, mas não poderão apagar ou salvar nada no disco. | Required Encryption: Obriga que a conexão entre o PC e o MikroTik seja criptografada (mais seguro, recomendado para versões modernas do Windows). | Valid User: Digite aqui os usuários (criados na aba Users do SMB) que podem acessar esta pasta. Se deixar vazio, todos os usuários válidos acessam. | Invalid User: Digite os usuários que estão proibidos de acessar esta pasta específica. | . | Clique em OK. | . ",
+    "url": "/docs/manutencao/smb/#-3-configurando-o-compartilhamento-shares",
+    
+    "relUrl": "/docs/manutencao/smb/#-3-configurando-o-compartilhamento-shares"
+  },"191": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "🌐 4. Ativando o Serviço SMB",
+    "content": "Agora, ative o servidor para que ele fique visível na rede. | Volte para a aba Settings em IP → SMB. | No campo Enabled, selecione a opção yes. | Domain: Pode manter WORKGROUP. | Comment: Uma breve descrição (ex: MikroTikSMB). | Interfaces: Selecione a sua Bridge principal (ex: REDE SWITCH). | . Nunca selecione interfaces WAN aqui por segurança. | Clique em Apply. | . ",
+    "url": "/docs/manutencao/smb/#-4-ativando-o-servi%C3%A7o-smb",
+    
+    "relUrl": "/docs/manutencao/smb/#-4-ativando-o-serviço-smb"
+  },"192": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "💻 5. Como Acessar os Arquivos",
+    "content": "No Windows: . | Abra o Explorador de Arquivos. | Na barra de endereços, digite o IP do seu MikroTik: \\\\10.220.0.1. | Insira o usuário e senha criados no Passo 2. | . No Linux (Interface Gráfica - GNOME/KDE): . | Abra o gestor de arquivos (Nautilus, Dolphin, Thunar). | Procure pela opção Outros Locais, Rede ou Conectar ao Servidor. | No campo de endereço, utilize o prefixo smb://: . | smb://10.220.0.1 | . | O sistema solicitará o usuário, o domínio (WORKGROUP) e a senha. | . No Linux (Terminal): . Se você quiser montar a pasta do MikroTik em um diretório do seu sistema (ex: /mnt/mikrotik), use o comando: . sudo mount -t cifs -o username=SEU_USUARIO //10.220.0.1/NOME_DO_SHARE /mnt/mikrotik . Quando não precisar mais do acesso ou for remover o MicroSD ou pendrive do MikroTik, desmonte a pasta no Linux com: . sudo umount /mnt/mikrotik . ",
+    "url": "/docs/manutencao/smb/#-5-como-acessar-os-arquivos",
+    
+    "relUrl": "/docs/manutencao/smb/#-5-como-acessar-os-arquivos"
+  },"193": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "📤 6. Como Upar Arquivos para o Disco",
+    "content": "Existem duas formas principais de colocar arquivos no seu MicroSD ou Pendrive: . A. Via Winbox (Ideal para Firmware e Scripts) . Este método é o mais direto para arquivos pequenos ou técnicos do sistema. | No Winbox, vá no menu lateral em Files. | Na janela File, localize os arquivos que começam com o nome do seu disco (ex: disk1/ ou usb1/). | Para Upar: Basta arrastar o arquivo do seu computador e soltá-lo em cima da pasta do disco /ou clicar em Upload no menu lateral. | Para Mover: Clique em cima do arquivo e arraste até a pasta criada (ex: usb1-part1/NOME_DA_PASTA). | . B. Via Rede (SMB) - Ideal para Backups de PCs . Como você já configurou o Passo 5, este é o método mais fácil para o dia a dia. | Acesse a pasta mapeada no seu Windows ou Linux. | Copie e cole os arquivos normalmente, como se fosse um HD externo ou um Pendrive espetado no seu próprio PC. | . Dica de Organização (Subpastas) . Para não virar uma bagunça, você pode criar pastas dentro do disco pelo terminal do Winbox: . | Abra o New Terminal. | Digite o comando: /file add name=usb1-part1/NOME_DA_PASTA type=directory (Substitua usb1-part1 pelo nome do seu slot e escolha o nome da pasta). | . O protocolo SMB consome processamento (CPU). Evite transferir arquivos gigantescos enquanto o roteador estiver sob carga pesada de tráfego, para não afetar a performance da internet. ",
+    "url": "/docs/manutencao/smb/#-6-como-upar-arquivos-para-o-disco",
+    
+    "relUrl": "/docs/manutencao/smb/#-6-como-upar-arquivos-para-o-disco"
+  },"194": {
+    "doc": "📂 Armazenamento SMB/Discos",
+    "title": "📂 Armazenamento SMB/Discos",
+    "content": " ",
+    "url": "/docs/manutencao/smb/",
+    
+    "relUrl": "/docs/manutencao/smb/"
+  },"195": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "👤 Guia: Gerenciamento de Usuários",
+    "content": "O controle de usuários permite definir quem pode configurar o roteador e quais alterações cada pessoa pode realizar, além de proteger o equipamento contra acessos não autorizados. ",
+    "url": "/docs/seguranca/usuarios/#-guia-gerenciamento-de-usu%C3%A1rios",
+    
+    "relUrl": "/docs/seguranca/usuarios/#-guia-gerenciamento-de-usuários"
+  },"196": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "🪜 1. Criando um Novo Usuário",
+    "content": ". | Vá em System → Users. | Na aba Users, clique no botão +. | Preencha os campos conforme abaixo: . | Name: Digite o nome de login (ex: suporte). | Group: Escolha o nível de permissão (veja a tabela no Passo 2). | Password: Defina uma senha forte. | . | Clique em OK. | . ",
+    "url": "/docs/seguranca/usuarios/#-1-criando-um-novo-usu%C3%A1rio",
+    
+    "relUrl": "/docs/seguranca/usuarios/#-1-criando-um-novo-usuário"
+  },"197": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "🛡️ 2. Entendendo os Grupos (Permissões)",
+    "content": "| Grupo | Nível de Acesso | Descrição | . | Full | Total | Pode alterar tudo, inclusive gerenciar outros usuários e ver senhas. | . | Write | Configuração | Pode alterar quase tudo, mas não tem acesso ao menu de usuários. | . | Read | Leitura | Pode apenas visualizar as configurações e gráficos. Não pode alterar nada. | . ",
+    "url": "/docs/seguranca/usuarios/#%EF%B8%8F-2-entendendo-os-grupos-permiss%C3%B5es",
+    
+    "relUrl": "/docs/seguranca/usuarios/#️-2-entendendo-os-grupos-permissões"
+  },"198": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "🚫 3. Desativando/Excluindo o Usuário Admin (Essencial)",
+    "content": "O usuário admin é o alvo número 1 de ataques. O ideal é nunca utilizá-lo. | Primeiro: Logue no Winbox com o novo usuário que você criou (garanta que ele seja do grupo Full). | Vá em System → Users. | Clique uma vez sobre o usuário admin. | Clique no botão “X” (Remove) no topo da janela. | . Nunca desative o admin antes de testar seu novo usuário! Se a senha nova estiver errada e você desativar o admin, você perderá o acesso ao roteador. ",
+    "url": "/docs/seguranca/usuarios/#-3-desativandoexcluindo-o-usu%C3%A1rio-admin-essencial",
+    
+    "relUrl": "/docs/seguranca/usuarios/#-3-desativandoexcluindo-o-usuário-admin-essencial"
+  },"199": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "🔐 4. Restrição por IP (Allowed Address)",
+    "content": ". | Dentro do cadastro do usuário, localize o campo Allowed Address. | Digite o IP do seu computador (ex: 10.220.0.50) ou o range da sua rede local (ex: 10.220.0.0/24). | . Se preenchido, o sistema bloqueará o login mesmo com a senha correta se o acesso vier de um IP fora da lista. ",
+    "url": "/docs/seguranca/usuarios/#-4-restri%C3%A7%C3%A3o-por-ip-allowed-address",
+    
+    "relUrl": "/docs/seguranca/usuarios/#-4-restrição-por-ip-allowed-address"
+  },"200": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "⏳ 5. Controle de Sessão (Inatividade)",
+    "content": "Para evitar que o Winbox fique aberto por esquecimento, configure o tempo de expiração: . | Inactive Timeout: Defina o tempo de espera (Ex: 00:10:00 para 10 minutos). | Inactive Policy: Escolha a ação após o tempo esgotar: . | none (padrão): Apenas encerra a conexão. Você precisará digitar usuário e senha novamente para entrar. | logout: Força o encerramento da sessão atual no roteador. É a opção mais limpa para garantir que o acesso foi fechado. | lockscreen: Funciona como o “bloqueio de tela”. A sessão continua aberta no fundo, mas o Winbox pede a senha para voltar ao que você estava fazendo. | . | . ❓ Por que usar usuários diferentes? . | Logs de Auditoria: No menu System → Logs, você verá exatamente qual usuário fez cada alteração. | Segurança: O Inactive Timeout garante que ninguém mexa no seu Winbox se você se ausentar da mesa e esquecer a tela aberta. | Organização: Permite separar acessos para técnicos (Write) e apenas monitoramento (Read). | . ",
+    "url": "/docs/seguranca/usuarios/#-5-controle-de-sess%C3%A3o-inatividade",
+    
+    "relUrl": "/docs/seguranca/usuarios/#-5-controle-de-sessão-inatividade"
+  },"201": {
+    "doc": "👤 Gerenciamento de Usuários",
+    "title": "👤 Gerenciamento de Usuários",
+    "content": " ",
+    "url": "/docs/seguranca/usuarios/",
+    
+    "relUrl": "/docs/seguranca/usuarios/"
+  },"202": {
+    "doc": "🌈 VLAN",
+    "title": "🌈 Guia: Configuração de VLAN",
+    "content": "Uma VLAN permite dividir seu roteador físico em múltiplas redes lógicas independentes. Isso aumenta a segurança e reduz o tráfego desnecessário na rede (broadcast). ",
+    "url": "/docs/redes/vlan/#-guia-configura%C3%A7%C3%A3o-de-vlan",
+    
+    "relUrl": "/docs/redes/vlan/#-guia-configuração-de-vlan"
+  },"203": {
+    "doc": "🌈 VLAN",
+    "title": "🪜 1. Criando a Interface VLAN",
+    "content": "O primeiro passo é dizer ao MikroTik em qual porta física a VLAN vai “viajar”. | Vá em Interfaces → VLAN. | Clique no botão +. | Preencha os campos: . | Name: Nome para identificar a rede (ex: vlan10-visitantes). | VLAN ID: O número de identificação da rede (ex: 10). | Interface: A porta física onde o cabo está conectado (ex: ether2). | . | Clique em OK. | . ",
+    "url": "/docs/redes/vlan/#-1-criando-a-interface-vlan",
+    
+    "relUrl": "/docs/redes/vlan/#-1-criando-a-interface-vlan"
+  },"204": {
+    "doc": "🌈 VLAN",
+    "title": "🌐 2. Configurando a Rede da VLAN",
+    "content": "Agora que a interface existe, precisamos dar a ela um endereço e um servidor DHCP para que os dispositivos recebam IP. A. Definir IP . | Vá em IP → Addresses. | Clique no botão +. | Address: Digite o IP da rede (ex: 192.168.10.1/24). | Interface: Selecione a VLAN que você criou no Passo 1 (vlan10-visitantes). | . B. Criar o DHCP Server . | Vá em IP → DHCP Server. | Clique no botão DHCP Setup. | Selecione a interface da VLAN. | Siga clicando em Next até o final. O MikroTik criará o Pool de IPs e o servidor automaticamente. | . ",
+    "url": "/docs/redes/vlan/#-2-configurando-a-rede-da-vlan",
+    
+    "relUrl": "/docs/redes/vlan/#-2-configurando-a-rede-da-vlan"
+  },"205": {
+    "doc": "🌈 VLAN",
+    "title": "🛡️ 3. Isolando as Redes (Segurança)",
+    "content": "Por padrão, o MikroTik roteia o tráfego entre VLANs. Se você quer que a rede de Visitantes não acesse sua rede Principal, use o Firewall: . | Vá em IP → Firewall → Filter Rules. | Clique no botão +. | Chain: forward. | In. Interface: vlan10-visitantes. | Out. Interface: sua-interface-lan-principal. | Na aba Action, selecione drop. | . ",
+    "url": "/docs/redes/vlan/#%EF%B8%8F-3-isolando-as-redes-seguran%C3%A7a",
+    
+    "relUrl": "/docs/redes/vlan/#️-3-isolando-as-redes-segurança"
+  },"206": {
+    "doc": "🌈 VLAN",
+    "title": "❓ Quando usar VLANs?",
+    "content": ". | Segurança: Isolar câmeras e dispositivos IoT da sua rede de computadores principal. | Visitantes: Criar um Wi-Fi separado que só tem acesso à internet, sem ver seus arquivos. | Organização: Separar departamentos (Financeiro, Vendas, TI) em empresas. | . Se você for passar várias VLANs para um Switch ou AP através de um único cabo, lembre-se de configurar esse cabo como Trunk no dispositivo de destino, usando o mesmo VLAN ID. ",
+    "url": "/docs/redes/vlan/#-quando-usar-vlans",
+    
+    "relUrl": "/docs/redes/vlan/#-quando-usar-vlans"
+  },"207": {
+    "doc": "🌈 VLAN",
+    "title": "🌈 VLAN",
+    "content": " ",
+    "url": "/docs/redes/vlan/",
+    
+    "relUrl": "/docs/redes/vlan/"
+  },"208": {
+    "doc": "🔐 VPN WireGuard",
+    "title": "🔐 VPN WireGuard",
+    "content": "Procedimento de configuração para túneis WireGuard no RouterOS v7. ",
+    "url": "/docs/seguranca/vpn-wireguard/",
+    
+    "relUrl": "/docs/seguranca/vpn-wireguard/"
+  },"209": {
+    "doc": "🔐 VPN WireGuard",
+    "title": "1. Criar Interface",
+    "content": " ",
+    "url": "/docs/seguranca/vpn-wireguard/#1-criar-interface",
+    
+    "relUrl": "/docs/seguranca/vpn-wireguard/#1-criar-interface"
+  },"210": {
+    "doc": "🐕 Watchdog (Auto-Reboot)",
+    "title": "🐕 Guia: Watchdog (Auto-Reboot)",
+    "content": "O Watchdog é um recurso de segurança que força a reinicialização do MikroTik se o processador travar ou se a RB perder a conexão com a internet. Ele garante que o dispositivo não fique “congelado” ou inacessível, sendo essencial para manter a disponibilidade da rede. Como configurar: . | Acessar o Menu: . | No Winbox, vá em System → Watchdog. | . | Habilitar o Temporizador de Hardware: . | Na aba Watchdog, certifique-se de que a opção Watchdog Timer esteja marcada. | Funcionamento: Esta função monitora o processador. Se o software travar, o hardware forçará o reboot. | . | Configurar Monitoramento de Conectividade: . | Clique na aba Ping Watchdog. | No campo Watch Address, insira um IP externo estável (ex: 8.8.8.8). | Funcionamento: Se a RB parar de receber resposta de ping deste IP, ela reiniciará automaticamente. | . | Ajustar o Tempo de Espera Inicial: . | Ainda na aba Ping Watchdog, defina o Ping Start After Boot (recomendado: 00:05:00). | . | . ",
+    "url": "/docs/manutencao/watchdog/#-guia-watchdog-auto-reboot",
+    
+    "relUrl": "/docs/manutencao/watchdog/#-guia-watchdog-auto-reboot"
+  },"211": {
+    "doc": "🐕 Watchdog (Auto-Reboot)",
+    "title": "🐕 Watchdog (Auto-Reboot)",
+    "content": " ",
+    "url": "/docs/manutencao/watchdog/",
+    
+    "relUrl": "/docs/manutencao/watchdog/"
+  }
+}

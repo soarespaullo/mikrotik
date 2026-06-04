@@ -1,0 +1,24 @@
+---
+# --- Configuração Básica ---
+layout: default          # Define a estrutura visual da página (menu lateral + conteúdo)
+title: "Nome da Página"  # O nome que aparece no menu e no título da aba
+nav_enabled: true        # Define se a página deve aparecer no menu lateral
+nav_order: 1             # Ordem numérica de exibição no menu (menor vem primeiro)
+
+# --- Hierarquia (Organização) ---
+has_children: true       # Se verdadeiro, esta página vira uma "pasta" para outras páginas
+parent: "Nome do Pai"    # Agrupa esta página dentro de uma página que tenha 'has_children'
+grand_parent: "Vovô"     # Permite criar um terceiro nível de profundidade na navegação
+
+# --- Recursos de Conteúdo ---
+has_toc: true            # Gera automaticamente um sumário (índice) no topo da página
+mermaid: true            # Ativa o suporte para diagramas de rede e fluxogramas
+last_modified_date: 2026-05-04 # Exibe a data de atualização no rodapé da página
+
+# --- Visibilidade e Busca ---
+nav_exclude: false       # Se true, a página existe mas some do menu lateral
+search_exclude: false    # Se true, o conteúdo desta página não aparecerá na busca
+
+# --- Cabeçalho e Títulos ---
+heading_anchors: true    # Ativa links clicáveis em cada título (H1, H2, H3) da página
+---

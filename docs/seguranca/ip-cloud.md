@@ -1,0 +1,57 @@
+---
+layout: default
+title: "☁️ IP Cloud (DDNS)"
+parent: "🔒 Segurança & Acesso"
+nav_order: 9
+---
+
+# ☁️ Guia: IP Cloud (DDNS)
+{: .no_toc }
+
+O serviço de **Cloud** da MikroTik fornece um nome de domínio gratuito (ex: `524f0542324a.sn.mynetname.net`) que aponta sempre para o IP atual da sua internet, permitindo o acesso remoto de qualquer lugar do mundo.
+
+## 🪜 1. Ativando o DDNS
+
+1.  Vá em **IP → Cloud**.
+
+2.  No campo **DDNS Enabled**, selecione a opção `Yes`.
+
+3.  (Opcional) Marque **Update Time** para que o roteador também use os servidores da **MikroTik** para ajustar o relógio.
+
+4.  Clique em **Apply**.
+
+## 🔗 2. Obtendo seu Endereço de Acesso
+
+Após clicar em Apply, observe os campos que foram preenchidos:
+
+*   **Public Address:** Mostra qual é o seu IP de internet atual.
+
+*   **DNS Name:** Este é o seu endereço fixo. É este "nome" cheio de letras e números que você usará no Winbox ou no celular para acessar o roteador remotamente.
+
+{: .note }
+> Copie esse **DNS Name** e salve em um bloco de notas. Mesmo que a operadora mude seu IP, esse nome nunca muda, pois ele é baseado no **Serial Number** do seu equipamento.
+
+---
+
+## 🛡️ 3. Considerações de Segurança
+
+Ao ativar o Cloud, seu roteador ganha um "nome" na internet. Para sua segurança, certifique-se de:
+
+1.  [**Trocar a senha padrão:**](https://github.com/soarespaullo/MikroTik/wiki/Setup-Inicial#-8-criando-usu%C3%A1rio-de-acesso) Nunca use o usuário `admin` sem senha (conforme fizemos no Guia de Configuração Inicial).
+
+2.  [**Portas de Serviço:**](https://github.com/soarespaullo/MikroTik/wiki/Service-Hardening) Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em **IP → Services**.
+
+---
+
+## ❓ Por que usar o IP Cloud?
+
+*   **Acesso Remoto:** Você pode entrar no Winbox do escritório estando em casa ou pelo celular (usando o app MikroTik).
+
+*   **VPNs:** Se você configurar uma VPN (como WireGuard), usará o **DNS Name** do Cloud para conectar os dispositivos, garantindo que a VPN não caia quando o IP da operadora mudar.
+
+*   **Gratuito:** É um serviço oficial da MikroTik, sem mensalidade e sem necessidade de criar contas em sites externos (como No-IP).
+
+{: .note }
+> **Verificação de Conectividade:** `Observe as mensagens no rodapé da janela`:
+>
+> Se mostrar `updated`, significa que o nome já está funcionando. Se mostrar `Router is behind NAT`, significa que seu MikroTik está recebendo um IP privado da operadora (**CGNAT**), e o acesso remoto direto pode não funcionar sem uma **VPN**.

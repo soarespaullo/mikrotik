@@ -1,0 +1,75 @@
+# ====================================================
+# Configurações Principais (Identidade)
+# ====================================================
+title: "Wiki MikroTik"
+description: "Documentação técnica para MikroTik"
+theme: "just-the-docs"
+logo: "/assets/images/logo-mikrotik.png"
+favicon_ico: "/assets/images/favicon.ico"
+url: "https://soarespaullo.github.io" # Recomendado para o GitHub Pages
+
+# ====================================================
+# Visual e Experiência do Usuário (UX)
+# ====================================================
+color_scheme: light
+back_to_top: true
+back_to_top_text: "Voltar ao topo"
+heading_anchors: true
+permalink: pretty # URLs limpas sem .html
+
+# ====================================================
+# Configurações de Busca
+# ====================================================
+search_enabled: true
+search:
+  button: false 
+  heading_level: 2
+  tokenizer_separator: /[\s/]+/ # Essencial para caminhos MikroTik (ip/address)
+  rel_url: true
+
+# ====================================================
+# Componentes Visuais (Callouts)
+# ====================================================
+callouts:
+  note:
+    title: Nota
+    color: blue
+  warning:
+    title: Atenção
+    color: yellow
+  important:
+    title: Importante
+    color: red
+
+# ====================================================
+# Funcionalidades de Código e Gráficos
+# ====================================================
+enable_copy_code_button: true
+
+mermaid:
+  version: "9.1.3"
+
+# ====================================================
+# Edição via GitHub (Colaboração)
+# ====================================================
+gh_edit_link: true
+gh_edit_link_text: "Editar esta página no GitHub"
+gh_edit_repository: "https://github.com/soarespaullo/wiki-mikrotik"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+# ====================================================
+# Rodapé e Metadados
+# ====================================================
+footer_content: "Wiki Técnica MikroTik - Paulo Soares"
+last_edit_timestamp: true
+last_edit_time_format: "%d/%m/%Y às %H:%M"
+
+# ====================================================
+# Links Externos (Opcional - Remova o '#' para ativar)
+# ====================================================
+# nav_external_links:
+#   - title: "Meu GitHub"
+#     url: "https://github.com/soarespaullo"
+#   - title: "Documentação MikroTik"
+#     url: "https://help.mikrotik.com"
