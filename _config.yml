@@ -41,6 +41,9 @@ callouts:
   important:
     title: "📢 Importante"
     color: red
+  tip:
+    title: "💡 Dica"
+    color: green
 
 # ====================================================
 # Funcionalidades de Código e Gráficos
