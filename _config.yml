@@ -33,13 +33,13 @@ search:
 # ====================================================
 callouts:
   note:
-    title: Nota
+    title: "ℹ️ Nota"
     color: blue
   warning:
-    title: Atenção
+    title: "⚠️ Atenção"
     color: yellow
   important:
-    title: Importante
+    title: "📢 Importante"
     color: red
 
 # ====================================================
