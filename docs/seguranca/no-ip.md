@@ -35,7 +35,7 @@ Como o `MikroTik` não possui um menu nativo para o `No-IP`, utilizamos um `scri
 
 **Passo a passo:**
 
-1.  Acesse **System → Scripts** e clique no `+`.
+1.  Acesse **System → Scripts** e clique no **+**.
 
 2.  **Name:** `atualizar-noip`.
 
