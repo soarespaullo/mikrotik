@@ -57,5 +57,5 @@ Se você tem várias portas (`80, 443, 2222`) para o mesmo servidor:
 
 ---
 
-{: .note }
+{: .tip }
 > A **Opção B** é a mais eficiente para o dia a dia. Se amanhã você abrir uma nova porta para este servidor no **DST-NAT**, não precisará criar uma nova regra de Hairpin; ela já sairá funcionando automaticamente.
