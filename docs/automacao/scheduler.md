@@ -61,5 +61,5 @@ Após configurar, você pode acompanhar o status na própria janela do Scheduler
 * **Next Run:** Informa exatamente quando será a próxima execução.
 * **Log:** Se o seu script tiver comandos de log (ex: `/log info "Backup realizado"`), você poderá ver o histórico na janela **Log** do Winbox.
 
-{: .note }
+{: .tip }
 > Sempre teste o seu Script manualmente no menu **System** → **Scripts** clicando em **Run Script** antes de agendá-lo. Se ele não funcionar manualmente, o agendamento também falhará.
