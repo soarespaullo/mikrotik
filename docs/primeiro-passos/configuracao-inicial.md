@@ -13,7 +13,7 @@ Este guia aborda os passos fundamentais para tirar um MikroTik da caixa, limpar 
 ---
 
 {: .note }
-> **Dica de Navegação:** Criamos um [**Mapa de Fluxo Visual da Configuração**](http://127.0.0.1:4000/MikroTik/docs/primeiro-passos/mapa/) para ajudar a acompanhar a ordem cronológica dos passos em uma tela separada.
+> **Dica de Navegação:** Criamos um [**Mapa de Fluxo Visual da Configuração**](https://soarespaullo.github.io/MikroTik/docs/primeiro-passos/mapa/) para ajudar a acompanhar a ordem cronológica dos passos em uma tela separada.
 
 ---
 
