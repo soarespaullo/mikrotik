@@ -3,6 +3,7 @@ layout: default
 title: "📂 Armazenamento SMB/Discos"
 parent: "🛠️ Manutenção"
 nav_order: 4
+last_modified_date: 2026-06-08
 ---
 
 # 📂 Guia: Armazenamento SMB e Discos

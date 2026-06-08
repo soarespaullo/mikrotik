@@ -3,6 +3,7 @@ layout: default
 title: "⏰ Ajuste de Hora (NTP)"
 parent: "🛠️ Manutenção"
 nav_order: 6
+last_modified_date: 2026-06-08
 ---
 
 # ⏰ Guia: Ajuste de Hora (NTP Client)

@@ -61,6 +61,17 @@ Rotinas de integridade, diagnósticos e automação para garantir alta disponibi
 
 ---
 
+## 🔄 Últimas Alterações na Wiki
+{: .no_toc }
+
+Aqui estão as páginas atualizadas recentemente na nossa infraestrutura:
+
+{% assign paginas_recentes = site.html_pages | where_exp:"item", "item.last_modified_date != nil" | sort: "last_modified_date" | reverse %}
+{% for pagina in paginas_recentes limit:3 %}
+* **{{ pagina.last_modified_date | date: "%d/%m/%Y" }}** — [{{ pagina.title }}]({{ pagina.url | relative_url }})
+{% endfor %}
+
+---
 ## 🔗 Links Úteis
 
 Para facilitar o dia a dia na operação da rede, utilize os canais oficiais da MikroTik:

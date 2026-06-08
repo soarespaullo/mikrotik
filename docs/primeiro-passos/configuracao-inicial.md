@@ -3,6 +3,7 @@ layout: default
 title: 🏁 Configuração Inicial
 nav_order: 2
 parent: 🚀 Primeiros Passos
+last_modified_date: 2026-06-08
 ---
 
 # 🚀 Guia: Configuração Inicial do MikroTik
