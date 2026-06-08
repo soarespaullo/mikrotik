@@ -46,3 +46,5 @@ graph TD
     
     STEP12 --> End[Roteador Pronto e Seguro]
 ```
+
+[⬅️ Voltar para o Guia de Configuração Inicial]({{ '/docs/primeiro-passos/configuracao-inicial/' | relative_url }}){: .btn .btn-outline }
