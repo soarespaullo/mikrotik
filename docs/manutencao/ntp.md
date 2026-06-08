@@ -27,7 +27,7 @@ Antes de buscar a hora na internet, precisamos dizer ao roteador em qual parte d
 
 ## 🛰️ 2. Ativando o NTP Client (Recomendado)
 
-Agora vamos configurar o roteador para buscar a hora exata nos servidores oficiais do Brasil ([**NTP.br**](https://ntp.br/)).
+Agora vamos configurar o roteador para buscar a hora exata nos servidores oficiais do Brasil ([**NTP.br**](https://ntp.br/){: target="_blank" }).
 
 1.  Vá em **System → NTP Client**.
 
