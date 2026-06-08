@@ -84,5 +84,5 @@ Para verificar se está funcionando:
 {: .important }
 > **NAT:** Não esqueça de ter as regras de **masquerade** para ambas as interfaces WAN em **IP** → **Firewall** → **NAT**.
 
-{: .note }
+{: .tip }
 > O **Load Balance** PCC não "soma" um único download (como um vídeo no YouTube), mas permite que um usuário baixe um vídeo pelo Link 1 enquanto outro usuário joga pelo Link 2, otimizando o uso total da banda.
