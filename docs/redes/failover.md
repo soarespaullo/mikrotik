@@ -65,15 +65,17 @@ Para um monitoramento preciso, recomendamos utilizar os `IPs` dos **Root Servers
 {: .note }
 > Você pode consultar a lista completa de **IPs dos Root Servers (de A a M)** no site oficial da [IANA](https://iana.org/domains/root/servers){: .btn .btn-purple target="_blank" }.
 
-1. Acesse **Tools → Netwatch** e clique em `+`.
+1. Acesse **Tools → Netwatch** e clique em **+**.
 2. Na aba **Host**:
     *   **Host:** `202.12.27.33`
     *   **Type:** `icmp`
     *   **Interval:** `00:00:15`
 3. Na aba **Down** (Ação ao cair):
+
 ```routeros
 /ip route disable [find comment="LINK PROXXIMA"]
 ```
+
 4. Na aba **Up** (Ação ao voltar):
 ```routeros
 /ip route enable [find comment="LINK PROXXIMA"]
