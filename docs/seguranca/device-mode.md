@@ -29,7 +29,7 @@ Este guia é a solução definitiva.
 
 ### 1. Verificar as permissões atuais
 Abre o Terminal no Winbox e executa:
-```routeros
+```bash
 /system/device-mode/print
 ```
 Observa se os itens `fetch` e `scheduler` estão marcados como no.
@@ -37,7 +37,7 @@ Observa se os itens `fetch` e `scheduler` estão marcados como no.
 2. Solicitar a atualização de permissões
 Para libertar as funções necessárias para os teus scripts e automações, executa o seguinte comando:
 
-```routeros
+```bash
 /system/device-mode/update fetch=yes scheduler=yes email=yes
 ```
 3. Confirmação Física (Obrigatório)
@@ -63,6 +63,6 @@ Verifica se a tua versão do RouterOS é a v7.13 ou superior. Em versões muito 
 ## 📑 Exemplo de Script Funcional (Após Libertação)
 Uma vez ativo o `fetch`, podes usar scripts como este para testar a comunicação com a API do Telegram:
 
-```routeros
+```bash
 /tool fetch url="https://api.telegram.org/TOKEN/sendMessage?chat_id=CHAT_ID&text=Teste+Wiki!" keep-result=no check-certificate=no
 ```
