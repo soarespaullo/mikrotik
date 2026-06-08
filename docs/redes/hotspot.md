@@ -47,7 +47,7 @@ O MikroTik possui um assistente que cria todas as regras de firewall e NAT autom
 3. **Shared Users:** Quantos dispositivos podem usar o mesmo login simultaneamente (ex: `1`).
 4. **Rate Limit (rx/tx):** Defina a velocidade (ex: `10M/10M`).
 
-{: .note }
+{: .tip }
 > **O segredo do Rate Limit:** O primeiro valor é o `Upload` e o segundo é o `Download`. Use sempre o sufixo **M** para Megas.
 
 ---
