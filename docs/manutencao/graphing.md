@@ -36,7 +36,7 @@ O **Graphing** permite que você visualize o histórico de consumo de tráfego, 
     *   Abra o seu navegador e digite o `IP` da sua `RB` seguido de `/graphs` (Ex: `http://10.220.0.1/graphs`).
 
 {: .important }
-> Se você alterou a porta padrão do serviço **WWW** (em [**IP → Services**](https://github.com/soarespaullo/MikroTik/wiki/Service-Hardening)), você deve incluí-la no endereço de acesso.
+> Se você alterou a porta padrão do serviço **WWW** (em [**IP → Services**](https://soarespaullo.github.io/MikroTik/docs/seguranca/bloqueio-servicos/){: target="_blank" }), você deve incluí-la no endereço de acesso.
 
 *   **Porta padrão (80):** `http://10.220.0.1/graphs`
 
