@@ -63,8 +63,7 @@ O Netwatch monitora o `IP` externo e desativa a rota principal se o ping falhar.
 Para um monitoramento preciso, recomendamos utilizar os `IPs` dos **Root Servers** (`servidores raiz da internet`), que garantem alta disponibilidade para o teste de conectividade.
 
 {: .note }
->
-> Você pode consultar a lista completa de **IPs dos Root Servers (de A a M)** no site oficial da [IANA](https://iana.org/domains/root/servers){: .btn .btn-purple }.
+> Você pode consultar a lista completa de **IPs dos Root Servers (de A a M)** no site oficial da [IANA](https://iana.org/domains/root/servers){: .btn .btn-purple target="_blank" }.
 
 1. Acesse **Tools → Netwatch** e clique em `+`.
 2. Na aba **Host**:
