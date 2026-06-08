@@ -33,7 +33,7 @@ Aqui você coloca o comando ou o nome do script que deve rodar no momento da fal
 
 **Exemplo (Aviso no Log):**
 
-    `/log error "LINK PRINCIPAL FORA DO AR!"`
+ * `/log error "LINK PRINCIPAL FORA DO AR!"`
 
 ### **Aba Up (O que fazer quando voltar):**
 
@@ -41,11 +41,11 @@ Aqui você coloca o que deve acontecer quando a conexão for restabelecida.
 
 **Exemplo (Aviso no Log):**
 
-    `/log warning "LINK PRINCIPAL RESTABELECIDO!"`
+ * `/log warning "LINK PRINCIPAL RESTABELECIDO!"`
 
 ## 🤖 3. Exemplo Prático: Notificação no Telegram
 
-Se você já seguiu o tutorial de [**Bot do Telegram**](https://github.com/soarespaullo/MikroTik/wiki/Telegram-Bot-Setup), pode integrar o Netwatch para receber alertas no celular:
+Se você já seguiu o tutorial de [**Bot do Telegram**](https://soarespaullo.github.io/MikroTik/docs/automacao/bot-telegram/){: target="_blank" }, pode integrar o Netwatch para receber alertas no celular:
 
 **Na aba Down:**
 
@@ -72,5 +72,5 @@ Na janela principal do Netwatch, você verá a coluna **Status**:
 Não monitore um IP que pode bloquear pings ou que seja instável por natureza. O ideal é monitorar o **DNS do Google (8.8.8.8)** ou o **Cloudflare (1.1.1.1)** para testar a internet real, ou o IP do roteador da operadora para testar apenas o link físico.
 
 
-{: .note }
-> **Uso Avançado:** O Netwatch é muito usado em cenários de [**Failover**](https://github.com/soarespaullo/MikroTik/wiki/Failover-Netwatch), onde ele desativa uma rota principal (`/ip route disable [find comment="rota1"]`) quando o link cai, forçando o roteador a usar o link reserva.
+{: .tip }
+> **Uso Avançado:** O Netwatch é muito usado em cenários de [**Failover**](https://soarespaullo.github.io/MikroTik/docs/redes/failover/){: target="_blank" }, onde ele desativa uma rota principal (`/ip route disable [find comment="rota1"]`) quando o link cai, forçando o roteador a usar o link reserva.
