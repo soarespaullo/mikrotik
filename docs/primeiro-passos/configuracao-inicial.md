@@ -73,7 +73,7 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 * **Interface:** `ether1-link-proxxima`.
 3. **Aba Dial Out:** Insira o **User** e **Password** fornecidos pelo seu provedor de internet.
 4. Marque **Add Default Route**.
-4. Garanta que **Add Default Route** esteja marcado (ou deixe `desmarcado` se você estiver configurando o [**Failover**](#) manualmente).
+4. Garanta que **Add Default Route** esteja marcado (ou deixe `desmarcado` se você estiver configurando o [**Failover**](https://soarespaullo.github.io/MikroTik/docs/redes/failover/){: target="_blank" }) manualmente).
 
 {: .note }
 > Verifique se o **Status** na parte inferior da janela mostra `connected`.
@@ -85,7 +85,7 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 2. Clique no botão **+**.
 3. Na aba **DHCP:**
 * **Interface:** Escolha a interface física onde o cabo do provedor está conectado (ex: `ether1-link-proxxima-dhcp`).
-* **Add Default Route:** Garanta que esteja marcado como `yes` (ou `no` se você estiver configurando o [**Failover**](#) manualmente).
+* **Add Default Route:** Garanta que esteja marcado como `yes` (ou `no` se você estiver configurando o [**Failover**](https://soarespaullo.github.io/MikroTik/docs/redes/failover/){: target="_blank" }) manualmente).
 4. Clique em **Apply** e **OK**.
 
 {: .note }
@@ -200,7 +200,7 @@ O MikroTik vem com várias "`portas`" abertas por padrão que você não vai usa
 
     * `winbox` (para configurar) e `ssh` (caso precise de acesso remoto via terminal).
 
-{: .note }
+{: .tip }
 > Você pode mudar a porta do winbox (`padrão 8291`) para uma porta aleatória (ex: `54321`) para dificultar a vida de invasores.
 
 ---
