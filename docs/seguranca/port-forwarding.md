@@ -59,7 +59,7 @@ Ao abrir a porta `443 (HTTPS)`, seu dispositivo ficará exposto à internet. Con
 
 *   **Porta Externa Diferente:** Você pode usar uma porta externa "disfarçada" (ex: `8443`) que redireciona para a `443` interna. Para isso, mude o **Dst. Port** para `8443` e mantenha o **To Ports** como `443`.
 
-{: .note }
+{: .tip }
 > **Acesso via Porta Personalizada:** Ao usar uma porta externa "disfarçada" (ex: **8443**), você deve obrigatoriamente especificá-la ao digitar o endereço no navegador ou aplicativo.
 
 *   **Exemplo:** `https://seudominio.ddns.net:8443`
