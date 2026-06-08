@@ -63,7 +63,7 @@ Imagine que o seu roteador é um cofre com um sistema de segurança inteligente:
 ## 🔓 3. Liberando o Acesso Real
 
 {: .note }
-> Se você já seguiu o guia de **[Firewall Básico](https://github.com/soarespaullo/MikroTik/wiki/Firewall-Rules)**, você já possui uma regra que aceita a `rede-suporte`. Não é necessário criar uma nova; o `Port Knocking` apenas adicionará o seu **IP** temporariamente a essa lista que o Firewall já autoriza.
+> Se você já seguiu o guia de **[Firewall Básico](https://soarespaullo.github.io/MikroTik/docs/seguranca/firewall-basico/){: target="_blank"}**, você já possui uma regra que aceita a `rede-suporte`. Não é necessário criar uma nova; o `Port Knocking` apenas adicionará o seu **IP** temporariamente a essa lista que o Firewall já autoriza.
 
 Se você ainda não tem essa regra, crie-a:
 
@@ -94,7 +94,7 @@ Quando você estiver fora da sua rede e precisar acessar o Winbox:
 
 ## 💡 Dica de Ouro
 
-Você pode automatizar essas batidas criando um arquivo `.bat` no Windows ou um atalho no celular que abre essas duas URLs em sequência. Assim, com um clique, você "**abre o cofre**" do seu MikroTik.
+Você pode automatizar essas batidas criando um arquivo `.bat` no Windows ou um atalho no celular que abre essas duas URLs em sequência. Assim, com um clique, você "**abre o cofre**" do seu MikroTik.
 
-{: .note }
+{: .tip }
 > O `Port Knocking` é excelente porque não consome recursos de CPU processando tentativas de login inválidas; o firewall simplesmente descarta os pacotes de quem não conhece a batida secreta.
