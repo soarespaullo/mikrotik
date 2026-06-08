@@ -12,6 +12,29 @@ Documentação centralizada para administração, segurança e automação de re
 
 ---
 
+## ⚡ Atalhos de Produção
+{: .no_toc }
+
+<div class="row" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; margin-bottom: 20px;">
+  <div class="col" style="flex: 1; min-width: 220px; padding: 15px; border: 1px solid #e1f5fe; border-radius: 6px; background: #fafafa; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+    <h4 style="margin-top: 0;">🚀 Primeiros Passos</h4>
+    <p style="font-size: 13px; color: #666; min-height: 40px;">Roteador fora da caixa? Siga o fluxo correto de provisionamento.</p>
+    <a href="{{ '/docs/primeiro-passos/configuracao-inicial/' | relative_url }}" class="btn btn-blue" style="font-size: 12px; padding: 4px 10px;">Acessar Guia</a>
+  </div>
+  <div class="col" style="flex: 1; min-width: 220px; padding: 15px; border: 1px solid #ffebee; border-radius: 6px; background: #fafafa; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+    <h4 style="margin-top: 0;">🔒 Hardening & Segurança</h4>
+    <p style="font-size: 13px; color: #666; min-height: 40px;">Políticas de Firewall, bloqueios estruturados e proteção L7.</p>
+    <a href="{{ '/docs/seguranca/' | relative_url }}" class="btn btn-red" style="font-size: 12px; padding: 4px 10px;">Ver Regras</a>
+  </div>
+  <div class="col" style="flex: 1; min-width: 220px; padding: 15px; border: 1px solid #e8f5e9; border-radius: 6px; background: #fafafa; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+    <h4 style="margin-top: 0;">🤖 Automação & Scripts</h4>
+    <p style="font-size: 13px; color: #666; min-height: 40px;">Automação de backups por e-mail e alertas integrados ao Telegram.</p>
+    <a href="{{ '/docs/automacao/' | relative_url }}" class="btn btn-green" style="font-size: 12px; padding: 4px 10px;">Pegar Scripts</a>
+  </div>
+</div>
+
+---
+
 ## 🛠️ Escopo Técnico
 {: .no_toc .text-delta }
 
