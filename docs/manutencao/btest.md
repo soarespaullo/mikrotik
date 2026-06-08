@@ -22,12 +22,12 @@ Para realizar um teste, você precisa de dois roteadores MikroTik:
 ## 🛠️ Configuração Passo a Passo
 
 ### 1. Habilitar o Servidor
-No roteador que servirá de destino, acesse: **Tools > BTest Server**.
+No roteador que servirá de destino, acesse: **Tools → BTest Server**.
 * Marque a opção `Enabled`.
 * *(Opcional)* Defina uma senha em `Authenticate` para evitar que estranhos usem seu processamento para testes.
 
 ### 2. Executar o Teste (Cliente)
-No roteador de origem, vá em: **Tools > Bandwidth Test**.
+No roteador de origem, vá em: **Tools → Bandwidth Test**.
 * **Test To:** Digite o IP do roteador servidor.
 * **Protocol:** * `UDP`: Mais leve, ideal para testar a capacidade máxima do meio físico.
     * `TCP`: Mais pesado, exige mais CPU, mas reflete o comportamento real da navegação web.
