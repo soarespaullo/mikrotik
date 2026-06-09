@@ -3,6 +3,7 @@ layout: default
 title: 🏠 Home
 nav_order: 1
 has_children: false
+last_modified_date: 2026-06-08 21:15
 ---
 
 # 🚀 Wiki Técnica MikroTik
