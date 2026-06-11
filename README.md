@@ -7,7 +7,7 @@
 
 Este repositório centraliza a documentação, rotinas de automação e scripts para dispositivos MikroTik (**RouterOS v7**). Todo o conteúdo deste repositório é compilado automaticamente em uma Wiki interativa utilizando **Jekyll** e o tema **Just the Docs**.
 
-🌐 **Acesse a Wiki Oficial:** [https://soarespaullo.github.io/MikroTik](https://soarespaullo.github.io/MikroTik)
+🌐 **Acesse a Wiki Oficial:** [https://soarespaullo.github.io/MikroTik](https://soarespaullo.github.io/mikrotik)
 
 ---
 
