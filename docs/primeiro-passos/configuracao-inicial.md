@@ -77,13 +77,10 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 2. **Aba General:**
 * **Name:** `pppoe-cliente-proxxima` 
 * **Interface:** `ether1-link-proxxima`.
-3. **Aba Dial Out:** Insira o **User** e **Password** fornecidos pelo seu provedor de internet.
+3. **Aba Dial Out:** Insira o **Usuário** e **Senha** fornecidos pelo seu provedor de internet.
 4. **Allow:** Desmarque a opção `pap` e deixe marcadas apenas as opções `chap`, `mschap1` e `mschap2`.
 5. Marque **Add Default Route**.
 6. Garanta que **Add Default Route** esteja marcado (ou deixe `desmarcado` se você estiver configurando o [**Failover**](https://soarespaullo.github.io/mikrotik/docs/redes/failover/){: target="_blank" }) manualmente).
-
-{: .warning }
-> Certifique-se de desmarcar a opção `pap`. Esse protocolo envia a senha em texto plano (`sem criptografia`) pela rede, o que representa uma falha de segurança.
 
 {: .note }
 > Verifique se o **Status** na parte inferior da janela mostra `connected`.
