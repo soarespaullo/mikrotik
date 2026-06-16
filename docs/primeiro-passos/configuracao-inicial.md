@@ -170,8 +170,8 @@ Vá em **System** → **Packages** e clique em **Check For Updates**.
 **Diferença entre Canais (Channels):**
  
 * **Long Term**: Estabilidade máxima (Produção).
-* **Stable**: Novos recursos testados.
-* **Testing:** Versão de pré-lançamento.
+* **Stable**: Novos recursos testados (Uso Diário / Geral).
+* **Testing:** Versão de pré-lançamento (Homologação / Validação).
 * **Development**: Apenas para laboratório (Risco de travamento).
 
 ---
