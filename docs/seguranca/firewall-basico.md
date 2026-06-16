@@ -25,6 +25,8 @@ Esta regra permite que o roteador responda a comunicações que ele mesmo inicio
 
     * **Connection State:** Marque `established` e `related`.
 
+    * **Comment:** `Aceitar conexoes estabelecidas e relacionadas - INPUT`
+
 3.  **Aba Action:**
 
     *  **Action:** `accept`
@@ -40,7 +42,7 @@ Esta regra permite que o roteador responda a comunicações que ele mesmo inicio
 
 Libera acesso total ao roteador para os **IPs** que estão na sua lista de permissão.
 
-1.  **Primeiro, crie a lista:** Vá na aba **Address Lists** e clique em `+`.
+1.  **Primeiro, crie a lista:** Vá na aba **Address Lists** e clique em **+**.
 
     *   **List:** `rede-suporte`
 
@@ -51,6 +53,8 @@ Libera acesso total ao roteador para os **IPs** que estão na sua lista de permi
     *   **Aba General:** `Chain: input`.
 
     *   **Aba General:** `Src. Address List: rede-suporte`.
+
+    *   **Comment:** `Permitir acesso total - Lista de Suporte - INPUT`
 
     *   **Aba Action:** `Action: accept`.
 
@@ -69,11 +73,13 @@ Permite que o roteador responda a Pings, mas limita a quantidade para evitar ata
 
     *   **Protocol:** `icmp`
 
+    * **Comment:** `Aceitar ICMP (Ping) limitado a 10 por segundo - INPUT`
+
 2.  **Aba Extra:**
 
     *   **Limit:**
 
-        *   **Rate:** `10/sec`
+        *   **Rate:** `10/sec` (Aceita até 10 pings por segundo)
 
         *   **Burst:** `5`
 
@@ -90,6 +96,8 @@ Esta regra deve ser **sempre a última**. Ela bloqueia qualquer tentativa de con
 1.  **Aba General:**
 
     *   **Chain:** `input`
+
+    *   **Comment:** `Bloqueio Geral (Drop All) - Resto do Trafego - INPUT`
 
 2.  **Aba Action:**
 
