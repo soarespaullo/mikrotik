@@ -10,6 +10,7 @@ last_modified_date: 2026-06-19 22:50
 {: .no_toc }
 
 Este módulo complementa as políticas básicas do RouterOS, adicionando proteção contra pacotes malformados, varreduras ativas (*Port Scanners*) e ataques de força bruta (*Brute Force*).
+
 (_Requisito:_ Ter configurado o [**Guia de Firewall Básico**](https://soarespaullo.github.io/mikrotik/docs/seguranca/firewall-basico/){: target="_blank" })
 
 ### 🧼 1. Filtragem de Estados Inválidos
@@ -20,11 +21,11 @@ Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
- *   **Chain:** input
+   *   **Chain:** input
 
- *   **Connection State:** Marque apenas invalid.
+   *   **Connection State:** Marque apenas invalid.
 
- *   **Comment:** Drop Conexoes Invalidas - INPUT
+   *   **Comment:** Drop Conexoes Invalidas - INPUT
 
 **Aba Action:**
 
