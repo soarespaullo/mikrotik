@@ -17,7 +17,7 @@ O Firewall de `input` é responsável por proteger o **próprio roteador** de ac
 
 Esta regra permite que o roteador responda a comunicações que ele mesmo iniciou. Sem ela, nada funciona corretamente.
 
-1.  Vá em **IP** → **Firewall** → **Filter Rules** e clique em **+**.
+1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 2.  **Aba General:**
 

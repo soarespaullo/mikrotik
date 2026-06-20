@@ -9,128 +9,128 @@ last_modified_date: 2026-06-19 22:50
 # 🛡️ Guia: Firewall Intermediário (Proteção do Roteador)
 {: .no_toc }
 
-Este módulo complementa as políticas básicas do RouterOS, adicionando proteção contra pacotes malformados, varreduras ativas (**Port Scanners**) e ataques de força bruta (**Brute Force**).<br>
+Este módulo complementa as políticas básicas do **RouterOS**, adicionando proteção contra pacotes malformados, varreduras ativas (**Port Scanners**) e ataques de força bruta (**Brute Force**).<br>
 (_Requisito:_ Ter configurado o [**Guia de Firewall Básico**](https://soarespaullo.github.io/mikrotik/docs/seguranca/firewall-basico/){: target="_blank" })
 
-### 🧼 1. Filtragem de Estados Inválidos
+## 🧼 1. Filtragem de Estados Inválidos
 
 Esta regra descarta pacotes defeituosos ou fora de sequência, poupando o processamento da CPU.
 
-Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
+1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
-**Aba General:**
+2.  **Aba General:**
 
-*   **Chain:** `input`
+    *   **Chain:** `input`.
 
-*   **Connection State:** Marque apenas `invalid`.
+	*   **Connection State:** Marque apenas `invalid`.
 
-*   **Comment:** `DROP CONEXOES INVALIDAS - INPUT`
+	*   **Comment:** `DROP CONEXOES INVALIDAS - INPUT`.
 
-**Aba Action:**
+3.  **Aba Action:**
 
-*   **Action:** `drop`
+4.	*   **Action:** `drop`.
 
-Clique em **OK**.
+5.  Clique em **OK**.
 
-### 🪤 2. Subsistema Anti-Scanners (Detecção e Bloqueio)
+## 🪤 2. Subsistema Anti-Scanners (Detecção e Bloqueio)
 
 Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bloqueio temporário.
 
 #### Regra A: Detecção por Pontuação (PSD)
 
-Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
+1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
-**Aba General:**
+2. **Aba General:**
 
-*   **Chain:** `input`
+	*   **Chain:** `input`.
 
-*   **Protocol:** `tcp`
+	*   **Protocol:** `tcp`.
 
-*   **Comment:** DETECTA PORT SCANNERS - INPUT
+	*   **Comment:** `DETECTA PORT SCANNERS - INPUT`.
 
-**Aba Extra:**
+3. **Aba Extra:**
 
-*   **PSD:** `Weight Threshold: 21 | Delay Threshold: 3s | Low Port Weight: 3 | High Port Weight: 1`
+	*   **PSD:** `Weight Threshold: 21 | Delay Threshold: 3s | Low Port Weight: 3 | High Port Weight: 1`
 
-**Aba Action:**
+4. **Aba Action:**
 
-*   **Action:** `add src to address list`
+	*   **Action:** `add src to address list`.
 
-*   **Address List:** `port scanners`
+	*   **Address List:** `port scanners`.
 
-*   **Timeout:** `2w (14 dias)`
+	*   **Timeout:** `2w (14 dias)`.
 
-Clique em **OK**.
+5. Clique em **OK**.
 
 #### Regra B: Detecção de Varredura Síncrona Agressiva (Fast SYN Scan)
 
-Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
+1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
-**Aba General:**
+2. **Aba General:**
 
-*   **Chain:** `input`
+	*   **Chain:** `input`.
 
-*   **Protocol:** `tcp`
+	*   **Protocol:** `tcp`.
 
-*   **TCP Flags:** `Marque apenas syn`.
+	*   **TCP Flags:** `Marque apenas syn`.
 
-*   **Connection Limit:** `Limit: 30 | Netmask: 32`
+	*   **Connection Limit:** `Limit: 30 | Netmask: 32`.
 
-*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`
+	*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`.
 
-**Aba Action:**
+3. **Aba Action:**
 
-*   **Action:** `add src to address list`
+	*   **Action:** `add src to address list`.
 
-*   **Address List:** `port scanners`
+	*   **Address List:** `port scanners`.
 
-*   **Timeout:** `2w (14 dias)`
+	*   **Timeout:** `2w (14 dias)`.
 
-Clique em **OK**.
+4. Clique em **OK**.
 
 #### Regra C: Bloqueio Estrutural da Lista
 
-Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
+1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
-**Aba General:**
+2.  **Aba General:**
 
-*   **Chain:** `input`
+	*   **Chain:** `input`.
 
-*   **Src. Address List:** `port scanners`
+	*   **Src. Address List:** `port scanners`.
 
-*   **Comment:** `DROP IPs SCANNERS - INPUT`
+	*   **Comment:** `DROP IPs SCANNERS - INPUT`.
 
-**Aba Action:**
+3.  **Aba Action:**
 
-*   **Action:** `drop`
+    *   **Action:** `drop`.
 
-Clique em OK.
+4.  Clique em OK.
 
-### 🦹 3. Mitigação de Força Bruta (Winbox / SSH)
+## 🦹 3. Mitigação de Força Bruta (Winbox / SSH)
 
 Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência, mitigando ataques automatizados de dicionário.
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
+1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
-**Aba General:**
+2.  **Aba General:**
 
-*   **Chain:** `input`
+	*   **Chain:** `input`.
 
-*   **Protocol:** `tcp`
+	*   **Protocol:** `tcp`.
 
-*   **Dst. Port:** `22,8291,5050` (_Insira as portas de gerência utilizadas_)
+	*   **Dst. Port:** `22,8291,5050`. (*Insira as portas de gerência utilizadas*)
 
-*   **Connection State:** `Marque apenas new`.
+	*   **Connection State:** `Marque apenas new`.
 
-*   **Connection Limit:** `Limit: 3 | Netmask: 32`
+	*   **Connection Limit:** `Limit: 3 | Netmask: 32`.
 
-*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`
+	*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`.
 
-**Aba Action:**
+3.  **Aba Action:**
 
-*   **Action:** `drop`
+	*   **Action:** `drop`.
 
-Clique em **OK**.
+4.  Clique em **OK**.
 
 ## ⚠️ Atenção à Ordem das Regras
 

@@ -15,7 +15,7 @@ Por padrão, o MikroTik vem com várias portas de comunicação abertas. Este tu
 
 ## 🛠️ 1. Onde encontrar os Serviços
 
-No Winbox, acesse o menu **IP** → **Services**. Você verá uma lista com os protocolos de comunicação do roteador.
+No Winbox, acesse o menu **IP** ➔ **Services**. Você verá uma lista com os protocolos de comunicação do roteador.
 
 ---
 
