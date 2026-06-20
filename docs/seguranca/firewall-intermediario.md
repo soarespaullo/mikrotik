@@ -16,21 +16,21 @@ Este módulo complementa as políticas básicas do RouterOS, adicionando proteç
 
 Esta regra descarta pacotes defeituosos ou fora de sequência, poupando o processamento da CPU.
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
+Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 **Aba General:**
 
-*   **Chain:** input
+*   **Chain:** `input`
 
-*   **Connection State:** Marque apenas invalid.
+*   **Connection State:** Marque apenas `invalid`.
 
-*   **Comment:** Drop Conexoes Invalidas - INPUT
+*   **Comment:** `DROP CONEXOES INVALIDAS - INPUT`
 
 **Aba Action:**
 
-*   **Action:** drop
+*   **Action:** `drop`
 
-Clique em OK.
+Clique em **OK**.
 
 ### 🪤 2. Subsistema Anti-Scanners (Detecção e Bloqueio)
 
@@ -38,71 +38,71 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 #### Regra A: Detecção por Pontuação (PSD)
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
+Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 **Aba General:**
 
-*   **Chain:** input
+*   **Chain:** `input`
 
-*   **Protocol:** tcp
+*   **Protocol:** `tcp`
 
-*   **Comment:** Detecta Port Scanners - INPUT
+*   **Comment:** DETECTA PORT SCANNERS - INPUT
 
 **Aba Extra:**
 
-*   **PSD:** Weight Threshold: 21 , Delay Threshold: 3s , Low Port Weight: 3 , High Port Weight: 1
+*   **PSD:** `Weight Threshold: 21 | Delay Threshold: 3s | Low Port Weight: 3 | High Port Weight: 1`
 
 **Aba Action:**
 
-*   **Action:** add src to address list
+*   **Action:** `add src to address list`
 
-*   **Address List:** port scanners
+*   **Address List:** `port scanners`
 
-*   **Timeout:** 2w (14 dias)
+*   **Timeout:** `2w (14 dias)`
 
-Clique em OK.
+Clique em **OK**.
 
 #### Regra B: Detecção de Varredura Síncrona Agressiva (Fast SYN Scan)
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
+Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 **Aba General:**
 
-*   **Chain:** input
+*   **Chain:** `input`
 
-*   **Protocol:** tcp
+*   **Protocol:** `tcp`
 
-*   **TCP Flags:** Marque apenas syn.
+*   **TCP Flags:** `Marque apenas syn`.
 
-*   **Connection Limit:** Limit: 30 , Netmask: 32
+*   **Connection Limit:** `Limit: 30 | Netmask: 32`
 
-*   **Comment:** Detecta syn scan Agressivo - INPUT
+*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`
 
 **Aba Action:**
 
-*   **Action:** add src to address list
+*   **Action:** `add src to address list`
 
-*   **Address List:** port scanners
+*   **Address List:** `port scanners`
 
-*   **Timeout:** 2w (14 dias)
+*   **Timeout:** `2w (14 dias)`
 
-Clique em OK.
+Clique em **OK**.
 
 #### Regra C: Bloqueio Estrutural da Lista
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
+Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 **Aba General:**
 
-*   **Chain:** input
+*   **Chain:** `input`
 
-*   **Src. Address List:** port scanners
+*   **Src. Address List:** `port scanners`
 
-*   **Comment:** DROP IPs SCANNERS - INPUT
+*   **Comment:** `DROP IPs SCANNERS - INPUT`
 
 **Aba Action:**
 
-*   **Action:** drop
+*   **Action:** `drop`
 
 Clique em OK.
 
@@ -114,23 +114,23 @@ Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
-*   **Chain:** input
+*   **Chain:** `input`
 
-*   **Protocol:** tcp
+*   **Protocol:** `tcp`
 
-*   **Dst. Port:** 22,8291,5050 (Insira as portas de gerência utilizadas)
+*   **Dst. Port:** `22,8291,5050` (_Insira as portas de gerência utilizadas_)
 
-*   **Connection State:** Marque apenas new.
+*   **Connection State:** `Marque apenas new`.
 
-*   **Connection Limit:** Limit: 3 , Netmask: 32
+*   **Connection Limit:** `Limit: 3 | Netmask: 32`
 
-*   **Comment:** Limita Brute Force SSH/Winbox - INPUT
+*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`
 
 **Aba Action:**
 
-*   **Action:** drop
+*   **Action:** `drop`
 
-Clique em OK.
+Clique em **OK**.
 
 ## ⚠️ Atenção à Ordem das Regras
 
@@ -154,3 +154,6 @@ No MikroTik, a ordem dos fatores altera o produto! O firewall lê as regras de c
 8.  `accept icmp` *(Básico 3)*
 
 9.  `Bloqueio Geral (Drop All) - Resto do Trafego - INPUT` *(Básico 4)*
+
+{: .important }
+> Se você colocar a regra de **Drop** acima da regra de **Rede Suporte**, você perderá o acesso ao Winbox imediatamente e precisará de acesso físico ao roteador.

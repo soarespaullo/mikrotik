@@ -21,15 +21,15 @@ Esta regra permite que o roteador responda a comunicações que ele mesmo inicio
 
 2.  **Aba General:**
 
-    * **Chain:** `input`
+    * **Chain:** `input`.
 
     * **Connection State:** Marque `established` e `related`.
 
-    * **Comment:** `Aceitar conexoes estabelecidas e relacionadas - INPUT`
+    * **Comment:** `ACEITA CONEXOES ESTABELECIDAS E RELACIONADAS - INPUT`.
 
 3.  **Aba Action:**
 
-    *  **Action:** `accept`
+    *  **Action:** `accept`.
 
 4.  Clique em **OK**.
 
@@ -44,7 +44,7 @@ Libera acesso total ao roteador para os **IPs** que estão na sua lista de permi
 
 1.  **Primeiro, crie a lista:** Vá na aba **Address Lists** e clique em **+**.
 
-    *   **List:** `rede-suporte`
+    *   **List:** `rede-suporte`.
 
     *   **Address:** `10.220.0.0/24` (Aceita a rede local inteira).
 
@@ -54,9 +54,11 @@ Libera acesso total ao roteador para os **IPs** que estão na sua lista de permi
 
     *   **Aba General:** `Src. Address List: rede-suporte`.
 
-    *   **Comment:** `Permitir acesso total - Lista de Suporte - INPUT`
+    *   **Comment:** `ACEITA REDE SUPORTE - INPUT`.
 
-    *   **Aba Action:** `Action: accept`.
+    *   **Aba Action:** 
+
+    *   **Action:** `accept`.
 
 {: .note } 
 > Em **Address**, você pode colocar o IP específico de um computador ou o bloco da rede toda como fizemos acima.
@@ -69,23 +71,23 @@ Permite que o roteador responda a Pings, mas limita a quantidade para evitar ata
 
 1.  **Aba General:**
 
-    *   **Chain:** `input`
+    *   **Chain:** `input`.
 
-    *   **Protocol:** `icmp`
+    *   **Protocol:** `icmp`.
 
-    * **Comment:** `Aceitar ICMP (Ping) limitado a 10 por segundo - INPUT`
+    * **Comment:** `ACEITA ICMP (PING) LIMITADO A 10 POR SEGUNDOO - INPUT`.
 
 2.  **Aba Extra:**
 
     *   **Limit:**
 
-        *   **Rate:** `10/sec` (Aceita até 10 pings por segundo)
+        *   **Rate:** `10/sec`. (_Aceita até 10 pings por segundo_)
 
-        *   **Burst:** `5`
+        *   **Burst:** `5`.
 
 3.  **Aba Action:**
 
-    *   **Action:** `accept`
+    *   **Action:** `accept`.
 
 ---
 
@@ -95,13 +97,13 @@ Esta regra deve ser **sempre a última**. Ela bloqueia qualquer tentativa de con
 
 1.  **Aba General:**
 
-    *   **Chain:** `input`
+    *   **Chain:** `input`.
 
-    *   **Comment:** `Bloqueio Geral (Drop All) - Resto do Trafego - INPUT`
+    *   **Comment:** `DROP GERAL - INPUT`.
 
 2.  **Aba Action:**
 
-    *   **Action:** `drop`
+    *   **Action:** `drop`.
 
 ---
 
