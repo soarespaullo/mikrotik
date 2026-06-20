@@ -13,7 +13,7 @@ O Firewall de `input` é responsável por proteger o **próprio roteador** de ac
 
 ---
 
-## 🏗️ 1. Aceitar Conexões Estabelecidas ou Relacionadas
+## 🏗️ 1. Aceitar Conexões Estabelecidas e Relacionadas
 
 Esta regra permite que o roteador responda a comunicações que ele mesmo iniciou. Sem ela, nada funciona corretamente.
 
