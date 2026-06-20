@@ -2,7 +2,7 @@
 layout: default
 title: "🚫 Bloqueio de Serviços"
 parent: "🔒 Segurança & Acesso"
-nav_order: 4
+nav_order: 13
 last_modified_date: 2026-06-12 23:45
 ---
 
