@@ -9,7 +9,7 @@ last_modified_date: 2026-06-08 11:40
 # 🛡️ Guia: Firewall Básico (Proteção do Roteador)
 {: .no_toc }
 
-O Firewall de `input` é responsável por proteger o **próprio roteador** de acessos externos não autorizados. Seguiremos a estratégia de "Bloqueio por Padrão", onde liberamos apenas o essencial e dropamos o resto.
+O Firewall de `input` é responsável por proteger o **próprio roteador** de acessos externos não autorizados. Seguiremos a estratégia de **Default Drop (Bloqueio por Padrão)**, onde liberamos apenas o essencial e dropamos o resto.
 
 ---
 
