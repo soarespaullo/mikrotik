@@ -37,7 +37,7 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 #### Regra A: Detecção por Pontuação (PSD)
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
+Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
@@ -49,7 +49,7 @@ Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
 
 **Aba Extra:**
 
-*   **PSD:** Weight Threshold: 21 | Delay Threshold: 3s | Low Port Weight: 3 | High Port Weight: 1
+*   **PSD:** Weight Threshold: 21 , Delay Threshold: 3s , Low Port Weight: 3 , High Port Weight: 1
 
 **Aba Action:**
 
@@ -63,7 +63,7 @@ Clique em OK.
 
 #### Regra B: Detecção de Varredura Síncrona Agressiva (Fast SYN Scan)
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
+Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
@@ -73,7 +73,7 @@ Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
 
 *   **TCP Flags:** Marque apenas syn.
 
-*   **Connection Limit:** Limit: 30 | Netmask: 32
+*   **Connection Limit:** Limit: 30 , Netmask: 32
 
 *   **Comment:** Detecta syn scan Agressivo - INPUT
 
@@ -89,7 +89,7 @@ Clique em OK.
 
 #### Regra C: Bloqueio Estrutural da Lista
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
+Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
@@ -109,7 +109,7 @@ Clique em OK.
 
 Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência, mitigando ataques automatizados de dicionário.
 
-Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
+Vá em IP ➔ Firewall ➔ Filter Rules e clique em **+**.
 
 **Aba General:**
 
@@ -121,9 +121,9 @@ Vá em IP ➔ Firewall ➔ Filter Rules e clique em +.
 
 *   **Connection State:** Marque apenas new.
 
-*   **Connection Limit:** Limit: 3 | Netmask: 32
+*   **Connection Limit:** Limit: 3 , Netmask: 32
 
-*   **Comment:** LIMITA BRUTE FORCE SSH/WINBOX - INPUT
+*   **Comment:** Limita Brute Force SSH/Winbox - INPUT
 
 **Aba Action:**
 
