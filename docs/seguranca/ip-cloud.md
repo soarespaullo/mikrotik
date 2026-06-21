@@ -13,7 +13,7 @@ O serviço de **Cloud** da MikroTik fornece um nome de domínio gratuito (ex: `5
 
 ## 🪜 1. Ativando o DDNS
 
-1.  Vá em **IP → Cloud**.
+1.  Vá em **IP ➔ Cloud**.
 
 2.  No campo **DDNS Enabled**, selecione a opção `Yes`.
 
@@ -21,9 +21,12 @@ O serviço de **Cloud** da MikroTik fornece um nome de domínio gratuito (ex: `5
 
 4.  Clique em **Apply**.
 
+{: .note }
+> Embora o IP Cloud ofereça a opção **Update Time**, para garantir uma precisão milimétrica nos logs e agendamentos do seu roteador, o recomendado é utilizar servidores nacionais dedicados. Após ativar o DDNS, configure o nosso [**Guia de Ajuste de Hora (NTP Client)**](https://soarespaullo.github.io/mikrotik/docs/manutencao/ntp/){: target="_blank" } para deixar o relógio do seu MikroTik 100% confiável.
+
 ## 🔗 2. Obtendo seu Endereço de Acesso
 
-Após clicar em Apply, observe os campos que foram preenchidos:
+Após clicar em **Apply**, observe os campos que foram preenchidos:
 
 *   **Public Address:** Mostra qual é o seu IP de internet atual.
 
@@ -38,19 +41,19 @@ Após clicar em Apply, observe os campos que foram preenchidos:
 
 Ao ativar o Cloud, seu roteador ganha um "nome" na internet. Para sua segurança, certifique-se de:
 
-1.  [**Trocar a senha padrão:**](https://soarespaullo.github.io/mikrotik/docs/primeiro-passos/configuracao-inicial/#-8-criando-usu%C3%A1rio-de-acesso){: target="_blank" } Nunca use o usuário `admin` sem senha (conforme fizemos no Guia de Configuração Inicial).
+1.  [**Trocar a senha padrão:**](https://soarespaullo.github.io/mikrotik/docs/primeiro-passos/configuracao-inicial/#-8-criando-usu%C3%A1rio-de-acesso){: target="_blank" } Nunca use o usuário `admin` sem senha ([**conforme fizemos no Guia de Configuração Inicial**](https://soarespaullo.github.io/mikrotik/docs/primeiro-passos/configuracao-inicial/){: target="_blank" }).
 
-2.  [**Portas de Serviço:**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" } Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em **IP → Services**.
+2.  [**Portas de Serviço:**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" } Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em ([**IP → Services**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" }).
 
 ---
 
 ## ❓ Por que usar o IP Cloud?
 
-*   **Acesso Remoto:** Você pode entrar no Winbox do escritório estando em casa ou pelo celular (usando o app MikroTik).
+*   **Acesso Remoto:** Você pode entrar no Winbox do escritório estando em casa ou pelo celular ([**usando o app MikroTik**](https://mikrotik.com/download/mobile){: target="_blank" }).
 
-*   **VPNs:** Se você configurar uma VPN (como WireGuard), usará o **DNS Name** do Cloud para conectar os dispositivos, garantindo que a VPN não caia quando o IP da operadora mudar.
+*   **VPNs:** Se você configurar uma VPN ([**como WireGuard**](https://soarespaullo.github.io/mikrotik/docs/seguranca/vpn-wireguard/){: target="_blank" }), usará o **DNS Name** do Cloud para conectar os dispositivos, garantindo que a VPN não caia quando o IP da operadora mudar.
 
-*   **Gratuito:** É um serviço oficial da MikroTik, sem mensalidade e sem necessidade de criar contas em sites externos (como No-IP).
+*   **Gratuito:** É um serviço oficial da MikroTik, sem mensalidade e sem necessidade de criar contas em sites externos (como No-IP/DuckDNS).
 
 {: .note }
 > **Verificação de Conectividade:** `Observe as mensagens no rodapé da janela`:
