@@ -73,7 +73,7 @@ Ao ativar o Cloud, seu roteador ganha um "nome" na internet. Para sua segurança
 
 ## ❓ Por que usar o IP Cloud?
 
-*   **Acesso Remoto:** Você pode entrar no Winbox do escritório estando em casa ou pelo celular ([**usando o app MikroTik**](https://mikrotik.com/download/mobile){: target="_blank" }).
+*   **Acesso Remoto:** Você pode entrar no [**Winbox**](https://mikrotik.com/download/winbox/){: target="_blank" } do **escritório estando em casa** ou pelo celular ([**usando o app MikroTik**](https://mikrotik.com/download/mobile){: target="_blank" }).
 
 *   **VPNs:** Se você configurar uma VPN ([**como WireGuard**](https://soarespaullo.github.io/mikrotik/docs/seguranca/vpn-wireguard/){: target="_blank" }), usará o **DNS Name** do Cloud para conectar os dispositivos, garantindo que a VPN não caia quando o IP da operadora mudar.
 
