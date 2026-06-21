@@ -122,17 +122,15 @@ Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer ser
 
     *   **Chain:** `forward`.
 
-3.  **Aba Advanced:**
-
     *   **Src. Address List:** Selecione ou digite `port-scanners`.
 
-4.  **Aba Action:**
+3.  **Aba Action:**
 
     *   **Action:** `drop`.
 
     *   **Comment:** `DROP IPs SCANNERS - FORWARD`.
 
-5.  Clique em **OK**.
+4.  Clique em **OK**.
 
 ## 🦹 6. Mitigação de Força Bruta (Winbox / SSH)
 
