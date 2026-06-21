@@ -37,6 +37,7 @@ Esta regra descarta pacotes defeituosos ou fora de sequência, poupando o proces
 Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bloqueio temporário.
 
 ### Regra A: Detecção por Pontuação (PSD)
+{: .label .label-green }
 
 1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
