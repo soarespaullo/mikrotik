@@ -75,5 +75,6 @@ graph TD
     style ADD2 fill:#fff8e1,stroke:#ffb300,stroke-width:2px
     style BAN1 fill:#fff3e0,stroke:#ff9800,stroke-width:2px
     style BAN2 fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+```
 
-    [⬅️ Voltar para o Guia de Firewall Intermediário]({{ '/docs/seguranca/firewall-intermediario/' | relative_url }}){: .btn .btn-outline }
+[⬅️ Voltar para o Guia de Firewall Intermediário]({{ '/docs/seguranca/firewall-intermediario/' | relative_url }}){: .btn .btn-outline }
