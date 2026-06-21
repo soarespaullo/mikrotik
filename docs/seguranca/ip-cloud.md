@@ -48,7 +48,7 @@ O endereço gerado pelo IP Cloud da MikroTik é extremamente estável, mas decor
 
 A grande vantagem deste método é que você **não precisa de scripts no roteador**. Quem atualiza o IP é o **Cloud da MikroTik**; o seu domínio gratuito apenas o segue.
 
-1. Acesse o site do [**No-IP**](https://www.noip.com/){: target="_blank" }, crie/acesse sua conta gratuita e vá na aba de gerenciamento de domínios (**No-IP Hosted Domains**).
+1. Acesse o site do [**No-IP**](https://www.noip.com/){: target="_blank" }, crie/acesse sua conta gratuita e vá na aba de gerenciamento de domínios (**Gerencie DNS/DNS Records**).
 2. Clique no botão **Criar hostname** e preencha os campos exatamente assim:
    * **Type:** Clique no menu de opções e mude de `A` para `CNAME`.
    * **Host:** Digite o nome amigável que você escolheu (Ex: `mikrotik`). Ao lado, selecione o domínio gratuito desejado (Ex: `.ddns.net`).
