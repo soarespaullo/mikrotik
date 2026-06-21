@@ -82,7 +82,7 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 	*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`.
 
-3. **Aba Action:**
+5. **Aba Action:**
 
 	*   **Action:** `add src to address list`.
 
@@ -90,7 +90,7 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 	*   **Timeout:** `14d 00:00:00 (14 dias, 0 horas, 0 minutos e 0 segundos)`.
 
-4. Clique em **OK**.
+6. Clique em **OK**.
 
 ### Regra C: Bloqueio Estrutural da Lista
 
@@ -110,7 +110,7 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 4.  Clique em **OK**.
 
-## 🧱 4. Restrição de Acesso à Rede Interna (Forward)
+## 🧱 3. Restrição de Acesso à Rede Interna (Forward)
 
 Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer servidor ou dispositivo da rede interna.
 
@@ -132,7 +132,7 @@ Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer ser
 
 5.  Clique em **OK**.
 
-## 🦹 3. Mitigação de Força Bruta (Winbox / SSH)
+## 🦹 4. Mitigação de Força Bruta (Winbox / SSH)
 
 Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência, mitigando ataques automatizados de dicionário.
 
@@ -154,11 +154,11 @@ Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência
 
 	*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`.
 
-3.  **Aba Action:**
+4.  **Aba Action:**
 
 	*   **Action:** `drop`.
 
-4.  Clique em **OK**.
+5.  Clique em **OK**.
 
 ## ⚠️ Atenção à Ordem das Regras
 
