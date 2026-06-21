@@ -24,7 +24,7 @@ O serviço de **Cloud** da MikroTik fornece um nome de domínio gratuito (ex: `5
 5.  Clique em **Apply**.
 
 {: .warning }
-> **Cuidado com o Intervalo:** Evite deixar o *DDNS Update Interval* em tempos muito baixos (como `00:01:00`). Consultas a cada 1 minuto podem fazer os servidores da MikroTik bloquearem o seu domínio temporariamente por excesso de requisições (Spam). O recomendado é manter entre 10 minutos e 1 hora.
+> Evite deixar o **DDNS Update Interval** em tempos muito baixos (como `00:01:00`). Consultas a cada 1 minuto podem fazer os servidores da MikroTik bloquearem o seu domínio temporariamente por excesso de requisições (Spam). O recomendado é manter entre 10 minutos e 1 hora.
 
 {: .note }
 > Embora o IP Cloud ofereça a opção **Update Time**, para garantir uma precisão milimétrica nos logs e agendamentos do seu roteador, o recomendado é utilizar servidores nacionais dedicados. Após ativar o DDNS, configure o nosso [**Guia de Ajuste de Hora (NTP Client)**](https://soarespaullo.github.io/mikrotik/docs/manutencao/ntp/){: target="_blank" } para deixar o relógio do seu MikroTik 100% confiável.
@@ -67,7 +67,7 @@ Ao ativar o Cloud, seu roteador ganha um "nome" na internet. Para sua segurança
 
 1.  [**Trocar a senha padrão:**](https://soarespaullo.github.io/mikrotik/docs/primeiro-passos/configuracao-inicial/#-8-criando-usu%C3%A1rio-de-acesso){: target="_blank" } Nunca use o usuário `admin` sem senha ([**conforme fizemos no Guia de Configuração Inicial**](https://soarespaullo.github.io/mikrotik/docs/primeiro-passos/configuracao-inicial/){: target="_blank" }).
 
-2.  [**Portas de Serviço:**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" } Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em ([**IP → Services**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" }).
+2.  [**Portas de Serviço:**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" } Se você for acessar de fora, lembre-se que as portas padrão (8291 para Winbox) devem estar abertas ou alteradas em ([**IP ➔ Services**](https://soarespaullo.github.io/mikrotik/docs/seguranca/bloqueio-servicos/){: target="_blank" }).
 
 ---
 
