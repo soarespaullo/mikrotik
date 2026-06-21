@@ -37,7 +37,26 @@ Após clicar em **Apply**, observe os campos que foram preenchidos:
 
 ---
 
-## 🛡️ 3. Considerações de Segurança
+## 🏷️ 3. Criando um Nome Amigável (No-IP ou DuckDNS)
+
+O endereço gerado pelo IP Cloud da MikroTik é extremamente estável, mas decorar uma sequência de letras e números aleatórios não é nada prático. Para resolver isso, você pode criar um subdomínio gratuito em serviços externos e mascarar esse "endereço feio" usando um apontamento do tipo **CNAME**.
+
+A grande vantagem deste método é que você **não precisa de scripts no roteador**. Quem atualiza o IP é o **Cloud da MikroTik**; o seu domínio gratuito apenas o segue.
+
+### Passo a Passo do Apontamento:
+1. Acesse o site do provedor de sua preferência ([**No-IP**](https://www.noip.com/){: target="_blank" } ou [**DuckDNS**](https://www.duckdns.org/){: target="_blank" }) e crie uma conta gratuita.
+
+2. Crie o subdomínio com o nome amigável que desejar (Exemplo: `mikrotik.ddns.net`).
+
+3. Na hora de escolher o tipo de registro, mude de **A (IP)** para **CNAME**.
+
+4. No campo de destino (*Target* ou *Alias*), cole o seu endereço completo do MikroTik **DNS Name** obtido no Passo 2.
+
+5. Salve as alterações
+
+---
+
+## 🛡️ 4. Considerações de Segurança
 
 Ao ativar o Cloud, seu roteador ganha um "nome" na internet. Para sua segurança, certifique-se de:
 
