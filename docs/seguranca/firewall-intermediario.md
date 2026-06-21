@@ -20,11 +20,11 @@ Esta regra descarta pacotes defeituosos ou fora de sequência, poupando o proces
 
 2.  **Aba General:**
 
+	*   **Comment:** `DROP CONEXOES INVALIDAS - INPUT`.
+
     *   **Chain:** `input`.
 
 	*   **Connection State:** Marque apenas `invalid`.
-
-	*   **Comment:** `DROP CONEXOES INVALIDAS - INPUT`.
 
 3.  **Aba Action:**
 
@@ -40,11 +40,11 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 2. **Aba General:**
 
+	*   **Comment:** `DETECTA PORT SCANNERS (PSD) - INPUT`.
+
 	*   **Chain:** `input`.
 
 	*   **Protocol:** `tcp`.
-
-	*   **Comment:** `DETECTA PORT SCANNERS (PSD) - INPUT`.
 
 3. **Aba Extra:**
 
@@ -68,6 +68,8 @@ Identifica robôs que realizam varreduras de portas em alta velocidade enviando 
 
 2. **Aba General:**
 
+	*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`.
+
 	*   **Chain:** `input`.
 
 	*   **Protocol:** `tcp`.
@@ -79,8 +81,6 @@ Identifica robôs que realizam varreduras de portas em alta velocidade enviando 
 4. **Aba Extra:**
 
 	*   **Connection Limit:** `Limit: 30 | Netmask: 32`.
-
-	*   **Comment:** `DETECTA SYN SCAN AGRESSIVO - INPUT`.
 
 5. **Aba Action:**
 
@@ -100,11 +100,11 @@ Aplica o bloqueio imediato na entrada do roteador para qualquer IP que tenha sid
 
 2.  **Aba General:**
 
+	*   **Comment:** `DROP IPs SCANNERS - INPUT`.
+
 	*   **Chain:** `input`.
 
 	*   **Src. Address List:** `port-scanners`.
-
-	*   **Comment:** `DROP IPs SCANNERS - INPUT`.
 
 3.  **Aba Action:**
 
@@ -120,6 +120,8 @@ Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer ser
 
 2.  **Aba General:**
 
+	*   **Comment:** `DROP IPs SCANNERS - FORWARD`.
+
     *   **Chain:** `forward`.
 
     *   **Src. Address List:** Selecione ou digite `port-scanners`.
@@ -127,8 +129,6 @@ Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer ser
 3.  **Aba Action:**
 
     *   **Action:** `drop`.
-
-    *   **Comment:** `DROP IPs SCANNERS - FORWARD`.
 
 4.  Clique em **OK**.
 
@@ -139,6 +139,8 @@ Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência
 1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
 2.  **Aba General:**
+
+	*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`.
 
 	*   **Chain:** `input`.
 
@@ -151,8 +153,6 @@ Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência
 3.  **Aba Extra:**
 
 	*   **Connection Limit:** `Limit: 3 | Netmask: 32`.
-
-	*   **Comment:** `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`.
 
 4.  **Aba Action:**
 

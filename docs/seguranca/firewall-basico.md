@@ -21,11 +21,11 @@ Esta regra permite que o roteador responda a comunicações que ele mesmo inicio
 
 2.  **Aba General:**
 
+    * **Comment:** `ACEITA CONEXOES ESTABELECIDAS E RELACIONADAS - INPUT`.
+
     * **Chain:** `input`.
 
     * **Connection State:** Marque `established` e `related`.
-
-    * **Comment:** `ACEITA CONEXOES ESTABELECIDAS E RELACIONADAS - INPUT`.
 
 3.  **Aba Action:**
 
@@ -56,9 +56,11 @@ Libera acesso total ao roteador para os **IPs** que estão na sua lista de permi
 
     *   **Comment:** `ACEITA REDE SUPORTE - INPUT`.
 
-    *   **Aba Action:** 
+3.  **Aba Action:** 
 
     *   **Action:** `accept`.
+
+4.  Clique em **OK**.
 
 {: .note } 
 > Em **Address**, você pode colocar o IP específico de um computador ou o bloco da rede toda como fizemos acima.
@@ -89,6 +91,8 @@ Permite que o roteador responda a Pings, mas limita a quantidade para evitar ata
 
     *   **Action:** `accept`.
 
+4.  Clique em **OK**.
+
 ---
 
 ## 🚫 4. Drop Geral (O Cadeado)
@@ -104,6 +108,8 @@ Esta regra deve ser **sempre a última**. Ela bloqueia qualquer tentativa de con
 2.  **Aba Action:**
 
     *   **Action:** `drop`.
+
+3.  Clique em **OK**.
 
 ---
 
