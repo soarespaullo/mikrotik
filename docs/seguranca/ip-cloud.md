@@ -33,20 +33,20 @@ Após clicar em **Apply**, observe os campos que foram preenchidos:
 *   **DNS Name:** Este é o seu endereço fixo. É este "nome" cheio de letras e números que você usará no Winbox ou no celular para acessar o roteador remotamente.
 
 {: .note }
-> Copie esse **DNS Name** e salve em um bloco de notas. Mesmo que a operadora mude seu IP, esse nome nunca muda, pois ele é baseado no **Serial Number** do seu equipamento.
+> Copie esse **DNS Name** e salve em um bloco de notas ou criei um [**"Nome Amigável"**](https://soarespaullo.github.io/mikrotik/docs/seguranca/ip-cloud/#%EF%B8%8F-3-criando-um-nome-amig%C3%A1vel-no-ip). Mesmo que a operadora mude seu IP, esse nome nunca muda, pois ele é baseado no **Serial Number** do seu equipamento.
 
 ---
 
 ## 🏷️ 3. Criando um Nome Amigável (No-IP)
 
-O endereço gerado pelo IP Cloud da MikroTik é extremamente estável, mas decorar uma sequência de letras e números aleatórios não é nada prático. Para resolver isso, você pode criar um subdomínio gratuito em serviços externos e mascarar esse "endereço feio" usando um apontamento do tipo **CNAME**.
+O endereço gerado pelo IP Cloud da MikroTik é extremamente estável, mas decorar uma sequência de letras e números aleatórios não é nada prático. Para resolver isso, você pode criar um subdomínio gratuito em serviços externos e mascarar esse "**endereço feio**" usando um apontamento do tipo **CNAME**.
 
 A grande vantagem deste método é que você **não precisa de scripts no roteador**. Quem atualiza o IP é o **Cloud da MikroTik**; o seu domínio gratuito apenas o segue.
 
-1. Acesse o site do [**No-IP**](https://www.noip.com/){: target="_blank" }, crie sua conta gratuita e vá na aba de gerenciamento de domínios (**No-IP Hosted Domains**).
+1. Acesse o site do [**No-IP**](https://www.noip.com/){: target="_blank" }, crie/acesse sua conta gratuita e vá na aba de gerenciamento de domínios (**No-IP Hosted Domains**).
 2. Clique no botão **Criar hostname** e preencha os campos exatamente assim:
+   * **Type:** Clique no menu de opções e mude de `A` para `CNAME`.
    * **Host:** Digite o nome amigável que você escolheu (Ex: `mikrotik`). Ao lado, selecione o domínio gratuito desejado (Ex: `.ddns.net`).
-   * **Type:** Clique no menu de opções e mude de `A` para **`CNAME`**.
    * **Target:** Cole o seu **DNS Name** completo da MikroTik (gerado lá no Passo 2, ex: `524f0542324a.sn.mynetname.net`).
    * **TTL:** Pode deixar o valor padrão que o site carregar automaticamente.
 3. Clique em **Criar**.
