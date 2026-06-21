@@ -1,63 +1,36 @@
 ---
 layout: default
-title: "🗺️ Mapa de Fluxo do Firewall"
+title: "🗺️ Tabela de Fluxo do Firewall"
 parent: "🔒 Segurança & Acesso"
 nav_order: 5
-last_modified_date: 2026-06-21 01:30
+last_modified_date: 2026-06-21 01:50
 ---
 
-# 🗺️ Mapa de Fluxo do Firewall (Input & Forward)
+# 🗺️ Linha de Processamento do Firewall (Input & Forward)
 {: .no_toc }
 
-Este diagrama visual apresenta o ciclo de vida e a ordem de processamento sequencial de um pacote de rede ao passar pelas regras de filtro (Filter Rules) básicas e intermediárias do seu MikroTik.
+Este guia apresenta a sequência lógica e cronológica que um pacote percorre ao passar pelas regras de filtro do seu roteador MikroTik.
 
 ---
 
-### 📊 Diagrama de Fluxo (Ordem de Processamento Sequencial)
+### 📊 Tabela de Fluxo de Processamento (Passo a Passo)
 
-{: .note }
-> O MikroTik processa as regras de cima para baixo. Assim que um pacote atinge um critério de **Drop** ou **Accept**, ele interrompe a leitura das regras seguintes.
+O MikroTik analisa cada pacote que entra seguindo a ordem estrita da tabela abaixo. Assim que um pacote atinge um critério de **Drop** ou **Accept**, ele interrompe a leitura das regras seguintes.
 
-```mermaid
-graph TD
-    %% Linha Principal de Decisao (O Pacote descendo o Firewall)
-    Inicio[Novo Pacote Chega ao Roteador] --> R1{1. E conexao invalida?}
-    
-    R1 -->|Nao| R2{2. E estabelecida ou relacionada?}
-    R1 -->|Sim| DROP1[DROP: Conexoes Invalidas]
-    
-    R2 -->|Nao| R3{3. IP esta na Rede Suporte?}
-    R2 -->|Sim| ACC1[ACCEPT: Mantem Conexao]
-    
-    R3 -->|Nao| R4{4. E a primeira batida Port Knock?}
-    R3 -->|Sim| ACC2[ACCEPT: Libera Acesso Total]
-    
-    R4 -->|Nao| R5{5. E a segunda batida Port Knock?}
-    R4 -->|Sim| ADD1[ADD LIST: Pre-Rede-Suporte]
-    
-    R5 -->|Nao| R6{6. E trafego da VPN WireGuard?}
-    R5 -->|Sim| ADD2[ADD LIST: Rede-Suporte]
-    
-    R6 -->|Nao| R7{7. Origem na lista port-scanner?}
-    R6 -->|Sim| ACC3[ACCEPT: Conecta VPN]
-    
-    R7 -->|Nao| R8{8. Origem na lista port-scanner?}
-    R7 -->|Sim| DROP2[DROP: IP Bloqueado no Input]
-    
-    R8 -->|Nao| R9{9. Bate com o comportamento PSD?}
-    R8 -->|Sim| DROP3[DROP: IP Bloqueado no Forward]
-    
-    R9 -->|Nao| R10{10. Bate com comportamento SYN Scan?}
-    R9 -->|Sim| BAN1[ADD LIST: port-scanner 2w]
-    
-    R10 -->|Nao| R11{11. E ataque de Forca Bruta?}
-    R10 -->|Sim| BAN2[ADD LIST: port-scanner 2w]
-    
-    R11 -->|Nao| R12{12. E pacote ICMP ou Ping?}
-    R11 -->|Sim| DROP4[DROP: Ataque Mitigado]
-    
-    R12 -->|Nao| R13[13. DROP GERAL - CADEADO FINAL]
-    R12 -->|Sim| ACC4[ACCEPT: Ping Permitido]
-```
+| Ordem | Regra / Verificação | Se for Verdade (Match) | Se não for (Próximo Passo) |
+| :---: | :--- | :--- | :--- |
+| **1** | O pacote é inválido ou defeituoso? | **DROP** (Descarta na hora) | Passa para o passo 2 |
+| **2** | É uma conexão que o roteador já aceitou antes? | **ACCEPT** (Mantém conectado) | Passa para o passo 3 |
+| **3** | O IP de origem está na `rede-suporte`? | **ACCEPT** (Acesso liberado) | Passa para o passo 4 |
+| **4** | É a 1ª batida do Port Knocking (Porta 7788)? | **ADD LIST** (Salva no Pré-Suporte) | Passa para o passo 5 |
+| **5** | É a 2ª batida do Port Knocking (Porta 4455)? | **ADD LIST** (Abre o acesso na Rede-Suporte) | Passa para o passo 6 |
+| **6** | É tráfego da VPN WireGuard (Porta 13231)? | **ACCEPT** (Permite conexão da VPN) | Passa para o passo 7 |
+| **7** | O IP está na lista de `port-scanner` (Input)? | **DROP** (Bloqueia acesso ao roteador) | Passa para o passo 8 |
+| **8** | O IP está na lista de `port-scanner` (Forward)? | **DROP** (Bloqueia acesso à rede local) | Passa para o passo 9 |
+| **9** | O comportamento bate com Port Scanner (PSD)? | **ADD LIST** (Gera bloqueio de 14 dias) | Passa para o passo 10 |
+| **10** | O comportamento bate com Fast SYN Scan? | **ADD LIST** (Gera bloqueio de 14 dias) | Passa para o passo 11 |
+| **11** | É uma tentativa de Força Bruta (Winbox/SSH)? | **DROP** (Corta o ataque de dicionário) | Passa para o passo 12 |
+| **12** | É um pacote de Ping (ICMP)? | **ACCEPT** (Responde se estiver dentro do limite) | Passa para o passo 13 |
+| **13** | **CADEADO FINAL (DROP GERAL)** | **DROP** (Bloqueia tudo o que restou) | *Fim do fluxo* |
 
 [⬅️ Voltar para o Guia de Firewall Intermediário]({{ '/docs/seguranca/firewall-intermediario/' | relative_url }}){: .btn .btn-outline }
