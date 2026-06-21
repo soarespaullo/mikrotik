@@ -19,7 +19,7 @@ Este diagrama visual apresenta o ciclo de vida e a ordem de processamento sequen
 > O MikroTik processa as regras de cima para baixo. Assim que um pacote atinge um critério de **Drop** ou **Accept**, ele interrompe a leitura das regras seguintes.
 
 ```mermaid
-graph TD
+graph LR
     Pacote[Novo Pacote Chega ao Firewall] --> STEP1{1. E conexao invalida?}
     
     STEP1 -->|Sim| DROP1[DROP: Conexoes Invalidas]
