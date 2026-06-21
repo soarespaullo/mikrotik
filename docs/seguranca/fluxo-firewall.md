@@ -20,42 +20,42 @@ Este diagrama visual apresenta o ciclo de vida e a ordem de processamento sequen
 
 ```mermaid
 graph TD
-    Pacote[📦 Novo Pacote Chega ao Firewall] --> STEP1{1. E conexao invalida?}
+    Pacote[Novo Pacote Chega ao Firewall] --> STEP1{1. E conexao invalida?}
     
-    STEP1 -->|Sim| DROP1[🛑 DROP: Conesoes Invalidas]
+    STEP1 -->|Sim| DROP1[DROP: Conexoes Invalidas]
     STEP1 -->|Nao| STEP2{2. E estabelecida ou relacionada?}
     
-    STEP2 -->|Sim| ACC1[✅ ACCEPT: Mantem Conexao]
+    STEP2 -->|Sim| ACC1[ACCEPT: Mantem Conexao]
     STEP2 -->|Nao| STEP3{3. IP esta na Rede Suporte?}
     
-    STEP3 -->|Sim| ACC2[✅ ACCEPT: Libera Acesso Total]
-    STEP3 -->|Nao| STEP4{4. E a 1ª batida do Port Knocking?}
+    STEP3 -->|Sim| ACC2[ACCEPT: Libera Acesso Total]
+    STEP3 -->|Nao| STEP4{4. E a primeira batida do Port Knocking?}
     
-    STEP4 -->|Sim| ADD1[📌 ADD LIST: Pre-Rede-Suporte]
-    STEP4 -->|Nao| STEP5{5. E a 2ª batida do Port Knocking?}
+    STEP4 -->|Sim| ADD1[ADD LIST: Pre-Rede-Suporte]
+    STEP4 -->|Nao| STEP5{5. E a segunda batida do Port Knocking?}
     
-    STEP5 -->|Sim| ADD2[📌 ADD LIST: Rede-Suporte]
+    STEP5 -->|Sim| ADD2[ADD LIST: Rede-Suporte]
     STEP5 -->|Nao| STEP6{6. E trafego da VPN WireGuard?}
     
-    STEP6 -->|Sim| ACC3[✅ ACCEPT: Conecta VPN]
-    STEP6 -->|Nao| STEP7{7. Origem esta na lista port-scanner?}
+    STEP6 -->|Sim| ACC3[ACCEPT: Conecta VPN]
+    STEP6 -->|Nao| STEP7{7. Origem esta na lista port-scanner no Input?}
     
-    STEP7 -->|Sim| DROP2[🛑 DROP: IP Bloqueado no Input]
-    STEP7 -->|Nao| STEP8{8. Origem esta na lista port-scanner?}
+    STEP7 -->|Sim| DROP2[DROP: IP Bloqueado no Input]
+    STEP7 -->|Nao| STEP8{8. Origem esta na lista port-scanner no Forward?}
     
-    STEP8 -->|Sim| DROP3[🛑 DROP: IP Bloqueado no Forward]
+    STEP8 -->|Sim| DROP3[DROP: IP Bloqueado no Forward]
     STEP8 -->|Nao| STEP9{9. Bate com o comportamento PSD?}
     
-    STEP9 -->|Sim| BAN1[🪤 ADD LIST: port-scanner 2w]
+    STEP9 -->|Sim| BAN1[ADD LIST: port-scanner 2w]
     STEP9 -->|Nao| STEP10{10. Bate com o comportamento SYN Scan?}
     
-    STEP10 -->|Sim| BAN2[🪤 ADD LIST: port-scanner 2w]
+    STEP10 -->|Sim| BAN2[ADD LIST: port-scanner 2w]
     STEP10 -->|Nao| STEP11{11. E ataque de Forca Bruta?}
     
-    STEP11 -->|Sim| DROP4[🛑 DROP: Attack Mitigado]
-    STEP11 -->|Nao| STEP12{12. E pacote ICMP / Ping?}
+    STEP11 -->|Sim| DROP4[DROP: Ataque Mitigado]
+    STEP11 -->|Nao| STEP12{12. E pacote ICMP ou Ping?}
     
-    STEP12 -->|Sim| ACC4[✅ ACCEPT: Ping Permitido]
+    STEP12 -->|Sim| ACC4[ACCEPT: Ping Permitido]
     STEP12 -->|Nao| STEP13[13. DROP GERAL - CADEADO FINAL]
 ```
 
