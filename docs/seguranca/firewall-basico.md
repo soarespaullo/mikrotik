@@ -73,11 +73,11 @@ Permite que o roteador responda a Pings, mas limita a quantidade para evitar ata
 
 1.  **Aba General:**
 
+    *   **Comment:** `ACEITA ICMP (PING) LIMITADO A 10 POR SEGUNDOO - INPUT`.
+    
     *   **Chain:** `input`.
 
     *   **Protocol:** `icmp`.
-
-    * **Comment:** `ACEITA ICMP (PING) LIMITADO A 10 POR SEGUNDOO - INPUT`.
 
 2.  **Aba Extra:**
 
@@ -101,9 +101,9 @@ Esta regra deve ser **sempre a última**. Ela bloqueia qualquer tentativa de con
 
 1.  **Aba General:**
 
-    *   **Chain:** `input`.
-
     *   **Comment:** `DROP GERAL - INPUT`.
+
+    *   **Chain:** `input`.
 
 2.  **Aba Action:**
 
