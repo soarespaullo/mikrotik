@@ -32,12 +32,9 @@ Esta regra descarta pacotes defeituosos ou fora de sequência, poupando o proces
 
 4.  Clique em **OK**.
 
-## 🪤 2. Subsistema Anti-Scanners (Detecção e Bloqueio)
+## 🪤 2. Detecção por Pontuação (PSD)
 
 Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bloqueio temporário.
-
-### Regra A: Detecção por Pontuação (PSD)
-{: .label .label-green }
 
 1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
@@ -63,7 +60,9 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 5. Clique em **OK**.
 
-### Regra B: Detecção de Varredura Síncrona Agressiva (Fast SYN Scan)
+## ⚡ 3. Detecção de Varredura Síncrona Agressiva (Fast SYN Scan)
+
+Identifica robôs que realizam varreduras de portas em alta velocidade enviando fluxos massivos de pacotes SYN.
 
 1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
@@ -93,7 +92,9 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 6. Clique em **OK**.
 
-### Regra C: Bloqueio Estrutural da Lista
+## 🚫 4. Bloqueio Estrutural da Lista
+
+Aplica o bloqueio imediato na entrada do roteador para qualquer IP que tenha sido inserido na lista de scanners.
 
 1.  Vá em **IP** ➔ **Firewall** ➔ **Filter Rules** e clique em **+**.
 
@@ -111,7 +112,7 @@ Identifica varreduras ativas na rede e adiciona o IP de origem a uma lista de bl
 
 4.  Clique em **OK**.
 
-## 🧱 3. Restrição de Acesso à Rede Interna (Forward)
+## 🧱 5. Restrição de Acesso à Rede Interna (Forward)
 
 Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer servidor ou dispositivo da rede interna.
 
@@ -133,7 +134,7 @@ Estende o bloqueio dos IPs atacantes da lista, impedindo o acesso a qualquer ser
 
 5.  Clique em **OK**.
 
-## 🦹 4. Mitigação de Força Bruta (Winbox / SSH)
+## 🦹 6. Mitigação de Força Bruta (Winbox / SSH)
 
 Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência, mitigando ataques automatizados de dicionário.
 
