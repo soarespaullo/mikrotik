@@ -37,22 +37,22 @@ Após clicar em **Apply**, observe os campos que foram preenchidos:
 
 ---
 
-## 🏷️ 3. Criando um Nome Amigável (No-IP ou DuckDNS)
+## 🏷️ 3. Criando um Nome Amigável (No-IP)
 
 O endereço gerado pelo IP Cloud da MikroTik é extremamente estável, mas decorar uma sequência de letras e números aleatórios não é nada prático. Para resolver isso, você pode criar um subdomínio gratuito em serviços externos e mascarar esse "endereço feio" usando um apontamento do tipo **CNAME**.
 
 A grande vantagem deste método é que você **não precisa de scripts no roteador**. Quem atualiza o IP é o **Cloud da MikroTik**; o seu domínio gratuito apenas o segue.
 
-### Passo a Passo do Apontamento:
-1. Acesse o site do provedor de sua preferência ([**No-IP**](https://www.noip.com/){: target="_blank" } ou [**DuckDNS**](https://www.duckdns.org/){: target="_blank" }) e crie uma conta gratuita.
+1. Acesse o site do [**No-IP**](https://www.noip.com/){: target="_blank" }, crie sua conta gratuita e vá na aba de gerenciamento de domínios (**No-IP Hosted Domains**).
+2. Clique no botão **Criar hostname** e preencha os campos exatamente assim:
+   * **Host:** Digite o nome amigável que você escolheu (Ex: `mikrotik`). Ao lado, selecione o domínio gratuito desejado (Ex: `.ddns.net`).
+   * **Type:** Clique no menu de opções e mude de `A` para **`CNAME`**.
+   * **Target:** Cole o seu **DNS Name** completo da MikroTik (gerado lá no Passo 2, ex: `524f0542324a.sn.mynetname.net`).
+   * **TTL:** Pode deixar o valor padrão que o site carregar automaticamente.
+3. Clique em **Criar**.
 
-2. Crie o subdomínio com o nome amigável que desejar (Exemplo: `mikrotik.ddns.net`).
-
-3. Na hora de escolher o tipo de registro, mude de **A (IP)** para **CNAME**.
-
-4. No campo de destino (*Target* ou *Alias*), cole o seu endereço completo do MikroTik **DNS Name** obtido no Passo 2.
-
-5. Salve as alterações
+{: .tip }
+> Pronto! A partir de agora, em vez de digitar aquele código gigante no Winbox, você usará apenas o seu endereço amigável (ex: `meu-roteador.ddns.net`) para se conectar remotamente.
 
 ---
 
