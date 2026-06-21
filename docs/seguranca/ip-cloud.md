@@ -52,7 +52,7 @@ A grande vantagem deste método é que você **não precisa de scripts no rotead
 3. Clique em **Criar**.
 
 {: .tip }
-> Pronto! A partir de agora, em vez de digitar aquele código gigante no Winbox, você usará apenas o seu endereço amigável (ex: `meu-roteador.ddns.net`) para se conectar remotamente.
+> Pronto! A partir de agora, em vez de digitar aquele código gigante no Winbox, você usará apenas o seu endereço amigável (ex: `mikrotik.ddns.net`) para se conectar remotamente.
 
 ---
 
