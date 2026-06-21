@@ -19,7 +19,12 @@ O serviço de **Cloud** da MikroTik fornece um nome de domínio gratuito (ex: `5
 
 3.  (Opcional) Marque **Update Time** para que o roteador também use os servidores da **MikroTik** para ajustar o relógio.
 
-4.  Clique em **Apply**.
+4. **DDNS Update Interval:** Defina este campo para `01:00:00` (1 hora).
+
+5.  Clique em **Apply**.
+
+{: .warning }
+> **Cuidado com o Intervalo:** Evite deixar o *DDNS Update Interval* em tempos muito baixos (como `00:01:00`). Consultas a cada 1 minuto podem fazer os servidores da MikroTik bloquearem o seu domínio temporariamente por excesso de requisições (Spam). O recomendado é manter entre 10 minutos e 1 hora.
 
 {: .note }
 > Embora o IP Cloud ofereça a opção **Update Time**, para garantir uma precisão milimétrica nos logs e agendamentos do seu roteador, o recomendado é utilizar servidores nacionais dedicados. Após ativar o DDNS, configure o nosso [**Guia de Ajuste de Hora (NTP Client)**](https://soarespaullo.github.io/mikrotik/docs/manutencao/ntp/){: target="_blank" } para deixar o relógio do seu MikroTik 100% confiável.
