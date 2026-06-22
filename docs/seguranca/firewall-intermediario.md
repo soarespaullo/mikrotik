@@ -164,24 +164,18 @@ Restringe a 3 o número de conexões simultâneas por IP nas portas de gerência
 
 No MikroTik, a ordem dos fatores altera o produto! O firewall lê as regras de cima para baixo.
 
-
-1.  `Drop Conexoes Invalidas`
-
-2.  `accept established/related` *(Básico 1)*
-
-3.  `accept rede-suporte` *(Básico 2)*
-
-4.  `Dop IPs Scanners`
-
-5.  `Detecta Port Scanners`
-
-6.  `Detecta Syn Scan Agressivo`
-
-7.  `Limita Brute Force ssh/Winbox`
-
-8.  `accept icmp` *(Básico 3)*
-
-9.  `Bloqueio Geral (Drop All) - Resto do Trafego - INPUT` *(Básico 4)*
+1. 🧼 `DROP CONEXOES INVALIDAS - INPUT`
+2. 🏗️ `ACEITA CONEXOES ESTABELECIDAS E RELACIONADAS` *(Básico 1)*
+3. 🚫 `DROP IPs SCANNERS - INPUT`
+4. 🚫 `DROP IPs SCANNERS - FORWARD`
+5. 🪤 `DETECTA PORT SCANNERS (PSD) - INPUT`
+6. ⚡ `DETECTA SYN SCAN AGRESSIVO - INPUT`
+7. 🚪 `PEGA IP PARA A LISTA PRE-REDE-SUPORTE` *(Port Knocking - Batida 1)*
+8. 🔑 `PEGA IP PARA A REDE-SUPORTE` *(Port Knocking - Batida 2)*
+9. 🟢 `ACEITA REDE SUPORTE` *(Básico 2)*
+10. 🦹 `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`
+11. 🏓 `ACEITA 10 PACOTES DE ICMP POR SEGUNDOS` *(Básico 3)*
+12. 🔒 `DROP GERAL` *(Básico 4)*
 
 {: .important }
 > Se você colocar a regra de **Drop** acima da regra de **Rede Suporte**, você perderá o acesso ao Winbox imediatamente e precisará de acesso físico ao roteador.

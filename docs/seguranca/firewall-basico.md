@@ -117,13 +117,10 @@ Esta regra deve ser **sempre a última**. Ela bloqueia qualquer tentativa de con
 
 No MikroTik, a ordem dos fatores altera o produto! O firewall lê as regras de cima para baixo.
 
-1.  `accept established/related` (Topo)
-
-2.  `accept rede-suporte`
-
-3.  `accept icmp`
-
-4.  `drop input` (Fundo)
+1. 🏗️ `ACEITA CONEXOES ESTABELECIDAS E RELACIONADAS - INPUT` *(Topo)*
+2. 🔑 `ACEITA REDE SUPORTE - INPUT`
+3. 🏓 `ACEITA ICMP (PING) LIMITADO - INPUT`
+4. 🔒 `DROP GERAL - INPUT` *(Fundo)*
 
 {: .important }
 > Se você colocar a regra de **Drop** acima da regra de **Rede Suporte**, você perderá o acesso ao Winbox imediatamente e precisará de acesso físico ao roteador.
