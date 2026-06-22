@@ -17,7 +17,7 @@ O protocolo **MNDP** (MikroTik Neighbor Discovery Protocol) permite que seu rote
 
 O primeiro passo é criar um `"grupo"` e dizer ao MikroTik quem faz parte dele.
 
-1.  Vá em **Interfaces** → aba **Interface List**.
+1.  Vá em **Interfaces** ➔ aba **Interface List**.
 
 2.  Clique em **Lists** e depois no **+**.
 
@@ -39,7 +39,7 @@ O primeiro passo é criar um `"grupo"` e dizer ao MikroTik quem faz parte dele.
 
 Agora vamos dizer ao roteador para só "falar" com quem estiver nessa lista.
 
-1.  Vá no menu **IP** → **Neighbor**.
+1.  Vá no menu **IP** ➔ **Neighbor**.
 
 2.  Clique na aba **Discovery Settings**.
 
@@ -56,7 +56,7 @@ Agora vamos dizer ao roteador para só "falar" com quem estiver nessa lista.
 
 Para fechar a segurança, você deve restringir quem pode tentar login via Endereço MAC (aquela conexão que usamos quando o roteador está sem IP).
 
-1.  Vá em **Tools** → **MAC Server**.
+1.  Vá em **Tools** ➔ **MAC Server**.
 
 2.  Na aba **MAC Telnet Server**, clique em **Allowed Interface List** e mude para `none` (ou `LISTA-SEGURA` se você realmente usa **MAC-Telnet**).
 

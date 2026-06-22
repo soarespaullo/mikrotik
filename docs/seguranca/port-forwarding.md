@@ -17,17 +17,19 @@ O redirecionamento de portas permite que um serviço hospedado na sua rede inter
 
 Neste exemplo, vamos redirecionar o tráfego HTTPS (porta **443**) para o servidor interno com o IP **10.220.0.100**.
 
-1.  No Winbox, acesse o menu **IP → Firewall**.
+1.  No Winbox, acesse o menu **IP ➔ Firewall**.
 
 2.  Vá até a aba **NAT** e clique no botão **+**.
 
 3.  Na aba **General**, preencha os campos abaixo:
 
-    *   **Chain:** `dstnat`
+    *   **Comment:**  `Acesso Externo - Servidor Web`.
 
-    *   **Protocol:** `6 (tcp)`
+    *   **Chain:** `dstnat`.
 
-    *   **Dst. Port:** `443`
+    *   **Protocol:** `6 (tcp)`.
+
+    *   **Dst. Port:** `443`.
 
 {: .important }
 > **Ajuste para Acesso Interno (Aba Extra):** 
@@ -36,13 +38,9 @@ Neste exemplo, vamos redirecionar o tráfego HTTPS (porta **443**) para o servid
 
 4.  Mude para a aba **Action** e configure o destino:
 
-    *   **Action:** `dst-nat`
+    *   **Action:** `dst-nat`.
 
-    *   **To Addresses:** `10.220.0.100`
-
-5.  **Comentário (Comment):**
-
-    *   Adicione uma identificação para sua organização: `Acesso Externo - Servidor Web`.
+    *   **To Addresses:** `10.220.0.100`.
 
 6.  Clique em **Apply** e **OK**.
 
@@ -63,7 +61,7 @@ Ao abrir a porta `443 (HTTPS)`, seu dispositivo ficará exposto à internet. Con
 {: .tip }
 > **Acesso via Porta Personalizada:** Ao usar uma porta externa "disfarçada" (ex: **8443**), você deve obrigatoriamente especificá-la ao digitar o endereço no navegador ou aplicativo.
 
-*   **Exemplo:** `https://seudominio.ddns.net:8443`
+*   **Exemplo:** `https://soarespaullo.ddns.net:8443`
 
 O MikroTik receberá a conexão na **8443** e fará a entrega silenciosa para a porta **443** interna do seu servidor. Se você não digitar `:8443`, o navegador tentará a porta padrão (443) e a conexão falhará.
 

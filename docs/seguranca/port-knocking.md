@@ -30,7 +30,7 @@ Imagine que o seu roteador é um cofre com um sistema de segurança inteligente:
 
 ### **Passo 1: A Primeira Batida (Porta 7788)**
 
-1.  Vá em **IP → Firewall → Filter Rules** e clique em **+**.
+1.  Vá em **IP ➔ Firewall ➔ Filter Rules** e clique em **+**.
 
 2.  **Aba General:** `Chain: input`, `Protocol: 6 (tcp)`, `Dst. Port: 7788`.
 
@@ -73,7 +73,7 @@ Se você ainda não tem essa regra, crie-a:
 2.  **Aba Action:** `Action: accept`.
 
 {: .important }
-> No **Winbox**, arraste esta regra para (acima do seu `Drop Geral`).
+> No **Winbox**, arraste esta regra para (acima do seu `Drop Geral`).
 
 ---
 
@@ -83,9 +83,9 @@ Quando você estiver fora da sua rede e precisar acessar o Winbox:
 
 1.  **Pelo Navegador:** Digite e acesse (mesmo que dê erro):
 
-    *   `http://dominio.duckdns.org:7788`
+    *   `http://soarespaullo.duckdns.org:7788`
 
-    *   Aguarde 2 segundos e acesse: `http://dominio.duckdns.org:4455`
+    *   Aguarde 2 segundos e acesse: `http://soarespaullo.duckdns.org:4455`
 
 
 {: .note }

@@ -24,7 +24,7 @@ Ao ligar o MikroTik pela primeira vez, um pop-up aparecerá. Clique sempre em **
 
 {: .important }
 > Se você esqueceu de clicar ou o roteador já veio configurado, faça o reset manual:
-> 1. Vá em **System** → **Reset Configuration**.
+> 1. Vá em **System** ➔ **Reset Configuration**.
 > 2. Marque a opção **No Default Configuration**.
 > 3. Clique em **Reset Configuration**. Isso garante que o roteador esteja *100%* "limpo".
 
@@ -34,22 +34,22 @@ Ao ligar o MikroTik pela primeira vez, um pop-up aparecerá. Clique sempre em **
 
 Antes de configurar a rede, identifique o seu equipamento e as portas físicas.
 
-* **Nome do Roteador**: Vá em **System** → **Identity** e dê um nome ao seu roteador (ex: `Borda-Principal`).
+* **Nome do Roteador**: Vá em **System** ➔ **Identity** e dê um nome ao seu roteador (ex: `Borda-Principal`).
 * **Renomear Interfaces**: Vá em **Interfaces**. Dê um clique duplo na porta e renomeie para facilitar a identificação:
-  * `ether1` → `ether1-link-proxxima`
-  * `ether5` → `ether5-rede-local`
+  * `ether1` ➔ `ether1-link-proxxima`
+  * `ether5` ➔ `ether5-rede-local`
 
 ---
 
 ## 🏠 3. Configuração da Rede Local (LAN)
 
 ### Definir o IP do Roteador
-1. Vá em **IP** → **Addresses** e clique em **+**.
+1. Vá em **IP** ➔ **Addresses** e clique em **+**.
 2. **Address**: `10.220.0.1/24`
 3. **Interface**: `ether5-rede-local`.
 
 ### Criar o Servidor DHCP
-1. Vá em **IP** → **DHCP Server** e clique no botão **DHCP Setup**.
+1. Vá em **IP** ➔ **DHCP Server** e clique no botão **DHCP Setup**.
 2. Siga o assistente:
    * **Interface**: `ether5-rede-local`.
    * **Gateway**: `10.220.0.1`.
@@ -73,7 +73,7 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 ### **Opção A: Conexão via PPPoE**
 > Caso seu provedor exija autenticação (`Usuário` e `Senha`), como um modem em modo bridge ou tecnologia de fibra que utiliza o protocolo (`PPPoE`).
 
-1. Vá em **PPP** → **+** → **PPPoE Client**.
+1. Vá em **PPP** ➔ **+** ➔ **PPPoE Client**.
 2. **Aba General:**
 * **Name:** `pppoe-cliente-proxxima` 
 * **Interface:** `ether1-link-proxxima`.
@@ -88,7 +88,7 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 ### **Opção B: Conexão via DHCP Client**
 > Caso seu provedor entregue a internet via DHCP (`IP Automático`), como um modem em modo roteador ou tecnologia fibra direta (`DHCP`).
 
-1. Vá em **IP** → **DHCP Client**
+1. Vá em **IP** ➔ **DHCP Client**
 2. Clique no botão **+**.
 3. Na aba **DHCP:**
 * **Interface:** Escolha a interface física onde o cabo do provedor está conectado (ex: `ether1-link-proxxima-dhcp`).
@@ -104,12 +104,12 @@ Dependendo do seu provedor, a conexão será feita via **PPPoE** (`Usuário e Se
 
 Para que os dispositivos da rede interna consigam navegar, precisamos de duas coisas:
 
-1. **DNS do Sistema:** Vá em **IP** → **DNS** → **Servers** → **+**. E adicione `8.8.8.8` e `1.1.1.1`.
+1. **DNS do Sistema:** Vá em **IP** ➔ **DNS** ➔ **Servers** ➔ **+**. E adicione `8.8.8.8` e `1.1.1.1`.
 2. **Regra de NAT (Masquerade):** A regra de `NAT` "*esconde*" os `IPs` da sua rede local atrás do `IP público` do link. Crie a regra de acordo com a sua conexão (ou ambas, se for usar [**Failover**](https://soarespaullo.github.io/mikrotik/docs/redes/failover/){: target="_blank" }):
 
 **Para Link PPPoE:**
 
-Vá em **IP** → **Firewall** → **NAT** → Clique no **+**.
+Vá em **IP** ➔ **Firewall** ➔ **NAT** ➔ Clique no **+**.
 
    * **Chain:** `srcnat`.
    * **Out. Interface:** `pppoe-cliente-proxxima`.
@@ -117,7 +117,7 @@ Vá em **IP** → **Firewall** → **NAT** → Clique no **+**.
 
 **Para Link DHCP (IP Automático):**
 
-   * Vá em **IP** → **Firewall** → **NAT** → Clique no **+**.
+   * Vá em **IP** ➔ **Firewall** ➔ **NAT** ➔ Clique no **+**.
    * **Chain:** `srcnat`.
    * **Out. Interface:** `ether1-link-proxxima-dhcp` (Escolha a interface onde o cabo da internet está).
    * **Action:** `masquerade`.
@@ -143,14 +143,14 @@ A Bridge permite que o `MikroTik` funcione como um `Switch`, unindo várias port
 
 3. **Migrar o IP Address para a Bridge:** Como o `IP` estava na `ether5`, precisamos movê-lo para a `Bridge` para que todas as portas respondam por ele.
 
-   * Vá em **IP** → **Addresses**.
+   * Vá em **IP** ➔ **Addresses**.
    * Dê um clique duplo no IP `10.220.0.1/24`.
    * Mude o campo **Interface** de `ether5-rede-local` para **REDE-SWITCH**.
    * Clique em **OK**.
 
 4. **Migrar o DHCP Server para a Bridge:** Para que os dispositivos recebam `IP` em qualquer porta da Bridge:
 
-   * Vá em **IP** → **DHCP Server**.
+   * Vá em **IP** ➔ **DHCP Server**.
    * Na aba **DHCP**, dê um clique duplo no servidor criado (ex: `dhcp1`).
    * Mude o campo **Interface** para **REDE-SWITCH**.
    * Clique em **OK**.
@@ -165,7 +165,7 @@ Ao mudar para a interface **REDE-SWITCH**, você ativa a rede em todo o "`Switch
 
 Mantenha seu `MikroTik` seguro e estável.
 
-Vá em **System** → **Packages** e clique em **Check For Updates**.
+Vá em **System** ➔ **Packages** e clique em **Check For Updates**.
 
 **Diferença entre Canais (Channels):**
  
@@ -181,7 +181,7 @@ Vá em **System** → **Packages** e clique em **Check For Updates**.
 {: .warning}
 > **NUNCA** use o usuário admin sem senha.
 
-1. Vá em **System** → **Users** e clique em **+**.
+1. Vá em **System** ➔ **Users** e clique em **+**.
 
 2. **Name:** Crie seu nome de usuário.
 
@@ -197,7 +197,7 @@ Vá em **System** → **Packages** e clique em **Check For Updates**.
 
 O MikroTik vem com várias "`portas`" abertas por padrão que você não vai usar e que podem ser alvos de ataques.
 
-1. Vá em **IP** → **Services**.
+1. Vá em **IP** ➔ **Services**.
 
 2. Clique no botão **Disable** (`ícone cinza de Pause`) para desabilitá-los.
 
@@ -216,12 +216,12 @@ O MikroTik vem com várias "`portas`" abertas por padrão que você não vai usa
 
 Para que os logs, agendamentos e scripts funcionem corretamente, o roteador precisa manter a hora sincronizada. Utilizamos os servidores oficiais do projeto [**NTP.br**](https://ntp.br/){: target="_blank" }.
 
-1. Vá em **System** → **NTP Client**.
+1. Vá em **System** ➔ **NTP Client**.
 2. Marque a caixa `Enabled`.
 3. No campo **NTP Servers**, clique no **+** adicione os seguintes servidores:
     * a.st1.ntp.br
     * b.st1.ntp.br
-4. Vá em **System** → **Clock** e confirme se o **Time Zone Name** está como `America/Sao_Paulo`.
+4. Vá em **System** ➔ **Clock** e confirme se o **Time Zone Name** está como `America/Sao_Paulo`.
 
 ---
 
@@ -231,7 +231,7 @@ Existem dois tipos de arquivos que você deve gerar ao finalizar a configuraçã
 
 * **Backup Binário (.backup):** Salva tudo, inclusive senhas. Use para restaurar no mesmo aparelho.
 
-    * Vá em **Files** → **Backup**.
+    * Vá em **Files** ➔ **Backup**.
 
 * **Script de Exportação (.rsc):** Salva as configurações em texto. Ótimo para conferir o que foi feito.
    

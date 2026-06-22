@@ -16,7 +16,7 @@ O **Watchdog** é um recurso de segurança que força a reinicialização do `Mi
 
 1.  **Acessar o Menu:**
 
-    *   No Winbox, vá em **System** → **Watchdog**.
+    *   No Winbox, vá em **System** ➔ **Watchdog**.
 
 2.  **Habilitar o Temporizador de Hardware:**
 

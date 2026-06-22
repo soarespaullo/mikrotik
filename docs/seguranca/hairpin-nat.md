@@ -18,9 +18,11 @@ Quando você tenta acessar o seu **IP Externo** (ou **DDNS**) estando dentro da 
 
 ## 🛠️ Configuração Passo a Passo
 
-1.  Acesse **IP → Firewall** e vá na aba **NAT**.
+1.  Acesse **IP ➔ Firewall** e vá na aba **NAT**.
 
 2.  Clique no botão **+** e preencha na aba **General**:
+
+    *   **Comment:** `HAIRPIN NAT - LOOPBACK DE DNS PARA REDE LOCAL`
 
     *   **Chain:** `srcnat`
 
@@ -38,7 +40,7 @@ Se quiser aplicar a regra apenas a um serviço (ex: HTTPS):
 
 *   **Dst. Port:** `443`
 
-*   **Comment:** `Hairpin NAT - Acesso Interno HTTPS`
+*   **Comment:** `HAIRPIN NAT - LOOPBACK DE DNS PARA REDE LOCAL`
 
 🎯 Opção B: Para múltiplas portas (Recomendado)
 
@@ -46,7 +48,7 @@ Se você tem várias portas (`80, 443, 2222`) para o mesmo servidor:
 
 *   **Dst. Port:** (Deixe em branco)
 
-*   **Comment:** `Hairpin NAT - Geral Servidor 100`
+*   **Comment:** `HAIRPIN NAT - LOOPBACK DE DNS PARA REDE LOCAL`
 
 {: .note }
 > Ao deixar em branco, a regra funcionará automaticamente para qualquer porta redirecionada para esse IP.

@@ -19,7 +19,7 @@ No Winbox, acesse a janela **Log** no menu lateral esquerdo. Por padrão, o Rout
 
 ## 🛠️ Configurando Tópicos de Log (System Logging)
 
-Você pode personalizar o que o `MikroTik` deve registrar e onde deve salvar. Acesse: **System → Logging**.
+Você pode personalizar o que o `MikroTik` deve registrar e onde deve salvar. Acesse: **System ➔ Logging**.
 
 ### 1. Criar um Filtro Customizado
 Se você deseja monitorar apenas eventos de **PPPoE** e **Scripts**:
@@ -64,7 +64,7 @@ Você pode criar um script que monitora o `log` e te avisa no `Telegram` quando 
 
 Para evitar perder o histórico após uma queda de energia:
 
-1. Vá em **System → Logging → Actions**.
+1. Vá em **System ➔ Logging ➔ Actions**.
 
 2. Clique duas vezes em `disk`.
 

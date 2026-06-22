@@ -18,7 +18,7 @@ O **Hotspot** permite controlar o acesso à internet através de uma página de 
 Antes de começar, você precisa de uma interface (física ou Bridge) dedicada para o Hotspot. Não utilize a mesma bridge da sua rede administrativa.
 
 {: .important }
-> **Certifique-se** de que a interface escolhida (ex: `bridge-hotspot`) já tenha um endereço IP definido em **IP** → **Addresses**.
+> **Certifique-se** de que a interface escolhida (ex: `bridge-hotspot`) já tenha um endereço IP definido em **IP** ➔ **Addresses**.
 
 ---
 
@@ -26,7 +26,7 @@ Antes de começar, você precisa de uma interface (física ou Bridge) dedicada p
 
 O MikroTik possui um assistente que cria todas as regras de firewall e NAT automaticamente.
 
-1. Vá em **IP** → **Hotspot**.
+1. Vá em **IP** ➔ **Hotspot**.
 2. Na aba **Servers**, clique no botão **Hotspot Setup**.
 3. **Hotspot Interface:** Selecione a interface (ex: `bridge-hotspot`). Clique em **Next**.
 4. **Local Address of Network:** Deixe o IP que já aparece. Marque **Masquerade Network**. Clique em **Next**.

@@ -17,7 +17,7 @@ Este guia cobre as três formas essenciais de garantir a segurança da sua confi
 
 Antes de automatizar, o `MikroTik` precisa ter permissão para enviar e-mails.
 
-1. Vá em **Tools → Email**.
+1. Vá em **Tools ➔ Email**.
 
 2. Preencha os campos conforme seu provedor (Ex: `Gmail`):
 
@@ -72,7 +72,7 @@ O arquivo aparecerá na lista `Files` pronto para **DOWNLOAD**.
 
 Este script gera o backup (`.rsc`) e envia por *e-mail* com o status completo: **IP (WAN/PPPoE), Uptime formatado, Modelo da RB e Versão**.
 
-1. Vá em **System → Scripts**, clique em **+**.
+1. Vá em **System ➔ Scripts**, clique em **+**.
     
     *   **Name:** `Bk-Mail`
 
@@ -95,7 +95,7 @@ Escolha a forma mais adequada para obter o código-fonte ou inspecionar o arquiv
 
 Para que o script rode sozinho (ex: `toda madrugada`), precisamos de um agendamento com permissões administrativas completas.
 
-1.  Vá em **System → Scheduler** e clique em **+**.
+1.  Vá em **System ➔ Scheduler** e clique em **+**.
 
     *   **Comment:** Backup MikroTik: Export .rsc via E-mail.
 
@@ -110,4 +110,4 @@ Para que o script rode sozinho (ex: `toda madrugada`), precisamos de um agendame
     *   **Policy:** `read`, `write`, `policy`, `test`, `sensitive`, `ftp` e `password`
 
 {: .important }
-> As permissões marcadas aqui no **Scheduler** devem ser **exatamente as mesmas** que você marcou dentro do menu **System → Scripts**. Se o agendador tiver menos permissões que o script, o backup retornará o erro "`not enough permissions`".
+> As permissões marcadas aqui no **Scheduler** devem ser **exatamente as mesmas** que você marcou dentro do menu **System ➔ Scripts**. Se o agendador tiver menos permissões que o script, o backup retornará o erro "`not enough permissions`".

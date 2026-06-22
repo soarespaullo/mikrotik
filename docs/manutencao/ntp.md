@@ -16,7 +16,7 @@ O MikroTik não possui uma **bateria interna** para manter a hora após ser desl
 
 Antes de buscar a hora na internet, precisamos dizer ao roteador em qual parte do mundo ele está.
 
-1.  Vá em **System → Clock**.
+1.  Vá em **System ➔ Clock**.
 
 2.  Na aba **Time**, verifique se o campo **Time Zone Name** está correto.
 
@@ -30,7 +30,7 @@ Antes de buscar a hora na internet, precisamos dizer ao roteador em qual parte d
 
 Agora vamos configurar o roteador para buscar a hora exata nos servidores oficiais do Brasil ([**NTP.br**](https://ntp.br/){: target="_blank" }).
 
-1.  Vá em **System → NTP Client**.
+1.  Vá em **System ➔ NTP Client**.
 
 2.  Marque a caixa **Enabled**.
 

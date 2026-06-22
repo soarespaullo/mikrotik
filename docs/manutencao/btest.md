@@ -28,7 +28,7 @@ No roteador que servirá de destino, acesse: **Tools → BTest Server**.
 * *(Opcional)* Defina uma senha em `Authenticate` para evitar que estranhos usem seu processamento para testes.
 
 ### 2. Executar o Teste (Cliente)
-No roteador de origem, vá em: **Tools → Bandwidth Test**.
+No roteador de origem, vá em: **Tools ➔ Bandwidth Test**.
 * **Test To:** Digite o IP do roteador servidor.
 * **Protocol:** * `UDP`: Mais leve, ideal para testar a capacidade máxima do meio físico.
     * `TCP`: Mais pesado, exige mais CPU, mas reflete o comportamento real da navegação web.
@@ -42,7 +42,7 @@ No roteador de origem, vá em: **Tools → Bandwidth Test**.
 > O Bandwidth Test consome muito processamento (**CPU**). Se você rodar um teste em um roteador pequeno (como uma hAP lite), a CPU chegará em **100%** e a rede pode travar durante o teste.
 
 **Dicas para testes precisos:**
-* Sempre monitore o **System > Resources > CPU** durante o teste.
+* Sempre monitore o **System ➔ Resources ➔ CPU** durante o teste.
 * Se a CPU atingir 100%, o resultado do teste de banda não é real; ele parou no limite do processador, não do link.
 * Dê preferência ao protocolo **UDP** para testar limites de rádio ou cabo.
 

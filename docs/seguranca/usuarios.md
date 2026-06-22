@@ -15,7 +15,7 @@ O controle de usuários permite definir quem pode configurar o roteador e quais 
 
 ## 🪜 1. Criando um Novo Usuário
 
-1.  Vá em **System → Users**.
+1.  Vá em **System ➔ Users**.
 
 2.  Na aba **Users**, clique no botão **+**.
 
@@ -43,7 +43,7 @@ O usuário `admin` é o alvo número 1 de ataques. O ideal é nunca utilizá-lo.
 
 1.  **Primeiro:** Logue no Winbox com o **novo usuário** que você criou (garanta que ele seja do grupo **Full**).
 
-2.  Vá em **System → Users**.
+2.  Vá em **System ➔ Users**.
 
 3.  Clique uma vez sobre o usuário `admin`.
 
@@ -79,7 +79,7 @@ Para evitar que o Winbox fique aberto por esquecimento, configure o tempo de exp
 
 ❓ Por que usar usuários diferentes?
 
-*   **Logs de Auditoria:** No menu **System → Logs**, você verá exatamente qual usuário fez cada alteração.
+*   **Logs de Auditoria:** No menu **System ➔ Logs**, você verá exatamente qual usuário fez cada alteração.
 
 *   **Segurança:** O **Inactive Timeout** garante que ninguém mexa no seu Winbox se você se ausentar da mesa e esquecer a tela aberta.
 

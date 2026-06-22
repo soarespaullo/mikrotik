@@ -17,7 +17,7 @@ O MikroTik permite anexar armazenamento externo para expandir a memória flash l
 
 Antes de usar um **MicroSD** ou **Pendrive**, ele precisa ser formatado no sistema de arquivos do **RouterOS** para que o sistema consiga gravar os arquivos corretamente.
 
-1.  No Winbox, vá em **System → Disks**.
+1.  No Winbox, vá em **System ➔ Disks**.
 
 2.  Localize o seu dispositivo na lista:
 
@@ -48,7 +48,7 @@ Antes de usar um **MicroSD** ou **Pendrive**, ele precisa ser formatado no siste
 
 Para segurança, defina quem pode ler e gravar nos arquivos.
 
-1.  Vá em **IP → SMB**.
+1.  Vá em **IP ➔ SMB**.
 
 2.  Clique na aba **Users** e depois no **+**.
 
@@ -66,7 +66,7 @@ Para segurança, defina quem pode ler e gravar nos arquivos.
 
 Aqui você define qual pasta do disco será visível na rede.
 
-1.  Ainda em **IP → SMB**, vá na aba **Shares**.
+1.  Ainda em **IP ➔ SMB**, vá na aba **Shares**.
 
 2.  Clique no **+**.
 
@@ -92,7 +92,7 @@ Aqui você define qual pasta do disco será visível na rede.
 
 Agora, ative o servidor para que ele fique visível na rede.
 
-1.  Volte para a aba **Settings** em **IP → SMB**.
+1.  Volte para a aba **Settings** em **IP ➔ SMB**.
 
 2.  No campo **Enabled**, selecione a opção `yes`.
 

@@ -17,7 +17,7 @@ Uma **VLAN** permite dividir seu roteador físico em múltiplas redes lógicas i
 
 O primeiro passo é dizer ao MikroTik em qual porta física a VLAN vai "**viajar**".
 
-1. Vá em **Interfaces** → **VLAN**.
+1. Vá em **Interfaces** ➔ **VLAN**.
 2. Clique no botão **+**.
 3. Preencha os campos:
     * **Name:** Nome para identificar a rede (ex: `vlan10-visitantes`).
@@ -32,13 +32,13 @@ O primeiro passo é dizer ao MikroTik em qual porta física a VLAN vai "**viajar
 Agora que a interface existe, precisamos dar a ela um endereço e um servidor DHCP para que os dispositivos recebam IP.
 
 ### A. Definir IP
-1. Vá em **IP** → **Addresses**.
+1. Vá em **IP** ➔ **Addresses**.
 2. Clique no botão **+**.
 3. **Address:** Digite o IP da rede (ex: `192.168.10.1/24`).
 4. **Interface:** Selecione a VLAN que você criou no Passo 1 (`vlan10-visitantes`).
 
 ### B. Criar o DHCP Server
-1. Vá em **IP** → **DHCP Server**.
+1. Vá em **IP** ➔ **DHCP Server**.
 2. Clique no botão **DHCP Setup**.
 3. Selecione a interface da **VLAN**.
 4. Siga clicando em **Next** até o final. O MikroTik criará o Pool de IPs e o servidor automaticamente.
@@ -49,7 +49,7 @@ Agora que a interface existe, precisamos dar a ela um endereço e um servidor DH
 
 Por padrão, o MikroTik roteia o tráfego entre VLANs. Se você quer que a rede de Visitantes não acesse sua rede Principal, use o Firewall:
 
-1. Vá em **IP** → **Firewall** → **Filter Rules**.
+1. Vá em **IP** ➔ **Firewall** ➔ **Filter Rules**.
 2. Clique no botão **+**.
 3. **Chain:** `forward`.
 4. **In. Interface:** `vlan10-visitantes`.

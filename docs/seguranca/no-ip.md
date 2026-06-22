@@ -17,11 +17,11 @@ Antes de configurar o roteador, você deve criar a identidade do seu host.
 
 1.  Acesse o site [**No-IP**](https://www.noip.com){: target="_blank" } e crie sua conta.
 
-2.  Vá em **DDNS e Acesso Remoto/ou Gerenciar DNS** → **DNS Records**.
+2.  Vá em **DDNS e Acesso Remoto/ou Gerenciar DNS** ➔ **DNS Records**.
 
 3.  Clique em **Criar Hostname**.
 
-4.  Defina o nome (ex: `mikrotik-net`) e escolha um domínio (ex: `ddns.net`).
+4.  Defina o nome (ex: `mikrotik`) e escolha um domínio (ex: `ddns.net`).
 
 5.  Guarde seu **E-mail**, **Senha** e o **Hostname** criado.
 
@@ -36,7 +36,7 @@ Como o `MikroTik` não possui um menu nativo para o `No-IP`, utilizamos um `scri
 
 **Passo a passo:**
 
-1.  Acesse **System → Scripts** e clique no **+**.
+1.  Acesse **System ➔ Scripts** e clique no **+**.
 
 2.  **Name:** `atualizar-noip`.
 
@@ -68,7 +68,7 @@ Escolha a forma mais adequada para obter o código-fonte ou inspecionar o arquiv
 
 Para que o `MikroTik` verifique e atualize o IP automaticamente, precisamos criar um agendamento.
 
-1.  Acesse **System → Scheduler** e clique no **+**.
+1.  Acesse **System ➔ Scheduler** e clique no **+**.
 
 2.  **Name:** `Check-NoIP`.
 

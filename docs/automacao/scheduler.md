@@ -17,7 +17,7 @@ O **Scheduler** (Agendador) é a ferramenta do MikroTik que permite executar scr
 
 Para automatizar qualquer tarefa, como o backup por e-mail ou a atualização de DDNS, siga estes passos:
 
-1. No menu lateral do Winbox, vá em **System** → **Scheduler**.
+1. No menu lateral do Winbox, vá em **System** ➔ **Scheduler**.
 2. Clique no botão **+** (Add) para criar um novo agendamento.
 3. Preencha os campos principais:
     * **Name:** Um nome para identificar a tarefa (ex: `Tarefa_Backup_Diario`).
@@ -63,4 +63,4 @@ Após configurar, você pode acompanhar o status na própria janela do Scheduler
 * **Log:** Se o seu script tiver comandos de log (ex: `/log info "Backup realizado"`), você poderá ver o histórico na janela **Log** do Winbox.
 
 {: .tip }
-> Sempre teste o seu Script manualmente no menu **System** → **Scripts** clicando em **Run Script** antes de agendá-lo. Se ele não funcionar manualmente, o agendamento também falhará.
+> Sempre teste o seu Script manualmente no menu **System** ➔ **Scripts** clicando em **Run Script** antes de agendá-lo. Se ele não funcionar manualmente, o agendamento também falhará.

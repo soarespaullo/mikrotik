@@ -31,7 +31,7 @@ Manter o MikroTik atualizado protege contra vulnerabilidades e melhora o desempe
 
 Este passo atualiza o sistema operacional do roteador.
 
-1.  Vá em **System → Packages**.
+1.  Vá em **System ➔ Packages**.
 
 2.  Clique no botão **Check For Updates**.
 
@@ -48,7 +48,7 @@ Este passo atualiza o sistema operacional do roteador.
 
 Muitos administradores esquecem este passo. Ele atualiza o chip da placa-mãe do MikroTik.
 
-1.  Após o roteador reiniciar da atualização anterior, vá em **System → RouterBOARD**.
+1.  Após o roteador reiniciar da atualização anterior, vá em **System ➔ RouterBOARD**.
 
 2.  Compare o **Current Firmware** com o **Upgrade Firmware**.
 
@@ -56,7 +56,7 @@ Muitos administradores esquecem este passo. Ele atualiza o chip da placa-mãe do
 
 4.  O Winbox pedirá uma confirmação. Clique em **Yes**.
 
-5.  **Importante:** O firmware só é aplicado após um novo reboot manual. Vá em **System → Reboot** e confirme.
+5.  **Importante:** O firmware só é aplicado após um novo reboot manual. Vá em **System ➔ Reboot** e confirme.
 
 
 {: .important }
@@ -82,6 +82,6 @@ Se o roteador não tiver acesso à internet, você pode atualizar manualmente:
 
 Após os reboots, verifique:
 
-*   Em **System → Resources**: Se a versão do RouterOS está correta.
+*   Em **System ➔ Resources**: Se a versão do RouterOS está correta.
 
-*   Em **System → RouterBOARD**: Se o *Current Firmware* agora iguala o *Upgrade Firmware*.
+*   Em **System ➔ RouterBOARD**: Se o *Current Firmware* agora iguala o *Upgrade Firmware*.

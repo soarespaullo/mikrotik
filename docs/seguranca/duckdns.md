@@ -32,7 +32,7 @@ Este script monitora o `IP` e atualiza o servidor apenas se houver mudança, reg
 
 **Passo a passo:**
 
-1.  Vá em **System → Scripts** e crie um novo chamado `atualizar-duckdns`.
+1.  Vá em **System ➔ Scripts** e crie um novo chamado `atualizar-duckdns`.
 
 2.  Em **Policies**, marque: `read, write, test, policy`.
 
@@ -51,7 +51,7 @@ Escolha a forma mais adequada para obter o código-fonte ou inspecionar o arquiv
 
 Para automação total, crie o agendamento:
 
-1.  Acesse **System → Scheduler** e clique no **+**.
+1.  Acesse **System ➔ Scheduler** e clique no **+**.
 
 2.  **Name:** `Check-DuckDNS`.
 
@@ -68,7 +68,7 @@ Para automação total, crie o agendamento:
 
 Para garantir que o script está rodando e se comunicando com o `DuckDNS`, siga esta ordem:
 
-1.  **Execute o Script:** Vá em **System → Scripts**, selecione o `atualizar-duckdns` e clique no botão **Run Script**.
+1.  **Execute o Script:** Vá em **System ➔ Scripts**, selecione o `atualizar-duckdns` e clique no botão **Run Script**.
     
 2.  **Verifique os Logs:** Acesse o menu **Log** na lateral esquerda.
     

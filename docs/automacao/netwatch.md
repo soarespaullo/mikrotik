@@ -15,7 +15,7 @@ O **Netwatch** permite que o roteador "tome decisões" sozinho baseado na conect
 
 ## 🛠️ 1. Como Criar um Monitoramento (Winbox)
 
-1. No menu lateral, vá em **Tools** → **Netwatch**.
+1. No menu lateral, vá em **Tools** ➔ **Netwatch**.
 2. Clique no botão **+**.
 3. Na aba **Host**, preencha:
     * **Host:** O endereço IP que você deseja monitorar (ex: `8.8.8.8` do Google ou gateway da sua operadora).

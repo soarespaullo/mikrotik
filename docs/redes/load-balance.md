@@ -19,7 +19,7 @@ O segredo do PCC está no Mangle. Precisamos identificar o que entra por cada li
 
 ### Passo 1: Aceitar tráfego local
 Antes de balancear, precisamos dizer ao roteador para não balancear o que é rede interna.
-1. Vá em **IP** → **Firewall** → **Mangle**.
+1. Vá em **IP** ➔ **Firewall** ➔ **Mangle**.
 2. Clique em **+**.
 3. **Chain:** `prerouting` **Dst. Address:** `10.220.0.0/24` (Sua rede local).
 4. **Action:** `accept`.
@@ -54,7 +54,7 @@ Para cada conexão marcada (`Link1_Conn` e `Link2_Conn`), crie uma regra de **Ac
 ## 🧭 2. Configurando as Rotas (Routes)
 
 Agora que os pacotes estão "etiquetados", vamos dizer para onde eles devem ir.
-1. Vá em **IP** → **Routes** e clique em **+**.
+1. Vá em **IP** ➔ **Routes** e clique em **+**.
 2. **Gateway:** IP ou Interface do Link 1.
 3. **Routing Mark:** `Para_Link1`.
 4. **Clique em + para o Link 2:**
@@ -69,7 +69,7 @@ Agora que os pacotes estão "etiquetados", vamos dizer para onde eles devem ir.
 ## 📈 3. Visualizando o Funcionamento
 
 Para verificar se está funcionando:
-1. Vá em **IP** → **Firewall** → **Mangle**.
+1. Vá em **IP** ➔ **Firewall** ➔ **Mangle**.
 2. Observe a coluna **Bytes** e **Packets**. Se ambas as regras de PCC (2/0 e 2/1) estiverem contando tráfego simultaneamente, o balanceamento está ativo.
 
 ---
@@ -83,7 +83,7 @@ Para verificar se está funcionando:
 > **Velocidades Diferentes:** Se o Link 1 tem 100MB e o Link 2 tem 50MB, você deve criar 3 marcações (3/0, 3/1 para o Link 1 e 3/2 para o Link 2). Isso cria uma proporção de 2:1.
 
 {: .important }
-> **NAT:** Não esqueça de ter as regras de **masquerade** para ambas as interfaces WAN em **IP** → **Firewall** → **NAT**.
+> **NAT:** Não esqueça de ter as regras de **masquerade** para ambas as interfaces WAN em **IP** ➔ **Firewall** ➔ **NAT**.
 
 {: .tip }
 > O **Load Balance** PCC não "soma" um único download (como um vídeo no YouTube), mas permite que um usuário baixe um vídeo pelo Link 1 enquanto outro usuário joga pelo Link 2, otimizando o uso total da banda.

@@ -16,7 +16,7 @@ O RoMON cria uma rede de gerenciamento independente do protocolo IP. Com ele ati
 
 Você deve ativar o RoMON em **todos** os roteadores da sua rede que deseja gerenciar.
 
-1.  No Winbox, vá em **Tools → RoMON**.
+1.  No Winbox, vá em **Tools ➔ RoMON**.
 
 2.  Marque a caixa **Enabled**.
 
