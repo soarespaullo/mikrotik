@@ -170,8 +170,8 @@ No MikroTik, a ordem dos fatores altera o produto! O firewall lê as regras de c
 4. 🚫 `DROP IPs SCANNERS - FORWARD`
 5. 🪤 `DETECTA PORT SCANNERS (PSD) - INPUT`
 6. ⚡ `DETECTA SYN SCAN AGRESSIVO - INPUT`
-7. 🚪 `PEGA IP PARA A LISTA PRE-REDE-SUPORTE` *(Port Knocking - Batida 1)*
-8. 🔑 `PEGA IP PARA A REDE-SUPORTE` *(Port Knocking - Batida 2)*
+7. 🚪 `PEGA IP PARA A LISTA PRE-REDE-SUPORTE` *(Port Knocking - Batida 1 - 7788)*
+8. 🔑 `PEGA IP PARA A REDE-SUPORTE` *(Port Knocking - Batida 2 - 4455)*
 9. 🟢 `ACEITA REDE SUPORTE` *(Básico 2)*
 10. 🦹 `LIMITA BRUTE FORCE SSH/WINBOX - INPUT`
 11. 🏓 `ACEITA 10 PACOTES DE ICMP POR SEGUNDOS` *(Básico 3)*
